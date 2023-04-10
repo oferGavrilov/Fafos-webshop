@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import Teaser from '@/components/Teaser'
 import Link from 'next/link'
 import React from 'react'
 

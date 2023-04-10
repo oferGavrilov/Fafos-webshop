@@ -7,8 +7,8 @@ import { AiOutlineUser, AiOutlineSearch, AiOutlineGlobal } from 'react-icons/ai'
 
 function AppHeader() {
   return (
-    <header className='fixed top-0 w-[100%] z-1 text-white'>
-      <nav className='flex h-[70px] items-center px-4 justify-between mt-[32px]'>
+    <header className='fixed w-[100%] z-10 text-white'>
+      <nav className='flex h-[70px] items-center px-4 justify-between'>
         <div className='flex gap-5 items-center'>
           <Link className='header-icon' href="/login"><AiOutlineUser /></Link>
           <Link className='header-icon' href="/cart"><IoBagOutline /></Link>
