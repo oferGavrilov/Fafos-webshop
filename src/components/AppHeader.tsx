@@ -4,10 +4,13 @@ import React from 'react'
 import { IoBagOutline } from 'react-icons/io5'
 import { AiOutlineUser, AiOutlineSearch, AiOutlineGlobal } from 'react-icons/ai'
 
+interface Props {
+  isScrolled: boolean
+}
 
-function AppHeader() {
+function AppHeader({ isScrolled }: Props) {
   return (
-    <header className='fixed w-[100%] z-10 text-white'>
+    <header className={`fixed w-[100%] transition duration-500 ${isScrolled ? 'scrolled' : 'text-white'}`}>
       <nav className='flex h-[70px] items-center px-4 justify-between'>
         <div className='flex gap-5 items-center'>
           <Link className='header-icon' href="/login"><AiOutlineUser /></Link>
@@ -17,7 +20,7 @@ function AppHeader() {
           <span className='header-icon cursor-pointer font-thin uppercase tracking-wider'>Gift card</span>
         </div>
         <Link href="/">
-          <span className='text-3xl font-mono font-bold uppercase tracking-wider'>Fafos</span>
+          <span className='text-3xl font-mono uppercase tracking-wider'>Fafos</span>
         </Link>
       </nav>
     </header>

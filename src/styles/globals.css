@@ -9,14 +9,31 @@
 }
 
 @layer components {
+  /* Header */
+  .scrolled {
+    @apply absolute top-0 z-20 bg-slate-200 opacity-90 text-black; 
+  }
+
   .header-icon {
-    @apply text-xl
+    @apply text-xl;
   }
 
   /* Hero */
   .hero-btn {
     @apply uppercase text-white border-white border-2 mt-[40px]
     tracking-wider py-3 px-10 ease-in-out duration-300 hover:bg-white hover:text-black;
+  }
+
+  /* Teaser */
+  .teaser-img {
+    @apply object-cover transition duration-300   h-[100%] w-[100%] hover:scale-110;
+  }
+
+  .teaser-name {
+    @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy md:hidden;
+  }
+  .teaser-name-mobile {
+    @apply hidden text-black md:block;
   }
 
   .card {

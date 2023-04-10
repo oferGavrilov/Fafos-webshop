@@ -2,7 +2,7 @@ import React from 'react'
 
 function AppFooter() {
   return (
-    <footer className='absolute bottom-0 w-[100%] flex h-10 justify-center items-center shadow-inner'>
+    <footer className='w-[100%] flex h-10 justify-center items-center shadow-inner'>
       <p>Copyright © 2023 Ofer Gavriel</p>
     </footer>
   )

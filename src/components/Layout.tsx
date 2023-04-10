@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import AppHeader from './AppHeader'
 import AppFooter from './AppFooter'
 import AboveHeader from './AboveHeader'
@@ -10,8 +10,17 @@ interface Props {
 }
 
 function Layout({ children, ...props }: Props) {
+      const [isScrolled, setIsScrolled] = useState(false)
       const router = useRouter()
-      console.log(router)
+      useEffect(() => {
+            const handleScroll = () => {
+                  if (window.scrollY > 33) setIsScrolled(true)
+                  else setIsScrolled(false)
+            }
+            addEventListener('scroll', handleScroll)
+
+            return () => window.removeEventListener('scroll', handleScroll)
+      }, [])
       return (
             <>
                   <Head>
@@ -19,14 +28,12 @@ function Layout({ children, ...props }: Props) {
                         <meta name="description" content="Ecommerce Website" />
                         <link rel="icon" href="/favicon.ico" />
                   </Head>
-                  <div>
-                        <AboveHeader />
-                        <AppHeader />
-                        <main {...props} className={`${router.asPath === "/products" ? 'container m-auto mt-4 px-4' : ''}`}>
-                              {children}
-                        </main>
-                        <AppFooter />
-                  </div>
+                  <AboveHeader />
+                  <AppHeader isScrolled={isScrolled} />
+                  <main {...props} className={`${router.asPath === "/products" ? 'container m-auto mt-4 px-4' : ''}`}>
+                        {children}
+                  </main>
+                  <AppFooter />
             </>
       )
 }
