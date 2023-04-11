@@ -50,3 +50,9 @@ export interface CarouselData {
       price: number
       id?: string
 }
+
+export interface CategoriesData {
+      img: string
+      title: string
+      id?: string
+}

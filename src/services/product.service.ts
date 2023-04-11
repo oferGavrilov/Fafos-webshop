@@ -1,15 +1,16 @@
 import { utilService } from "./util.service";
 
 import carouselData from '../carousel-data.json'
-import { CarouselData } from "@/models/products.model";
+import { CarouselData, CategoriesData } from "@/models/products.model";
+import hotCategoriesData from '../hot-categories.json'
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
 const PRODUCT_KEY = 'product_DB'
-const CAROUSEL_KEY = 'carousel_DB'
 
 export const productService = {
       query,
-      getCarouselData
+      getCarouselData,
+      getCategoriesData
 }
 
 const options = {
@@ -38,4 +39,11 @@ function getCarouselData() {
             return item = { ...item, id: utilService.makeId() } as CarouselData
       })
       return carouselWithId
+}
+
+function getCategoriesData() {
+      const categoriesWithId = hotCategoriesData.map((item) => {
+            return item = { ...item, id: utilService.makeId() } as CategoriesData
+      })
+      return categoriesWithId 
 }

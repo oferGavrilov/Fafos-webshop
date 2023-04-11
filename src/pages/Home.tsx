@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import HotCategories from '@/components/HotCategories'
 import ImgCarousel from '@/components/ImgCarousel'
 import Teaser from '@/components/Teaser'
 import Link from 'next/link'
@@ -10,6 +11,7 @@ function Home() {
                   <Hero />
                   <Teaser />
                   <ImgCarousel />
+                  <HotCategories />
             </div>
       )
 }
