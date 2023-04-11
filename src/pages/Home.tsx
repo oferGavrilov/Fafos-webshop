@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import HomeVideo from '@/components/HomeVideo'
 import HotCategories from '@/components/HotCategories'
 import ImgCarousel from '@/components/ImgCarousel'
 import Teaser from '@/components/Teaser'
@@ -12,6 +13,7 @@ function Home() {
                   <Teaser />
                   <ImgCarousel />
                   <HotCategories />
+                  <HomeVideo />
             </div>
       )
 }

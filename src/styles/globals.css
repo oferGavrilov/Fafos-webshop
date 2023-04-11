@@ -33,6 +33,15 @@
     @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy ;
   }
 
+  /* Footer */
+  .footer-icon {
+    @apply text-2xl cursor-pointer transition duration-300 hover:scale-125 hover:text-blue-500
+  }
+
+  .footer-links {
+    @apply hover:text-gray-600 cursor-pointer;
+  }
+
   .card {
     @apply mb-5 block rounded-lg border border-gray-200 shadow-md;
   }
