@@ -8,7 +8,7 @@ import React from 'react'
 
 function Home() {
       return (
-            <div>
+            <div className='scroll-smooth'>
                   <Hero />
                   <Teaser />
                   <ImgCarousel />
