@@ -1,12 +1,17 @@
 import { utilService } from "./util.service";
 
+import carouselData from '../carousel-data.json'
+import { CarouselData } from "@/models/products.model";
+
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
 const PRODUCT_KEY = 'product_DB'
+const CAROUSEL_KEY = 'carousel_DB'
 
 export const productService = {
-      query
+      query,
+      getCarouselData
 }
-console.log(process.env.NEXT_PUBLIC_API_KEY)
+
 const options = {
       method: 'GET',
       headers: {
@@ -14,7 +19,6 @@ const options = {
             'X-RapidAPI-Host': 'asos2.p.rapidapi.com'
       }
 };
-
 
 async function query() {
       let data = utilService.loadFromStorage(PRODUCT_KEY)
@@ -27,4 +31,11 @@ async function query() {
       } catch (err) {
             console.log(err)
       }
+}
+
+function getCarouselData() {
+      const carouselWithId = carouselData.map((item) => {
+            return item = { ...item, id: utilService.makeId() } as CarouselData
+      })
+      return carouselWithId
 }

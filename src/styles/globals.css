@@ -26,14 +26,11 @@
 
   /* Teaser */
   .teaser-img {
-    @apply object-cover transition duration-300   h-[100%] w-[100%] hover:scale-110;
+    @apply object-cover transition duration-300 max-h-[740px]  h-[100%] w-[100%] hover:scale-110;
   }
 
   .teaser-name {
-    @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy md:hidden;
-  }
-  .teaser-name-mobile {
-    @apply hidden text-black md:block;
+    @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy ;
   }
 
   .card {

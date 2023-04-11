@@ -10,7 +10,7 @@ interface Props {
 
 function AppHeader({ isScrolled }: Props) {
   return (
-    <header className={`fixed w-[100%] transition duration-500 ${isScrolled ? 'scrolled' : 'text-white'}`}>
+    <header className={`fixed w-[100%] z-10 transition duration-500 ${isScrolled ? 'scrolled' : 'text-white'}`}>
       <nav className='flex h-[70px] items-center px-4 justify-between'>
         <div className='flex gap-5 items-center'>
           <Link className='header-icon' href="/login"><AiOutlineUser /></Link>

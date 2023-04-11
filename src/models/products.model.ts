@@ -43,3 +43,10 @@ interface Price {
             text: string
       }
 }
+
+export interface CarouselData {
+      img: string
+      title: string
+      price: number
+      id?: string
+}
