@@ -28,7 +28,6 @@
   .teaser-img {
     @apply object-cover transition duration-300 max-h-[740px]  h-[100%] w-[100%] hover:scale-110;
   }
-
   .teaser-name {
     @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy ;
   }
@@ -37,9 +36,13 @@
   .footer-icon {
     @apply text-2xl cursor-pointer transition duration-300 hover:scale-125 hover:text-blue-500
   }
-
   .footer-links {
     @apply hover:text-gray-600 cursor-pointer;
+  }
+
+  /* Side Menu */
+  .menu-list {
+    @apply p-4 border-t border-gray-300 transition-colors duration-200 cursor-pointer hover:bg-slate-100
   }
 
   .card {

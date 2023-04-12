@@ -21,6 +21,7 @@ function Layout({ children, ...props }: Props) {
 
             return () => window.removeEventListener('scroll', handleScroll)
       }, [])
+
       return (
             <>
                   <Head>
