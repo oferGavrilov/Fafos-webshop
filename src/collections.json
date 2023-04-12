@@ -1,26 +1,38 @@
 [
       {
+            "id":"100",
             "img":"imgs/collections/one-piece.jpg",
-            "title":"Onepiece"
+            "title":"onepiece",
+            "category":"one-piece"
       },
       {
+            "id":"101",
             "img":"imgs/collections/bottoms.jpg",
-            "title":"Bottoms"
+            "title":"bottoms",
+            "category":"bottoms"
       },
       {
+            "id":"102",
             "img":"imgs/collections/tops.jpg",
-            "title":"Tops"
+            "title":"tops",
+            "category":"tops"
       },
       {
+            "id":"103",
             "img":"imgs/collections/b-man.jpg",
-            "title":"B-man"
+            "title":"b-man",
+            "category":"b-man"
       },
       {
+            "id":"104",
             "img":"imgs/collections/all-swimwear.png",
-            "title":"All Swimwear"
+            "title":"all swimwear",
+            "category":"all-swimwear"
       },
       {
+            "id":"105",
             "img":"imgs/collections/plus-size.jpg",
-            "title":"Plus size"
+            "title":"plus size",
+            "category":"plus-size"
       }
 ]

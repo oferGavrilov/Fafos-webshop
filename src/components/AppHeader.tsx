@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import { useEffect } from 'react'
 import { useState } from "react"
 
 import { IoBagOutline } from 'react-icons/io5'
@@ -10,13 +10,23 @@ import MenuIcon from '@mui/icons-material/Menu'
 import SideMenu from './SideMenu'
 
 interface Props {
-  isScrolled: boolean,
   page: string
 }
 
-function AppHeader({ isScrolled , page}: Props) {
+function AppHeader({ page }: Props) {
   const [isOpen, setIsOpen] = useState(false)
-  console.log(page)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 33) setIsScrolled(true)
+      else setIsScrolled(false)
+    }
+    addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <>
       <header className={`fixed w-[100%] z-10 transition duration-500  ${isScrolled ? 'scrolled' : 'text-white'}`}>

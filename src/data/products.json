@@ -1,0 +1,72 @@
+[
+      {
+            "id": "100",
+            "imgUrl": "imgs/products/one-piece1.jpg",
+            "title": "JADE INDIA PAISLEY - ONE PIECE",
+            "price": 835,
+            "category": "one-piece"
+      },
+      {
+            "id": "101",
+            "imgUrl": "imgs/products/one-piece2.jpg",
+            "title": "JADE TURQUOISE - ONE PIECE",
+            "price": 835,
+            "category": "one-piece"
+      },
+      {
+            "id": "102",
+            "imgUrl": "imgs/products/bottoms1.jpg",
+            "title": "LUNA PAISLEY - BOTTOM",
+            "price": 430,
+            "category": "bottoms"
+      },
+      {
+            "id": "103",
+            "imgUrl": "imgs/products/bottoms2.jpg",
+            "title": "DOLLY YELLOW FLOWERS - BOTTOM",
+            "price": 360,
+            "category": "bottoms"
+      },
+      {
+            "id": "104",
+            "imgUrl": "imgs/products/tops1.jpg",
+            "title": "MILA HOT PINK - TOP",
+            "price": 375,
+            "category": "tops"
+      },
+      {
+            "id": "105",
+            "imgUrl": "imgs/products/tops2.jpg",
+            "title": "BELL RUBY - TOP",
+            "price": 370,
+            "category": "tops"
+      },
+      {
+            "id": "106",
+            "imgUrl": "imgs/products/b-man1.jpg",
+            "title": "MAN SWIM SHORT - BLUE STRIPES",
+            "price": 350,
+            "category": "b-man"
+      },
+      {
+            "id": "107",
+            "imgUrl": "imgs/products/b-man2.jpg",
+            "title": "MAN SWIM SHORT - BEIGE STRIPES",
+            "price": 350,
+            "category": "b-man"
+      },
+      {
+            "id": "108",
+            "imgUrl": "imgs/products/plus-size1.jpg",
+            "title": "SPRING MINT - TOP",
+            "price": 360,
+            "category": "plus-size"
+      },
+      {
+            "id": "109",
+            "imgUrl": "imgs/products/plus-size2.jpg",
+            "title": "CHAIN MINT - TOP",
+            "price": 350,
+            "category": "plus-size"
+      }
+]
