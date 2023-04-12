@@ -30,7 +30,7 @@ function AppHeader({ page }: Props) {
   return (
     <>
       <header className={`fixed w-[100%] z-10 transition duration-500  ${isScrolled ? 'scrolled' : 'text-white'}`}>
-        <nav className={`flex h-[70px] items-center px-4 justify-between ${page !== 'Home' ? 'text-black' : ''}`}>
+        <nav className={`flex h-[70px] items-center px-4 justify-between ${page !== 'Home' ? 'font-black' : ''}`}>
           <div className='flex gap-5 items-center'>
             <Link className='header-icon hidden lg:block' href="/login"><AiOutlineUser /></Link>
             <Link className='header-icon' href="/cart"><IoBagOutline /></Link>
@@ -40,13 +40,13 @@ function AppHeader({ page }: Props) {
           </div>
           <Link href="/" className='flex gap-4 items-center'>
             <span className='text-3xl font-mono uppercase tracking-wider'>Fafos</span>
-            <IconButton className='text-white lg:hidden' edge='start' size='large' aria-label='logo' onClick={() => setIsOpen(true)}>
-              <MenuIcon />
-            </IconButton>
           </Link>
+          <IconButton className='text-inherit lg:hidden' edge='start' size='large' aria-label='logo' onClick={() => setIsOpen(true)}>
+            <MenuIcon />
+          </IconButton>
         </nav>
       </header>
-      <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} menuType='main'/>
     </>
   )
 }

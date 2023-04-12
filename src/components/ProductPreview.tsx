@@ -17,7 +17,9 @@ function ProductPreview({ product }: Props) {
         />
       </Link>
       <div className='flex flex-col items-center p-5'>
-        <button className='primary-button'>
+        <span>{product.title}</span>
+        <span className='text-lg'>₪ {product.price}</span>
+        <button className='primary-button '>
           Add to cart
         </button>
       </div>

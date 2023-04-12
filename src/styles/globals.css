@@ -11,7 +11,7 @@
 @layer components {
   /* Header */
   .scrolled {
-    @apply absolute top-0 z-20 bg-slate-200 opacity-90 text-black; 
+    @apply absolute top-0 z-20 bg-slate-200 opacity-90 font-black; 
   }
 
   .header-icon {
@@ -21,7 +21,7 @@
   /* Hero */
   .hero-btn {
     @apply uppercase text-white border-white border-2 mt-4 md:mt-10
-    tracking-wider py-1 px-5 md:py-3 md:px-10 ease-in-out duration-300 hover:bg-white hover:text-black;
+    tracking-wider py-1 px-5 md:py-3 md:px-10 ease-in-out duration-300 hover:bg-white hover:font-black;
   }
 
   /* Teaser */
@@ -50,7 +50,7 @@
   }
 
   .primary-button {
-    @apply rounded bg-amber-300 py-2 px-4 shadow outline-none hover:bg-amber-400 active:bg-amber-500;
+    @apply rounded font-fuzzy tracking-wider text-lg bg-[#ced4da] py-2 px-5 transition-colors duration-300 shadow outline-none hover:bg-[#adb5bd] active:bg-amber-500;
   }
 
 }
@@ -58,5 +58,12 @@
 @layer utilities {
   .absolute-center {
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+  .custom-hover{
+    @apply transition duration-200 hover:bg-slate-100 hover:border-x-blue-500;
+  }
+
+  .font-black{
+    @apply text-[#212529]; 
   }
 }
