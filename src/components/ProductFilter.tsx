@@ -45,7 +45,7 @@ function ProductFilter({ category, handleSort, sort }: Props) {
               </Select>
             </FormControl>
           </Box>
-          <div className='custom-hover flex items-center w-1/2 max-w-xs justify-center gap-2 border  cursor-pointer border-[#b2b3b6] rounded' onClick={() => setIsOpen(true)}>
+          <div className='custom-hover flex items-center w-1/2 max-w-xs justify-center gap-2 border cursor-pointer border-[#b2b3b6] rounded' onClick={() => setIsOpen(true)}>
             <span className='font-fuzzy tracking-wider text-lg'>Filters</span>
             <MdTune className='text-2xl' />
           </div>

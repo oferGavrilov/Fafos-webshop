@@ -30,7 +30,7 @@ function AppHeader({ page }: Props) {
   return (
     <>
       <header className={`fixed w-[100%] z-10 transition duration-500  ${isScrolled ? 'scrolled' : 'text-white'}`}>
-        <nav className={`flex h-[70px] items-center px-4 justify-between ${page !== 'Home' ? 'font-black' : ''}`}>
+        <nav className={`flex h-[70px] items-center px-4 justify-between ${page !== 'Home' ? 'text-[#212529]' : ''}`}>
           <div className='flex gap-5 items-center'>
             <Link className='header-icon hidden lg:block' href="/login"><AiOutlineUser /></Link>
             <Link className='header-icon' href="/cart"><IoBagOutline /></Link>
