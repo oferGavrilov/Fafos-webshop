@@ -11,14 +11,16 @@ import SideMenu from './SideMenu'
 
 interface Props {
   isScrolled: boolean,
+  page: string
 }
 
-function AppHeader({ isScrolled }: Props) {
+function AppHeader({ isScrolled , page}: Props) {
   const [isOpen, setIsOpen] = useState(false)
+  console.log(page)
   return (
     <>
-      <header className={`fixed w-[100%] z-10 transition duration-500 ${isScrolled ? 'scrolled' : 'text-white'}`}>
-        <nav className='flex h-[70px] items-center px-4 justify-between'>
+      <header className={`fixed w-[100%] z-10 transition duration-500  ${isScrolled ? 'scrolled' : 'text-white'}`}>
+        <nav className={`flex h-[70px] items-center px-4 justify-between ${page !== 'Home' ? 'text-black' : ''}`}>
           <div className='flex gap-5 items-center'>
             <Link className='header-icon hidden lg:block' href="/login"><AiOutlineUser /></Link>
             <Link className='header-icon' href="/cart"><IoBagOutline /></Link>

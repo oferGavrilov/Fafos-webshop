@@ -1,0 +1,26 @@
+[
+      {
+            "img":"imgs/collections/one-piece.jpg",
+            "title":"Onepiece"
+      },
+      {
+            "img":"imgs/collections/bottoms.jpg",
+            "title":"Bottoms"
+      },
+      {
+            "img":"imgs/collections/tops.jpg",
+            "title":"Tops"
+      },
+      {
+            "img":"imgs/collections/b-man.jpg",
+            "title":"B-man"
+      },
+      {
+            "img":"imgs/collections/all-swimwear.png",
+            "title":"All Swimwear"
+      },
+      {
+            "img":"imgs/collections/plus-size.jpg",
+            "title":"Plus size"
+      }
+]
