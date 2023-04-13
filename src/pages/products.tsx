@@ -15,7 +15,6 @@ function Product() {
       const category = useRouter().asPath.split('=')[1]
 
       useEffect(() => {
-            console.log('render')
             loadProducts()
       }, [sort])
 
@@ -25,9 +24,7 @@ function Product() {
       }
 
       const handleSort = (event: SelectChangeEvent) => {
-            console.log(event)
             setSort(event.target.value as string)
-
       }
 
       if (!products || !products?.length) return <div>Loading...</div>

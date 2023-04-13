@@ -4,69 +4,429 @@
             "imgUrl": "imgs/products/one-piece1.jpg",
             "title": "JADE INDIA PAISLEY - ONE PIECE",
             "price": 835,
-            "category": "one-piece"
+            "category": "one-piece",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "101",
             "imgUrl": "imgs/products/one-piece2.jpg",
             "title": "JADE TURQUOISE - ONE PIECE",
             "price": 835,
-            "category": "one-piece"
+            "category": "one-piece",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "102",
             "imgUrl": "imgs/products/bottoms1.jpg",
             "title": "LUNA PAISLEY - BOTTOM",
             "price": 430,
-            "category": "bottoms"
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "103",
             "imgUrl": "imgs/products/bottoms2.jpg",
             "title": "DOLLY YELLOW FLOWERS - BOTTOM",
             "price": 360,
-            "category": "bottoms"
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "104",
             "imgUrl": "imgs/products/tops1.jpg",
             "title": "MILA HOT PINK - TOP",
             "price": 375,
-            "category": "tops"
+            "category": "tops",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "105",
             "imgUrl": "imgs/products/tops2.jpg",
             "title": "BELL RUBY - TOP",
             "price": 370,
-            "category": "tops"
+            "category": "tops",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "106",
             "imgUrl": "imgs/products/b-man1.jpg",
             "title": "MAN SWIM SHORT - BLUE STRIPES",
             "price": 350,
-            "category": "b-man"
+            "category": "b-man",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "107",
             "imgUrl": "imgs/products/b-man2.jpg",
             "title": "MAN SWIM SHORT - BEIGE STRIPES",
             "price": 350,
-            "category": "b-man"
+            "category": "b-man",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "108",
             "imgUrl": "imgs/products/plus-size1.jpg",
             "title": "SPRING MINT - TOP",
             "price": 360,
-            "category": "plus-size"
+            "category": "plus-size",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       },
       {
             "id": "109",
             "imgUrl": "imgs/products/plus-size2.jpg",
             "title": "CHAIN MINT - TOP",
             "price": 350,
-            "category": "plus-size"
+            "category": "plus-size",
+            "inventory": [
+                  {
+                        "color": "black",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "color": "white",
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
       }
 ]

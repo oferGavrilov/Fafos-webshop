@@ -1,44 +1,20 @@
 import { utilService } from "./util.service";
-
 import { CarouselData, CategoriesData, Product } from "@/models/products.model";
 import products from '../data/products.json'
 import carouselData from '../carousel-data.json'
 import hotCategoriesData from '../hot-categories.json'
 import collectionsData from '../collections.json'
 import { Filter } from "@/models/filter.model";
-
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY
-const PRODUCT_KEY = 'product_DB'
+import { ParsedUrlQuery } from "querystring";
 
 export const productService = {
-      // query,
       getAllProducts,
       getCarouselData,
       getCategoriesData,
       getCollections,
-      getEmptyFilter
+      getEmptyFilter,
+      getProductById
 }
-
-// const options = {
-//       method: 'GET',
-//       headers: {
-//             'X-RapidAPI-Key': API_KEY || '24742ecb58mshe745177d0d1ba7dp182a90jsnd43311155beb',
-//             'X-RapidAPI-Host': 'asos2.p.rapidapi.com'
-//       }
-// };
-
-// async function query() {
-//       let data = utilService.loadFromStorage(PRODUCT_KEY)
-//       if (data) return data
-//       try {
-//             data = await fetch('https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&currency=USD&sizeSchema=US&lang=en-US', options)
-//                   .then((response) => response.json())
-//             utilService.saveToStorage(PRODUCT_KEY, data.products)
-//             return data.products
-//       } catch (err) {
-//             console.log(err)
-//       }
-// }
 
 function getAllProducts(filter: Filter = getEmptyFilter(), sort: string = '') {
       let filteredProducts: Product[] = products.slice()
@@ -49,6 +25,10 @@ function getAllProducts(filter: Filter = getEmptyFilter(), sort: string = '') {
             filteredProducts = setSort(sort, filteredProducts)
       }
       return filteredProducts
+}
+
+function getProductById(id: string) {
+      return products.find(product => product.id === id)
 }
 
 function getEmptyFilter() {
@@ -81,4 +61,3 @@ function getCategoriesData() {
 function getCollections() {
       return collectionsData
 }
-

@@ -9,16 +9,16 @@ interface Props {
 function ProductPreview({ product }: Props) {
   return (
     <article className='card'>
-      <Link href={`/product`}>
+      <Link href={`/product/${product.id}`}>
         <img
           src={product.imgUrl}
           alt={product.title}
           className='rounded shadow w-[100%]'
         />
       </Link>
-      <div className='flex flex-col items-center p-5'>
-        <span>{product.title}</span>
-        <span className='text-lg'>₪ {product.price}</span>
+      <div className='flex flex-col items-center gap-4 p-5'>
+        <Link href={`/product-details?product=${product.id}`} className='hover:underline underline-offset-2 cursor-pointer'>{product.title}</Link>
+        <span className='text-lg'>₪{product.price}</span>
         <button className='primary-button '>
           Add to cart
         </button>

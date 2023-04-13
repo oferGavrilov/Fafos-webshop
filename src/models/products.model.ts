@@ -1,48 +1,3 @@
-// export interface Product {
-//       advertisement: null
-//       brandName: string
-//       colour: string
-//       colourWayId: number
-//       facetGroupings: FacetGroupings
-//       groupId: null
-//       hasMultiplePrices: boolean
-//       hasVariantColours: boolean
-//       id: number
-//       imageUrl: string
-//       isSellingFast: boolean
-//       name: string
-//       price: Price
-//       productCode: number
-//       productType: string
-//       sponsoredCampaignId: null
-//       url: string
-//       videoUrl: string | null
-// }
-
-// interface FacetGroupings {
-//       products: {
-//             productId: number
-//       }
-//       type: string
-// }
-
-// interface Price {
-//       currency: string
-//       current: {
-//             value: number
-//             text: string
-//       }
-//       isMarkenDown: boolean
-//       isOutletPrice: boolean
-//       previous: {
-//             value: null
-//             text: string
-//       }
-//       rrp: {
-//             value: null
-//             text: string
-//       }
-// }
 
 export interface CarouselData {
       img: string
@@ -70,4 +25,15 @@ export interface Product {
       title: string
       price: number
       category: string
+      inventory: Inventory[]
+}
+
+interface Inventory {
+      color: string
+      quantity: Quantity[]
+}
+
+interface Quantity {
+      size: string
+      amount: number
 }
