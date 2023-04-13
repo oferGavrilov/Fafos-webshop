@@ -6,13 +6,13 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontFamily:{
-      'sans':['ui-sans-serif', 'system-ui'],
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui'],
       'mono': ['ui-monospace', 'SFMono-Regular'],
       'fuzzy': ['Fuzzy']
     },
     extend: {
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar'),],
 }

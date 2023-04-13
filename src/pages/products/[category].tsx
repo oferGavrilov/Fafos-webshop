@@ -8,12 +8,12 @@ import { SelectChangeEvent } from '@mui/material'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 
-function Products() {
+function Product() {
+      const category = useRouter().query.category
       const [filterBy, setFilterBy] = useState<Filter>(productService.getEmptyFilter())
       const [sort, setSort] = React.useState('none')
       const [products, setProducts] = useState<Product[]>([])
-      const category = useRouter().asPath.split('=')[1]
-      console.log('here')
+
       useEffect(() => {
             loadProducts()
       }, [sort])
@@ -36,4 +36,4 @@ function Products() {
       )
 }
 
-export default Products
+export default Product

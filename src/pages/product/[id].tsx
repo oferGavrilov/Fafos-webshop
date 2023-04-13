@@ -2,9 +2,8 @@ import Layout from '@/components/Layout'
 import { Product } from '@/models/products.model'
 import { productService } from '@/services/product.service'
 import { useRouter } from 'next/router'
-import { ParsedUrlQuery } from 'querystring'
 import React, { useEffect, useState } from 'react'
-import {BiShekel} from 'react-icons/bi'
+import { BiShekel } from 'react-icons/bi'
 
 function ProductDetails() {
       const id = useRouter().query.id as string

@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Inter&family=Outfit&family=Raleway:wght@600&family=Roboto+Slab&display=swap');
 @layer base {
   body {
-    @apply text-[#212529];
+    @apply text-[#212529] !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#adb5bd] ;
   }
 }
 
