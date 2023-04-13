@@ -7,7 +7,9 @@
             "category": "one-piece",
             "inventory": [
                   {
+                        "id":"10",
                         "color": "black",
+                        "imgUrl": "imgs/products/one-piece1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -24,7 +26,9 @@
                         ]
                   },
                   {
+                        "id":"11",
                         "color": "white",
+                        "imgUrl": "imgs/products/one-piece1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -50,7 +54,9 @@
             "category": "one-piece",
             "inventory": [
                   {
+                        "id":"12",
                         "color": "black",
+                        "imgUrl": "imgs/products/one-piece2.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -67,7 +73,9 @@
                         ]
                   },
                   {
+                        "id":"13",
                         "color": "white",
+                        "imgUrl": "imgs/products/one-piece2.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -93,7 +101,9 @@
             "category": "bottoms",
             "inventory": [
                   {
+                        "id":"14",
                         "color": "black",
+                        "imgUrl": "imgs/products/bottoms1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -110,7 +120,9 @@
                         ]
                   },
                   {
+                        "id":"15",
                         "color": "white",
+                        "imgUrl": "imgs/products/bottoms1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -136,7 +148,9 @@
             "category": "bottoms",
             "inventory": [
                   {
+                        "id":"16",
                         "color": "black",
+                        "imgUrl": "imgs/products/bottoms2.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -153,7 +167,9 @@
                         ]
                   },
                   {
+                        "id":"17",
                         "color": "white",
+                        "imgUrl": "imgs/products/bottoms2.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -179,7 +195,9 @@
             "category": "tops",
             "inventory": [
                   {
+                        "id":"18",
                         "color": "black",
+                        "imgUrl": "imgs/products/tops1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -196,7 +214,9 @@
                         ]
                   },
                   {
+                        "id":"19",
                         "color": "white",
+                        "imgUrl": "imgs/products/tops1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -222,7 +242,9 @@
             "category": "tops",
             "inventory": [
                   {
+                        "id":"20",
                         "color": "black",
+                        "imgUrl": "imgs/products/tops2.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -239,7 +261,9 @@
                         ]
                   },
                   {
+                        "id":"21",
                         "color": "white",
+                        "imgUrl": "imgs/products/tops2.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -265,7 +289,9 @@
             "category": "b-man",
             "inventory": [
                   {
+                        "id":"22",
                         "color": "black",
+                        "imgUrl": "imgs/products/b-man1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -282,7 +308,9 @@
                         ]
                   },
                   {
+                        "id":"23",
                         "color": "white",
+                        "imgUrl": "imgs/products/b-man1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -308,7 +336,9 @@
             "category": "b-man",
             "inventory": [
                   {
+                        "id":"24",
                         "color": "black",
+                        "imgUrl": "imgs/products/b-man2.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -325,7 +355,9 @@
                         ]
                   },
                   {
-                        "color": "white",
+                        "id":"25",
+                        "color": "purple",
+                        "imgUrl": "imgs/products/b-man-purple.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -351,7 +383,9 @@
             "category": "plus-size",
             "inventory": [
                   {
+                        "id":"26",
                         "color": "black",
+                        "imgUrl": "imgs/products/plus-size1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -368,7 +402,9 @@
                         ]
                   },
                   {
+                        "id":"27",
                         "color": "white",
+                        "imgUrl": "imgs/products/plus-size1.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -394,7 +430,9 @@
             "category": "plus-size",
             "inventory": [
                   {
+                        "id":"28",
                         "color": "black",
+                        "imgUrl": "imgs/products/plus-size2.jpg",
                         "quantity": [
                               {
                                     "size": "s",
@@ -411,7 +449,9 @@
                         ]
                   },
                   {
+                        "id":"29",
                         "color": "white",
+                        "imgUrl": "imgs/products/plus-size2.jpg",
                         "quantity": [
                               {
                                     "size": "s",

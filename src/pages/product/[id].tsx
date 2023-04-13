@@ -21,7 +21,7 @@ function ProductDetails() {
 
       if (!product) return <div>loading...</div>
       return (
-            <Layout page={product.title}>
+            <Layout page='Product'>
                   <div className='flex flex-col my-20 mx-10'>
                         <img src={'/' + product.imgUrl} alt={""} />
                         <div className='flex flex-col mt-5 text-center gap-4'>

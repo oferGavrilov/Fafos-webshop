@@ -8,6 +8,10 @@
   }
 }
 
+.swiper-pagination {
+  @apply !bottom-5 !w-[30%] 
+}
+
 @layer components {
   /* Header */
   .scrolled {
@@ -64,5 +68,9 @@
   }
   .main-text {
     @apply font-fuzzy text-[#212529] tracking-wider;
+  }
+
+  .swiper-pagination-bullet{
+    @apply !w-7 !h-7 !bottom-5 border-2 border-black
   }
 }

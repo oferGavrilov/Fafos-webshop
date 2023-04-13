@@ -15,8 +15,9 @@ function Product() {
       const [products, setProducts] = useState<Product[]>([])
 
       useEffect(() => {
+            if(!category) return
             loadProducts()
-      }, [sort])
+      }, [sort , category])
 
       async function loadProducts() {
             let data = productService.getAllProducts({ ...filterBy, category: category }, sort)
