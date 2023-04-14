@@ -6,14 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
 import "swiper/css";
 import "swiper/css/pagination";
-import { useRouter } from 'next/router'
 interface Props {
   product: Product
 }
 
 function ProductPreview({ product }: Props) {
   const data = product.inventory.map(item => item.imgUrl)
-  const router = useRouter()
   const pagination = {
     clickable: true,
     renderBullet: function (index: number) {
@@ -26,7 +24,7 @@ function ProductPreview({ product }: Props) {
       <Swiper pagination={pagination} modules={[Pagination]} className='mySwiper'>
         {data.map((item, idx) => (
           <SwiperSlide key={product.inventory[idx].id}>
-            <Link href={`/product/${product.id}`}>
+            <Link href={`/product/${product.id}?item=${product.inventory[idx].id}`}>
               <img className='rounded relative shadow w-[100%]' src={'/' + item[idx]} alt={item[idx]} />
             </Link>
             <div className='flex flex-col items-center gap-4 p-5'>
