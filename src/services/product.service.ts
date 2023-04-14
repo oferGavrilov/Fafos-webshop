@@ -5,7 +5,6 @@ import carouselData from '../carousel-data.json'
 import hotCategoriesData from '../hot-categories.json'
 import collectionsData from '../collections.json'
 import { Filter } from "@/models/filter.model";
-import { ParsedUrlQuery } from "querystring";
 
 export const productService = {
       getAllProducts,

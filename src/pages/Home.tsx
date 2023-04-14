@@ -8,11 +8,13 @@ import React from 'react'
 
 function Home() {
       return (
-            <div className='scroll-smooth'>
+            <div className='scroll-smooth '>
                   <Hero />
-                  <Teaser />
-                  <ImgCarousel />
-                  <HotCategories />
+                  <div className='md:mx-10 lg:mx-28 xl:mx-32'>
+                        <Teaser />
+                        <ImgCarousel />
+                        <HotCategories />
+                  </div>
                   <HomeVideo />
             </div>
       )

@@ -24,13 +24,12 @@
 
   /* Hero */
   .hero-btn {
-    @apply uppercase text-white border-white border-2 mt-4 md:mt-10
-    tracking-wider py-1 px-5 md:py-3 md:px-10 ease-in-out duration-300 hover:bg-white hover:text-[#212529];
+    @apply uppercase text-white border-white border-2 mt-4 md:mt-10 tracking-wider py-1 px-5 md:py-3 md:px-10 ease-in-out duration-300 hover:bg-white hover:text-[#212529];
   }
 
   /* Teaser */
   .teaser-img {
-    @apply object-cover transition duration-300  max-h-[710px]  h-[100%] w-[100%] hover:scale-110;
+    @apply object-cover transition duration-300    h-[100%] w-[100%] hover:scale-110;
   }
   .teaser-name {
     @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy ;

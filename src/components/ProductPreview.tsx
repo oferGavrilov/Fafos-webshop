@@ -16,28 +16,29 @@ function ProductPreview({ product }: Props) {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      console.log(product.inventory[index].color)
       return `<span class="swiper-pagination-bullet !bg-${product.inventory[index].color}"></span>`;
     },
   };
   console.log(data)
   return (
     <article className='card'>
-      <Link href={`/product/${product.id}`}>
-        <Swiper  pagination={pagination} modules={[Pagination]} className='mySwiper'>
-          {data.map((item, idx) => (
-            <SwiperSlide key={product.inventory[idx].id}><img className='rounded relative shadow w-[100%]' src={'/' + item} alt={item} /></SwiperSlide>
-          ))}
-          <div className='flex flex-col items-center gap-4 p-5'>
-            <Link href={`/product/${product.id}`} className='hover:underline underline-offset-2 cursor-pointer'>{product.title}</Link>
-            <span className='text-lg'>₪{product.price}</span>
-            <button className='primary-button '>
-              Add to cart
-            </button>
-          </div>
-        </Swiper>
-      </Link>
-    </article>
+      <Swiper pagination={pagination} modules={[Pagination]} className='mySwiper'>
+        {data.map((item, idx) => (
+          <SwiperSlide key={product.inventory[idx].id}>
+            <Link href={`/product/${product.id}`}>
+              <img className='rounded relative shadow w-[100%]' src={'/' + item} alt={item} />
+            </Link>
+          </SwiperSlide>
+        ))}
+        <div className='flex flex-col items-center gap-4 p-5'>
+          <Link href={`/product/${product.id}`} className='hover:underline underline-offset-2 cursor-pointer'>{product.title}</Link>
+          <span className='text-lg'>₪{product.price}</span>
+          <button className='primary-button '>
+            Add to cart
+          </button>
+        </div>
+      </Swiper>
+    </article >
   )
 }
 
