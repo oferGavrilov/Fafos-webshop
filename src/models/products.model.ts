@@ -31,7 +31,8 @@ export interface Product {
 interface Inventory {
       id:string
       color: string
-      imgUrl: string
+      bulletColor: string
+      imgUrl: string[]
       quantity: Quantity[]
 }
 

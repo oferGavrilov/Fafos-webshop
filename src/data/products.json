@@ -2,14 +2,18 @@
       {
             "id": "100",
             "imgUrl": "imgs/products/one-piece1.jpg",
-            "title": "JADE INDIA PAISLEY - ONE PIECE",
+            "title": "Mulan",
             "price": 835,
             "category": "one-piece",
             "inventory": [
                   {
-                        "id":"10",
-                        "color": "black",
-                        "imgUrl": "imgs/products/one-piece1.jpg",
+                        "id": "10",
+                        "color": "apple",
+                        "bulletColor":"springgreen",
+                        "imgUrl": [
+                              "imgs/products/one-piece/mulan-apple1.jpg",
+                              "imgs/products/one-piece/mulan-apple2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -26,9 +30,13 @@
                         ]
                   },
                   {
-                        "id":"11",
+                        "id": "11",
                         "color": "white",
-                        "imgUrl": "imgs/products/one-piece1.jpg",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/one-piece/mulan-white1.jpg",
+                              "imgs/products/one-piece/mulan-white2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -49,14 +57,18 @@
       {
             "id": "101",
             "imgUrl": "imgs/products/one-piece2.jpg",
-            "title": "JADE TURQUOISE - ONE PIECE",
+            "title": "Jade",
             "price": 835,
             "category": "one-piece",
             "inventory": [
                   {
-                        "id":"12",
-                        "color": "black",
-                        "imgUrl": "imgs/products/one-piece2.jpg",
+                        "id": "12",
+                        "color": "turquoise",
+                        "bulletColor":"turquoise",
+                        "imgUrl": [
+                              "imgs/products/one-piece/jade-turquoise1.jpg",
+                              "imgs/products/one-piece/jade-turquoise2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -73,9 +85,13 @@
                         ]
                   },
                   {
-                        "id":"13",
-                        "color": "white",
-                        "imgUrl": "imgs/products/one-piece2.jpg",
+                        "id": "13",
+                        "color": "lime",
+                        "bulletColor":"lime",
+                        "imgUrl": [
+                              "imgs/products/one-piece/jade-lime1.jpg",
+                              "imgs/products/one-piece/jade-lime2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -96,14 +112,18 @@
       {
             "id": "102",
             "imgUrl": "imgs/products/bottoms1.jpg",
-            "title": "LUNA PAISLEY - BOTTOM",
+            "title": "Tai",
             "price": 430,
             "category": "bottoms",
             "inventory": [
                   {
-                        "id":"14",
-                        "color": "black",
-                        "imgUrl": "imgs/products/bottoms1.jpg",
+                        "id": "14",
+                        "color": "ice-blue",
+                        "bulletColor":"deepskyblue",
+                        "imgUrl": [
+                              "imgs/products/bottoms/tai-ice-blue1.jpg",
+                              "imgs/products/bottoms/tai-ice-blue2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -120,9 +140,13 @@
                         ]
                   },
                   {
-                        "id":"15",
-                        "color": "white",
-                        "imgUrl": "imgs/products/bottoms1.jpg",
+                        "id": "15",
+                        "color": "ivory",
+                        "bulletColor":"ghostwhite",
+                        "imgUrl": [
+                              "imgs/products/bottoms/tai-ivory1.jpg",
+                              "imgs/products/bottoms/tai-ivory2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -143,14 +167,18 @@
       {
             "id": "103",
             "imgUrl": "imgs/products/bottoms2.jpg",
-            "title": "DOLLY YELLOW FLOWERS - BOTTOM",
-            "price": 360,
+            "title": "Donna - BOTTOM",
+            "price": 350,
             "category": "bottoms",
             "inventory": [
                   {
-                        "id":"16",
+                        "id": "16",
                         "color": "black",
-                        "imgUrl": "imgs/products/bottoms2.jpg",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-black1.jpg",
+                              "imgs/products/bottoms/donna-black2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -167,9 +195,13 @@
                         ]
                   },
                   {
-                        "id":"17",
-                        "color": "white",
-                        "imgUrl": "imgs/products/bottoms2.jpg",
+                        "id": "17",
+                        "color": "pink",
+                        "bulletColor":"pink",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-pink1.jpg",
+                              "imgs/products/bottoms/donna-pink2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -189,34 +221,19 @@
       },
       {
             "id": "104",
-            "imgUrl": "imgs/products/tops1.jpg",
-            "title": "MILA HOT PINK - TOP",
+            "imgUrl": "imgs/products/tops-pink1.jpg",
+            "title": "Mila",
             "price": 375,
             "category": "tops",
             "inventory": [
                   {
-                        "id":"18",
-                        "color": "black",
-                        "imgUrl": "imgs/products/tops1.jpg",
-                        "quantity": [
-                              {
-                                    "size": "s",
-                                    "amount": 3
-                              },
-                              {
-                                    "size": "m",
-                                    "amount": 5
-                              },
-                              {
-                                    "size": "l",
-                                    "amount": 1
-                              }
-                        ]
-                  },
-                  {
-                        "id":"19",
-                        "color": "white",
-                        "imgUrl": "imgs/products/tops1.jpg",
+                        "id": "18",
+                        "color": "pink",
+                        "bulletColor":"pink",
+                        "imgUrl": [
+                              "imgs/products/tops/mila-pink1.jpg",
+                              "imgs/products/tops/mila-pink2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -237,14 +254,18 @@
       {
             "id": "105",
             "imgUrl": "imgs/products/tops2.jpg",
-            "title": "BELL RUBY - TOP",
+            "title": "Bell",
             "price": 370,
             "category": "tops",
             "inventory": [
                   {
-                        "id":"20",
-                        "color": "black",
-                        "imgUrl": "imgs/products/tops2.jpg",
+                        "id": "20",
+                        "color": "ruby",
+                        "bulletColor":"saddlebrown",
+                        "imgUrl": [
+                              "imgs/products/tops/bell-ruby1.jpg",
+                              "imgs/products/tops/bell-ruby2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -261,9 +282,13 @@
                         ]
                   },
                   {
-                        "id":"21",
-                        "color": "white",
-                        "imgUrl": "imgs/products/tops2.jpg",
+                        "id": "21",
+                        "color": "purple",
+                        "bulletColor":"purple",
+                        "imgUrl": [
+                              "imgs/products/tops/bell-purple1.jpg",
+                              "imgs/products/tops/bell-purple2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -281,64 +306,22 @@
                   }
             ]
       },
-      {
-            "id": "106",
-            "imgUrl": "imgs/products/b-man1.jpg",
-            "title": "MAN SWIM SHORT - BLUE STRIPES",
-            "price": 350,
-            "category": "b-man",
-            "inventory": [
-                  {
-                        "id":"22",
-                        "color": "black",
-                        "imgUrl": "imgs/products/b-man1.jpg",
-                        "quantity": [
-                              {
-                                    "size": "s",
-                                    "amount": 3
-                              },
-                              {
-                                    "size": "m",
-                                    "amount": 5
-                              },
-                              {
-                                    "size": "l",
-                                    "amount": 1
-                              }
-                        ]
-                  },
-                  {
-                        "id":"23",
-                        "color": "white",
-                        "imgUrl": "imgs/products/b-man1.jpg",
-                        "quantity": [
-                              {
-                                    "size": "s",
-                                    "amount": 3
-                              },
-                              {
-                                    "size": "m",
-                                    "amount": 5
-                              },
-                              {
-                                    "size": "l",
-                                    "amount": 1
-                              }
-                        ]
-                  }
-            ]
-      },
+      
       {
             "id": "107",
             "imgUrl": "imgs/products/b-man2.jpg",
-            "title": "MAN SWIM SHORT - BEIGE STRIPES",
+            "title": "Swim short",
             "price": 350,
             "category": "b-man",
             "inventory": [
                   {
-                        "id":"24",
-                        "color": "black",
-                        "imgUrl": "imgs/products/b-man2.jpg",
+                        "id": "24",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/b-man/swim-white1.jpg",
+                              "imgs/products/b-man/swim-white2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -355,9 +338,13 @@
                         ]
                   },
                   {
-                        "id":"25",
-                        "color": "purple",
-                        "imgUrl": "imgs/products/b-man-purple.jpg",
+                        "id": "25",
+                        "color": "blue",
+                        "bulletColor":"blue",
+                        "imgUrl": [
+                              "imgs/products/b-man/swim-blue1.jpg",
+                              "imgs/products/b-man/swim-blue2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
@@ -378,80 +365,18 @@
       {
             "id": "108",
             "imgUrl": "imgs/products/plus-size1.jpg",
-            "title": "SPRING MINT - TOP",
+            "title": "Spring-mint",
             "price": 360,
             "category": "plus-size",
             "inventory": [
                   {
-                        "id":"26",
-                        "color": "black",
-                        "imgUrl": "imgs/products/plus-size1.jpg",
-                        "quantity": [
-                              {
-                                    "size": "s",
-                                    "amount": 3
-                              },
-                              {
-                                    "size": "m",
-                                    "amount": 5
-                              },
-                              {
-                                    "size": "l",
-                                    "amount": 1
-                              }
-                        ]
-                  },
-                  {
-                        "id":"27",
-                        "color": "white",
-                        "imgUrl": "imgs/products/plus-size1.jpg",
-                        "quantity": [
-                              {
-                                    "size": "s",
-                                    "amount": 3
-                              },
-                              {
-                                    "size": "m",
-                                    "amount": 5
-                              },
-                              {
-                                    "size": "l",
-                                    "amount": 1
-                              }
-                        ]
-                  }
-            ]
-      },
-      {
-            "id": "109",
-            "imgUrl": "imgs/products/plus-size2.jpg",
-            "title": "CHAIN MINT - TOP",
-            "price": 350,
-            "category": "plus-size",
-            "inventory": [
-                  {
-                        "id":"28",
-                        "color": "black",
-                        "imgUrl": "imgs/products/plus-size2.jpg",
-                        "quantity": [
-                              {
-                                    "size": "s",
-                                    "amount": 3
-                              },
-                              {
-                                    "size": "m",
-                                    "amount": 5
-                              },
-                              {
-                                    "size": "l",
-                                    "amount": 1
-                              }
-                        ]
-                  },
-                  {
-                        "id":"29",
-                        "color": "white",
-                        "imgUrl": "imgs/products/plus-size2.jpg",
+                        "id": "26",
+                        "color": "spring-mint",
+                        "bulletColor":"springgreen",
+                        "imgUrl": [
+                              "imgs/products/plus-size/spring-mint1.jpg",
+                              "imgs/products/plus-size/spring-mint2.jpg"
+                        ],
                         "quantity": [
                               {
                                     "size": "s",
