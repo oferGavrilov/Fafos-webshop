@@ -11,11 +11,17 @@
 .swiper-pagination {
   @apply !bottom-5 !w-[30%] 
 }
+.carousel-root {
+  @apply md:flex
+}
+.thumbs{
+  @apply  md:flex md:flex-col
+}
 
 @layer components {
   /* Header */
   .scrolled {
-    @apply absolute top-0 z-20 bg-slate-50 opacity-90 font-black; 
+    @apply absolute top-0 z-20 bg-[#e9ecef] opacity-90 font-black; 
   }
 
   .header-icon {

@@ -1,14 +1,12 @@
 import { utilService } from "./util.service";
-import { CarouselData, CategoriesData, Product } from "@/models/products.model";
+import { CategoriesData, Product } from "@/models/products.model";
 import products from '../data/products.json'
-import carouselData from '../carousel-data.json'
 import hotCategoriesData from '../hot-categories.json'
 import collectionsData from '../collections.json'
 import { Filter } from "@/models/filter.model";
 
 export const productService = {
       getAllProducts,
-      getCarouselData,
       getCategoriesData,
       getCollections,
       getEmptyFilter,
@@ -42,13 +40,6 @@ function setSort(sort: string, products: Product[]) {
             case 'price-descending': return products.sort((a, b) => b.price - a.price)
             default: return products
       }
-}
-
-function getCarouselData() {
-      const carouselWithId = carouselData.map((item) => {
-            return item = { ...item, id: utilService.makeId() } as CarouselData
-      })
-      return carouselWithId
 }
 
 function getCategoriesData() {

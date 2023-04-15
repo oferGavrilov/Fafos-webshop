@@ -28,7 +28,7 @@ function ProductPreview({ product }: Props) {
               <img className='rounded relative shadow w-[100%]' src={'/' + item[idx]} alt={item[idx]} />
             </Link>
             <div className='flex flex-col items-center gap-4 p-5'>
-              <Link href={`/product/${product.id}`} className='hover:underline underline-offset-2 cursor-pointer uppercase'>{product.title} {product.inventory[idx].color} {product.category}</Link>
+              <Link href={`/product/${product.id}`} className='hover:underline underline-offset-2 h-12 cursor-pointer uppercase'>{product.title} {product.inventory[idx].color} {product.category}</Link>
               <span className='text-lg'>₪{product.price}</span>
               <button className='primary-button '>
                 Add to cart

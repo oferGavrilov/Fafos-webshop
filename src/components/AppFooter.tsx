@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 function AppFooter() {
   return (
-    <footer className='w-[100%] p-10  bg-[#f2d6c2] justify-center items-center shadow-inner'>
+    <footer className='w-[100%] p-10  bg-[#e9ecef] justify-center items-center shadow-inner'>
       <div className='flex gap-x-16 justify-between'>
         <ul>
           <li className='footer-links'>משלוחים</li>
