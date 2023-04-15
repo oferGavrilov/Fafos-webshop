@@ -11,12 +11,13 @@
 .swiper-pagination {
   @apply !bottom-5 !w-[30%] 
 }
-.carousel-root {
+/* .carousel-root {
   @apply md:flex
-}
-.thumbs{
+} */
+
+/* .thumbs{
   @apply  md:flex md:flex-col
-}
+} */
 
 @layer components {
   /* Header */
