@@ -4,20 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Inter&family=Outfit&family=Raleway:wght@600&family=Roboto+Slab&display=swap');
 @layer base {
   body {
-    @apply text-[#212529] !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#adb5bd] ;
+    @apply text-[#212529] bg-[#f8f9fa] !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#adb5bd] ;
   }
 }
 
 .swiper-pagination {
   @apply !bottom-5 !w-[30%] 
 }
-/* .carousel-root {
-  @apply md:flex
-} */
-
-/* .thumbs{
-  @apply  md:flex md:flex-col
-} */
 
 @layer components {
   /* Header */

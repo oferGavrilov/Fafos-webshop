@@ -31,7 +31,7 @@ function ImgCarousel() {
             <>
                   <div className='font-fuzzy text-center mb-4 tracking-wider'>
                         <h2 className='text-4xl mb-4'>Just Landed</h2>
-                        <Link href="/products" className='uppercase underline underline-offset-2 font-mono'>Shop 23' Collection</Link>
+                        <Link href="/collections" className='uppercase underline underline-offset-2 font-mono'>Shop 23' Collection</Link>
                   </div>
                   <Carousel itemClass='px-4' centerMode={false} responsive={responsive} infinite={true} className='mb-[85px] sm:mx-10'>
                         {products.map((product: Product, idx: number) => (

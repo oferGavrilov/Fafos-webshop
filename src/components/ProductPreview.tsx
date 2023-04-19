@@ -2,15 +2,18 @@ import { Product } from '@/models/products.model'
 import Link from 'next/link'
 import React from 'react'
 // import Carousel from 'react-responsive-carousel'
+import { useShoppingCart } from '@/context/ShoppingCart'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
 import "swiper/css";
 import "swiper/css/pagination";
+import { formatCurrency } from '@/services/formatCurrency'
 interface Props {
   product: Product
 }
 
 function ProductPreview({ product }: Props) {
+  const { removeFromCart, getItemQuantity, increaseItemQuantity, decreaseItemQuantity } = useShoppingCart()
   const data = product.inventory.map(item => item.imgUrl)
   const pagination = {
     clickable: true,
@@ -29,8 +32,8 @@ function ProductPreview({ product }: Props) {
             </Link>
             <div className='flex flex-col items-center gap-4 p-5'>
               <Link href={`/product/${product.id}`} className='hover:underline underline-offset-2 h-12 cursor-pointer uppercase'>{product.title} {product.inventory[idx].color} {product.category}</Link>
-              <span className='text-lg'>₪{product.price}</span>
-              <button className='primary-button '>
+              <span className='text-lg'>{formatCurrency(product.price)}</span>
+              <button className='primary-button' onClick={() => increaseItemQuantity(product.id)}>
                 Add to cart
               </button>
             </div>

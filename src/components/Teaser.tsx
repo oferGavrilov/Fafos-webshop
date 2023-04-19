@@ -3,7 +3,7 @@ import React from 'react'
 
 function Teaser() {
   return (
-    <ul className='sm:mx-12  z-10 flex flex-col md:flex-row  gap-[30px] my-6 md:my-[85px]'>
+    <ul className='sm:mx-12  z-10 flex flex-col md:flex-row gap-5 xl:gap-[30px] my-6 md:my-[85px]'>
       <li className='flex-1 relative overflow-hidden'>
         <Link href="/products/one-piece">
           <img className='teaser-img' src="imgs/home/teaser1.jpg" alt="teaser" />
