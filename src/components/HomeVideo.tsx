@@ -1,5 +1,4 @@
 import React from 'react'
-// import ReactPlayer from 'react-player'
 import { Suspense } from 'react'
 import dynamic from 'next/dynamic';
 

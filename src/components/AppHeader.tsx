@@ -44,7 +44,7 @@ function AppHeader({ page }: Props) {
                 </Badge>
               </IconButton>
             </Link>
-            <Link className='header-icon' href="/search">
+            <Link className='header-icon' href="#">
               <IconButton>
                 <AiOutlineSearch />
               </IconButton>

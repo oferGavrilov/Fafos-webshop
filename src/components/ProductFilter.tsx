@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import SideMenu from './SideMenu'
-import { Box, FormControl, InputLabel, Select, MenuItem, SelectChangeEvent } from '@mui/material'
-import TuneIcon from '@mui/icons-material/Tune'
+import { Box, FormControl, InputLabel, Select, MenuItem } from '@mui/material'
 import { MdTune } from 'react-icons/md'
 interface Props {
   category: string | string[] | undefined

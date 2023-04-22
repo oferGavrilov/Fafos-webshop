@@ -7,12 +7,14 @@ import { productService } from '@/services/product.service'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
+import { IoClose } from 'react-icons/io5'
 import { BiShekel } from 'react-icons/bi'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
 import { Carousel } from 'react-responsive-carousel'
 
 function ProductDetails() {
       const [product, setProduct] = useState<Product>()
+      const router = useRouter()
       const id = useRouter().query.id as string
       const { item } = useRouter().query
       const images = product?.inventory.filter(type => type.id === item).map(item => item.imgUrl).flat()
@@ -34,7 +36,7 @@ function ProductDetails() {
                   <div className='my-24 mx-16 md:mx-20 flex  flex-col md:flex-row-reverse'>
                         <Carousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
                               {images && images.map((item, idx) => (
-                                    <div className=' flex flex-col'>
+                                    <div key={item + idx} className='flex flex-col'>
                                           < img src={'/' + item} className='w-full' alt="" />
                                     </div>
                               ))}
@@ -52,8 +54,8 @@ function ProductDetails() {
                                           name="row-radio-buttons-group"
                                           className='mx-auto mt-4 gap-2'
                                     >
-                                          {data.quantity.map(item => (
-                                                <FormControlLabel disabled={!!(!item.amount)} defaultChecked={true} className='border !ml-0 !mr-0 border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
+                                          {data.quantity.map((item, idx) => (
+                                                <FormControlLabel key={item.size + idx} disabled={!!(!item.amount)} defaultChecked={true} className='border !ml-0 !mr-0 border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
                                           ))}
                                     </RadioGroup>
                               </FormControl>}
@@ -61,6 +63,7 @@ function ProductDetails() {
                               <span className='text-center main-text mt-1'>✦ משלוח חינם בהזמנה מעל ₪600 ✦</span>
                         </div>
                   </div>
+                  <IoClose className='absolute top-24 right-4 text-3xl' onClick={() => router.back()} />
             </Layout >
 
       )

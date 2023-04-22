@@ -1,7 +1,6 @@
 import { Product } from '@/models/products.model'
 import Link from 'next/link'
 import React from 'react'
-// import Carousel from 'react-responsive-carousel'
 import { useShoppingCart } from '@/context/ShoppingCart'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
