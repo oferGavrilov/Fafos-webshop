@@ -55,6 +55,9 @@
   .primary-button {
     @apply rounded font-fuzzy tracking-wider text-lg bg-[#ced4da] py-2 px-5 transition-colors duration-300 shadow outline-none hover:bg-[#adb5bd] active:bg-amber-500;
   }
+  .login-btn {
+    @apply absolute uppercase bg-white px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#242424] hover:text-white;
+  }
 
 }
 

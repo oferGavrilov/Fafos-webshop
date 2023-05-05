@@ -9,7 +9,7 @@ module.exports = {
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui'],
       'mono': ['ui-monospace', 'SFMono-Regular'],
-      'fuzzy': ['Fuzzy']
+      'fuzzy': ['Fuzzy' , 'ui-sans-serif', 'system-ui'],
     },
     extend: {
     },

@@ -1,0 +1,38 @@
+.login-page {
+      padding-top: 2rem;
+      height: 100vh;
+      background-image: linear-gradient(to bottom, #f4f9f9, #cbece5, #abddc6, #98cc9e, #93b970);
+}
+
+.animate-wrapper {
+      animation-name: header;
+      animation-duration: 1s;
+}
+
+.header {
+      color: #6c757d;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 1rem;
+}
+
+
+@keyframes header {
+      0% {
+            opacity: 0;
+            transform: translateY(-100px);
+      }
+
+      80% {
+            opacity: 1;
+            transform: translateY(15px);
+      }
+
+      100% {
+            opacity: 1;
+            transform: translateY(0px);
+      }
+}
