@@ -11,9 +11,11 @@ import { IoClose } from 'react-icons/io5'
 import { BiShekel } from 'react-icons/bi'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
 import { Carousel } from 'react-responsive-carousel'
+import { toast } from 'react-toastify'
 
 function ProductDetails() {
       const [product, setProduct] = useState<Product>()
+      const [size , setSize] = useState<string>('')
       const router = useRouter()
       const id = useRouter().query.id as string
       const { item } = useRouter().query
@@ -30,13 +32,21 @@ function ProductDetails() {
             setProduct(data)
       }
 
+      function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+            console.log(e.target.value)
+            setSize(e.target.value)
+      }
+
+      function onAddToCart(){
+            if(!size) return toast.error('You must choose a size')
+            console.log(size)
+      }
+
       if (!product) return <div>loading...</div>
+      console.log(data)
       return (
             <Layout page='Product'>
-                  <div className={`bg-gradient-to-r from-50 h-screen`}>
-
-                  
-                  <div className='my-24 mx-16 md:mx-20 flex  flex-col md:flex-row-reverse'>
+                  <div className='my-24 mx-16 md:mx-20 flex flex-col md:flex-row-reverse'>
                         <Carousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
                               {images && images.map((item, idx) => (
                                     <div key={item + idx} className='flex flex-col'>
@@ -58,16 +68,15 @@ function ProductDetails() {
                                           className='mx-auto mt-4 gap-2'
                                     >
                                           {data.quantity.map((item, idx) => (
-                                                <FormControlLabel key={item.size + idx} disabled={!!(!item.amount)} defaultChecked={true} className='border !ml-0 !mr-0 border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
+                                                <FormControlLabel key={item.size + idx} disabled={!!(!item.amount)} onChange={handleChange} defaultChecked={true} className='border !ml-0 !mr-0 border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
                                           ))}
                                     </RadioGroup>
                               </FormControl>}
-                              <button className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>הוספה לסל</button>
+                              <button onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>הוספה לסל</button>
                               <span className='text-center main-text mt-1'>✦ משלוח חינם בהזמנה מעל ₪600 ✦</span>
                         </div>
                   </div>
-                  <IoClose className='absolute top-24 right-4 text-3xl' onClick={() => router.back()} />
-                  </div>
+                  <IoClose className='absolute top-24 right-4 text-3xl cursor-pointer' onClick={() => router.back()} />
             </Layout >
 
       )

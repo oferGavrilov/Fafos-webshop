@@ -21,9 +21,10 @@ const ShoppingCartContext = createContext({} as ShoppingCartContextType)
 export const useShoppingCart = () => useContext(ShoppingCartContext)
 
 export function ShoppingCartProvider({ children }: Props) {
-      const [cartItems, setCartItems] = useState<Cart[]>([])
+      const [cartItems, setCartItems] = useState<Cart[]>(cartService.getCart())
 
-      const cartQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0)
+      console.log(cartItems)
+      const cartQuantity = cartItems ? cartItems.reduce((acc, item) => acc + item.quantity, 0) : 0
 
       function getItemQuantity(id: string) {
             const item = cartItems.find(item => item.id === id)
@@ -35,7 +36,7 @@ export function ShoppingCartProvider({ children }: Props) {
                   const item = cartItems.find(item => item.id === id)
                   if (item) {
                         item.quantity++
-                        // cartService.addToCart(item)
+                        cartService.addToCart(item)
                         return [...prevState]
                   } else {
                         const product = productService.getProductById(id)

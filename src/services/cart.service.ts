@@ -1,4 +1,3 @@
-import { useLocalStorage } from "@hooks/useLocalStorage"
 import { Cart, Product } from "../models/products.model"
 import { loadFromStorage, saveToStorage } from "../utils/util.service"
 
@@ -10,9 +9,9 @@ export const cartService = {
       // updateCart,
       // clearCart
 }
-const {} = useLocalStorage(STORAGE_KEY, [] as Cart[])
 
 function getCart(): Cart[] {
+      if(typeof window === 'undefined' || !window.localStorage) return
       let cart = loadFromStorage(STORAGE_KEY)
       if (!cart || !cart.length) {
             cart = []
