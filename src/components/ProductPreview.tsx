@@ -12,7 +12,7 @@ interface Props {
 }
 
 function ProductPreview({ product }: Props) {
-  const { removeFromCart, getItemQuantity, increaseItemQuantity, decreaseItemQuantity } = useShoppingCart()
+  const { removeItem, getItemQuantity, increaseItemQuantity, decreaseItemQuantity } = useShoppingCart()
   const data = product.inventory.map(item => item.imgUrl)
   const pagination = {
     clickable: true,
@@ -32,9 +32,11 @@ function ProductPreview({ product }: Props) {
             <div className='flex flex-col items-center gap-4 p-5'>
               <Link href={`/product/${product.id}`} className='hover:underline underline-offset-2 h-12 cursor-pointer uppercase'>{product.title} {product.inventory[idx].color} {product.category}</Link>
               <span className='text-lg'>{formatCurrency(product.price)}</span>
-              <button className='primary-button' onClick={() => increaseItemQuantity(product.id)}>
-                Add to cart
-              </button>
+              <Link href={`/product/${product.id}?item=${product.inventory[idx].id}`}>
+                <button className='primary-button'>
+                  More Details
+                </button>
+              </Link>
             </div>
           </SwiperSlide>
         ))}

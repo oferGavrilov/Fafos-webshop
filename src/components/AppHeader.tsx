@@ -8,6 +8,7 @@ import { Badge, IconButton } from "@mui/material"
 
 import MenuIcon from '@mui/icons-material/Menu'
 import SideMenu from './SideMenu'
+import { useShoppingCart } from '@context/ShoppingCart'
 
 interface Props {
   page: string
@@ -16,6 +17,7 @@ interface Props {
 function AppHeader({ page }: Props) {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const {cartItems} = useShoppingCart()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,12 +41,12 @@ function AppHeader({ page }: Props) {
             </Link>
             <Link className='header-icon' href="/cart">
               <IconButton>
-                <Badge badgeContent={4} color="warning">
+                <Badge badgeContent={cartItems.length} color="warning">
                   <IoBagOutline />
                 </Badge>
               </IconButton>
             </Link>
-            <Link className='header-icon' href="#">
+            <Link className='header-icon' href="/yes">
               <IconButton>
                 <AiOutlineSearch />
               </IconButton>

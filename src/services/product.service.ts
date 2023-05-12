@@ -1,9 +1,9 @@
-import { utilService } from "./util.service"
-import { CategoriesData, Product } from "@/models/products.model"
+import {  makeId } from "../utils/util.service"
+import { CategoriesData, Product } from "../models/products.model"
 import products from '../data/products.json'
 import hotCategoriesData from '../hot-categories.json'
 import collectionsData from '../collections.json'
-import { Filter } from "@/models/filter.model"
+import { Filter } from "../models/filter.model"
 
 export const productService = {
       getAllProducts,
@@ -44,7 +44,7 @@ function setSort(sort: string, products: Product[]) {
 
 function getCategoriesData() {
       const categoriesWithId = hotCategoriesData.map((item) => {
-            return item = { ...item, id: utilService.makeId() } as CategoriesData
+            return item = { ...item, id: makeId() } as CategoriesData
       })
       return categoriesWithId
 }

@@ -41,3 +41,7 @@ interface Quantity {
       size: string
       amount: number
 }
+
+export interface Cart  extends Product{
+      quantity: number
+}

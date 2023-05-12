@@ -1,31 +1,27 @@
-import { createContext, useContext, useState } from 'react'
+import { Cart } from '@models/products.model'
+import { cartService } from '@services/cart.service'
+import { productService } from '@services/product.service'
+import { createContext, useContext, useMemo, useState } from 'react'
 
 interface Props {
       children: React.ReactNode
 }
 
-type CartItem = {
-      id: string
-      quantity: number
-}
-
-type ShoppingCartContext = {
+type ShoppingCartContextType = {
       getItemQuantity: (id: string) => number
       increaseItemQuantity: (id: string) => void
       decreaseItemQuantity: (id: string) => void
-      removeFromCart: (id: string) => void
-      cartItems: CartItem[]
+      removeItem: (id: string) => void
+      cartItems: Cart[]
       cartQuantity: number
 }
 
-const ShoppingCartContext = createContext({} as ShoppingCartContext)
+const ShoppingCartContext = createContext({} as ShoppingCartContextType)
 
-export function useShoppingCart() {
-      return useContext(ShoppingCartContext)
-}
+export const useShoppingCart = () => useContext(ShoppingCartContext)
 
 export function ShoppingCartProvider({ children }: Props) {
-      const [cartItems, setCartItems] = useState<CartItem[]>([])
+      const [cartItems, setCartItems] = useState<Cart[]>([])
 
       const cartQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0)
 
@@ -34,34 +30,47 @@ export function ShoppingCartProvider({ children }: Props) {
             return item ? item.quantity : 0
       }
 
-      function increaseCartQuantity(id: string) {
-            const item = cartItems.find(item => item.id === id)
-            if (item) {
-                  item.quantity++
-            } else {
-                  cartItems.push({ id, quantity: 1 })
-            }
-            setCartItems([...cartItems])
+      function increaseItemQuantity(id: string): void {
+            setCartItems(prevState => {
+                  const item = cartItems.find(item => item.id === id)
+                  if (item) {
+                        item.quantity++
+                        // cartService.addToCart(item)
+                        return [...prevState]
+                  } else {
+                        const product = productService.getProductById(id)
+                        return [...cartItems, { ...product, quantity: 1 }] as Cart[]
+                  }
+            })
       }
 
-      function decreaseCartQuantity(id: string) {
-            const item = cartItems.find(item => item.id === id)
-            if (item) {
-                  item.quantity--
-            }
-            setCartItems([...cartItems])
+      function decreaseItemQuantity(id: string): void {
+            setCartItems(prevState => {
+                  const item = prevState.find(item => item.id === id)
+                  if (item) {
+                        if (item.quantity === 1) removeItem(id)
+                        item.quantity--
+                        return [...prevState]
+                  }
+                  return [...prevState, { id, quantity: 1 }] as Cart[]
+            })
       }
 
-      function removeFromCart(id: string) {
-            const item = cartItems.find(item => item.id === id)
-            if (item) {
-                  item.quantity = 0
-            }
-            setCartItems([...cartItems])
+      function removeItem(id: string): void {
+            setCartItems(prevState => prevState.filter(item => item.id !== id))
       }
+
+      const contextValue = useMemo(() => ({
+            getItemQuantity,
+            increaseItemQuantity,
+            decreaseItemQuantity,
+            removeItem,
+            cartItems,
+            cartQuantity
+      }), [cartItems, setCartItems])
 
       return (
-            <ShoppingCartContext.Provider value={{ getItemQuantity, decreaseCartQuantity, increaseCartQuantity, removeFromCart, cartItems, cartQuantity } as any} >
+            <ShoppingCartContext.Provider value={contextValue} >
                   {children}
             </ShoppingCartContext.Provider>
       )

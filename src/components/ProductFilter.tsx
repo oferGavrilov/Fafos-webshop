@@ -29,9 +29,9 @@ function ProductFilter({ category, handleSort, sort }: Props) {
         <div className='flex justify-between pt-8 gap-4'>
           <Box textAlign={'center'} className="w-1/2 max-w-xs">
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Sort</InputLabel>
+              <InputLabel id="select">Sort</InputLabel>
               <Select
-                id="demo-simple-select"
+                id="select"
                 value={sort}
                 label="Sort"
                 onChange={(ev) => handleSort(ev)}

@@ -3,6 +3,7 @@ import AppHeader from './AppHeader'
 import AppFooter from './AppFooter'
 import AboveHeader from './AboveHeader'
 import { useRouter } from 'next/router'
+import { Suspense } from 'react'
 
 interface Props {
       children?: React.ReactNode
@@ -20,10 +21,12 @@ function Layout({ children, ...props }: Props) {
                         <link rel="icon" href="/favicon.ico" />
                   </Head>
                   <AboveHeader />
-                  <AppHeader  page={props.page} />
-                  <main {...props} className={`${router.asPath === "/products" ? 'container m-auto mt-4 px-4' : ''}`}>
-                        {children}
-                  </main>
+                  <AppHeader page={props.page} />
+                  <Suspense fallback={<div>Loading...</div>}>
+                        <main {...props} className={`${router.asPath === "/products" ? 'container m-auto mt-4 px-4' : ''}`}>
+                              {children}
+                        </main>
+                  </Suspense>
                   <AppFooter />
             </>
       )

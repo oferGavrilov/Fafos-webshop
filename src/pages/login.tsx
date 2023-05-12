@@ -10,7 +10,6 @@ import React, { FormEvent, useState } from 'react'
 function login() {
   const [isLogin, setIsLogin] = useState(false)
   const [credentials, setCredentials] = useState(userService.getEmptyUser())
-
   const router = useRouter()
   const { createUser } = useAuth()
 
