@@ -1,12 +1,12 @@
-import { Product } from '@/models/products.model'
+import { Product } from '../models/products.model'
 import Link from 'next/link'
 import React from 'react'
-import { useShoppingCart } from '@/context/ShoppingCart'
+import { useShoppingCart } from '../context/ShoppingCart'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
-import "swiper/css";
-import "swiper/css/pagination";
-import { formatCurrency } from '@/services/formatCurrency'
+import "swiper/css"
+import "swiper/css/pagination"
+import { formatCurrency } from '../services/formatCurrency'
 interface Props {
   product: Product
 }

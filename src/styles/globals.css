@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Inter&family=Outfit&family=Raleway:wght@600&family=Roboto+Slab&display=swap');
+
 @layer base {
   body {
-    @apply text-[#212529] bg-[#f8f9fa] !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#adb5bd] ;
+    @apply text-[#212529] bg-[#f8f9fa] !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#adb5bd];
   }
 }
 
 .swiper-pagination {
-  @apply !bottom-5 !w-[30%] 
+  @apply !bottom-5 !w-[30%];
 }
 
 @layer components {
+
   /* Header */
   .scrolled {
-    @apply absolute top-0 z-20 bg-[#e9ecef] opacity-90 font-black; 
+    @apply absolute top-0 z-20 bg-[#e9ecef] opacity-90 font-black;
   }
 
   .header-icon {
@@ -29,16 +31,18 @@
 
   /* Teaser */
   .teaser-img {
-    @apply object-cover transition duration-300    h-[100%] w-[100%] hover:scale-110;
+    @apply object-cover transition duration-300 h-[100%] w-[100%] hover:scale-110;
   }
+
   .teaser-name {
-    @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy ;
+    @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy;
   }
 
   /* Footer */
   .footer-icon {
     @apply text-2xl cursor-pointer transition duration-300 hover:scale-125 hover:text-blue-500;
   }
+
   .footer-links {
     @apply hover:text-gray-600 cursor-pointer;
   }
@@ -55,6 +59,7 @@
   .primary-button {
     @apply rounded font-fuzzy tracking-wider text-lg bg-[#ced4da] py-2 px-5 transition-colors duration-300 shadow outline-none hover:bg-[#adb5bd] active:bg-amber-500;
   }
+
   .login-btn {
     @apply absolute uppercase bg-white px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#242424] hover:text-white;
   }
@@ -65,14 +70,16 @@
   .absolute-center {
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   }
-  .custom-hover{
+
+  .custom-hover {
     @apply transition duration-200 hover:bg-slate-100 hover:border-x-blue-500;
   }
+
   .main-text {
     @apply font-fuzzy text-[#212529] tracking-wider;
   }
 
-  .swiper-pagination-bullet{
-    @apply !w-7 !h-7 !bottom-5 border-2 border-black
+  .swiper-pagination-bullet {
+    @apply !w-7 !h-7 !bottom-5 border-2 border-black;
   }
 }

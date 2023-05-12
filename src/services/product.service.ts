@@ -1,9 +1,9 @@
-import { utilService } from "./util.service";
-import { CategoriesData, Product } from "@/models/products.model";
+import { utilService } from "./util.service"
+import { CategoriesData, Product } from "@/models/products.model"
 import products from '../data/products.json'
 import hotCategoriesData from '../hot-categories.json'
 import collectionsData from '../collections.json'
-import { Filter } from "@/models/filter.model";
+import { Filter } from "@/models/filter.model"
 
 export const productService = {
       getAllProducts,

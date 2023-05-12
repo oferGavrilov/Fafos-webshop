@@ -1,8 +1,9 @@
-import AccountForm from '@/components/login/AccountForm'
-import AddressForm from '@/components/login/AddressForm'
-import UserForm from '@/components/login/UserForm'
-import { useMultiStepForm } from '@/hooks/useMultiStepForm'
-import { userService } from '@/services/user.service'
+import AccountForm from '../components/login/AccountForm'
+import AddressForm from '../components/login/AddressForm'
+import UserForm from '../components/login/UserForm'
+import { useAuth } from '../context/AuthContext'
+import { useMultiStepForm } from '../hooks/useMultiStepForm'
+import { userService } from '../services/user.service'
 import { useRouter } from 'next/router'
 import React, { FormEvent, useState } from 'react'
 
@@ -11,12 +12,32 @@ function login() {
   const [credentials, setCredentials] = useState(userService.getEmptyUser())
 
   const router = useRouter()
+  const { createUser } = useAuth()
 
   function onSubmit(e: FormEvent) {
     e.preventDefault()
     console.log(credentials)
     if (!isLastStep) return onNext()
+    isLogin ? signIn() : signUp()
     router.push('/')
+  }
+
+  async function signIn() {
+    try {
+      console.log('signIn', credentials)
+      // await userService.signIn(credentials)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async function signUp() {
+    try {
+      console.log('signUp', credentials)
+      await createUser(credentials.email, credentials.password)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   function updateFields(fields: Partial<FormData>) {

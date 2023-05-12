@@ -2,8 +2,8 @@ import React from 'react'
 
 import "react-multi-carousel/lib/styles.css"
 import Carousel from 'react-multi-carousel'
-import { productService } from '@/services/product.service'
-import { Product } from '@/models/products.model'
+import { productService } from '../services/product.service'
+import { Product } from '../models/products.model'
 import Link from 'next/link'
 
 function ImgCarousel() {

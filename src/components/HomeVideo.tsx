@@ -1,8 +1,8 @@
 import React from 'react'
 import { Suspense } from 'react'
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
 
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 
 function HomeVideo() {
   return (

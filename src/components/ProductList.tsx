@@ -1,4 +1,4 @@
-import {  Product } from '@/models/products.model'
+import { Product } from '../models/products.model'
 import React from 'react'
 import ProductPreview from './ProductPreview'
 

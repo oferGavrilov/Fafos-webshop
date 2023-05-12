@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import Layout from '@/components/Layout'
-import { Product } from '@/models/products.model'
-import { productService } from '@/services/product.service'
+import Layout from '../../components/Layout'
+import { Product } from '../../models/products.model'
+import { productService } from '../../services/product.service'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 

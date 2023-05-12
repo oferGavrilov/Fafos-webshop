@@ -8,11 +8,11 @@ import { ReactJSXElement } from "@emotion/react/types/jsx-namespace"
 import SelectUnstyled, {
       SelectUnstyledProps,
       selectUnstyledClasses,
-} from '@mui/base/SelectUnstyled';
-import OptionUnstyled, { optionUnstyledClasses } from '@mui/base/OptionUnstyled';
-import PopperUnstyled from '@mui/base/PopperUnstyled';
-import { styled } from '@mui/system';
-import { productService } from '@/services/product.service'
+} from '@mui/base/SelectUnstyled'
+import OptionUnstyled, { optionUnstyledClasses } from '@mui/base/OptionUnstyled'
+import PopperUnstyled from '@mui/base/PopperUnstyled'
+import { styled } from '@mui/system'
+import { productService } from '../services/product.service'
 import { useRouter } from "next/router"
 
 interface Props {
@@ -69,7 +69,7 @@ function DynamicList(type: string, setIsOpen: Function): ReactJSXElement {
             return (
                   <>
                         <CustomSelect defaultValue={category} className="mt-14 border uppercase py-4 hover:bg-[#e9ecef]">
-                              {collections.map((collection , idx) => (
+                              {collections.map((collection, idx) => (
                                     <StyledOption key={collection + idx} className="uppercase" value={collection} onClick={() => navigate(collection)}>
                                           {collection}
                                     </StyledOption>
@@ -87,7 +87,7 @@ const blue = {
       500: '#007FFF',
       600: '#0072E5',
       900: '#003A75',
-};
+}
 
 const grey = {
       50: '#f6f8fa',
@@ -100,88 +100,88 @@ const grey = {
       700: '#424a53',
       800: '#32383f',
       900: '#24292f',
-};
+}
 
 const StyledButton = styled('button')(() => `
   &.${selectUnstyledClasses.expanded} {
       &::after {
-            font-size: 40px;
-            content: '▴';
-            position: absolute;
-            top: 50%;
-            right: 0;
-            height: 20px;
+            font-size: 40px
+            content: '▴'
+            position: absolute
+            top: 50%
+            right: 0
+            height: 20px
       }
 }
 &::after {
-      font-size: 40px;
-      content: '▾';
-      position: absolute;
-      top: 50%;
-      right: 0;
-      height: 20px;
+      font-size: 40px
+      content: '▾'
+      position: absolute
+      top: 50%
+      right: 0
+      height: 20px
   }
   `,
 )
 
 const StyledListbox = styled('ul')(
       ({ theme }) => `
-  font-family: IBM Plex Sans, sans-serif;
-  font-size: 0.875rem;
-  box-sizing: border-box;
-  padding: 6px;
-  margin: 12px 0;
-  width: 270px;
-  border-radius: 12px;
-  overflow: auto;
-  outline: 0px;
-  background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
-  border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]};
-  color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
-  box-shadow: 0px 4px 30px ${theme.palette.mode === 'dark' ? grey[900] : grey[200]};
+  font-family: IBM Plex Sans, sans-serif
+  font-size: 0.875rem
+  box-sizing: border-box
+  padding: 6px
+  margin: 12px 0
+  width: 270px
+  border-radius: 12px
+  overflow: auto
+  outline: 0px
+  background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'}
+  border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]}
+  color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]}
+  box-shadow: 0px 4px 30px ${theme.palette.mode === 'dark' ? grey[900] : grey[200]}
   `,
-);
+)
 
 const StyledOption = styled(OptionUnstyled)(
       ({ theme }) => `
-  list-style: none;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: default;
+  list-style: none
+  padding: 8px
+  border-radius: 8px
+  cursor: default
 
   &:last-of-type {
-    border-bottom: none;
+    border-bottom: none
   }
 
   &.${optionUnstyledClasses.selected} {
-    background-color: ${theme.palette.mode === 'dark' ? blue[900] : blue[100]};
-    color: ${theme.palette.mode === 'dark' ? blue[100] : blue[900]};
+    background-color: ${theme.palette.mode === 'dark' ? blue[900] : blue[100]}
+    color: ${theme.palette.mode === 'dark' ? blue[100] : blue[900]}
   }
 
   &.${optionUnstyledClasses.highlighted} {
-    background-color: ${theme.palette.mode === 'dark' ? grey[800] : grey[100]};
-    color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
+    background-color: ${theme.palette.mode === 'dark' ? grey[800] : grey[100]}
+    color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]}
   }
 
   &.${optionUnstyledClasses.highlighted}.${optionUnstyledClasses.selected} {
-    background-color: ${theme.palette.mode === 'dark' ? blue[900] : blue[100]};
-    color: ${theme.palette.mode === 'dark' ? blue[100] : blue[900]};
+    background-color: ${theme.palette.mode === 'dark' ? blue[900] : blue[100]}
+    color: ${theme.palette.mode === 'dark' ? blue[100] : blue[900]}
   }
 
   &.${optionUnstyledClasses.disabled} {
-    color: ${theme.palette.mode === 'dark' ? grey[700] : grey[400]};
+    color: ${theme.palette.mode === 'dark' ? grey[700] : grey[400]}
   }
 
   &:hover:not(.${optionUnstyledClasses.disabled}) {
-    background-color: ${theme.palette.mode === 'dark' ? grey[800] : grey[100]};
-    color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
+    background-color: ${theme.palette.mode === 'dark' ? grey[800] : grey[100]}
+    color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]}
   }
   `,
-);
+)
 
 const StyledPopper = styled(PopperUnstyled)`
-  z-index: 1;
-`;
+  z-index: 1
+`
 
 const CustomSelect = React.forwardRef(function CustomSelect<
       TValue extends {},
@@ -195,10 +195,10 @@ const CustomSelect = React.forwardRef(function CustomSelect<
             listbox: StyledListbox,
             popper: StyledPopper,
             ...props.slots,
-      };
+      }
 
-      return <SelectUnstyled {...props} ref={ref} slots={slots} />;
+      return <SelectUnstyled {...props} ref={ref} slots={slots} />
 }) as <TValue extends {}, Multiple extends boolean>(
       props: SelectUnstyledProps<TValue, Multiple> &
             React.RefAttributes<HTMLButtonElement>,
-) => JSX.Element;
+) => JSX.Element
