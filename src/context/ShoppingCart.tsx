@@ -9,7 +9,7 @@ interface Props {
 
 type ShoppingCartContextType = {
       getItemQuantity: (id: string) => number
-      increaseItemQuantity: (id: string) => void
+      increaseItemQuantity: (cartItem: Cart) => void
       decreaseItemQuantity: (id: string) => void
       removeItem: (id: string) => void
       cartItems: Cart[]
@@ -23,7 +23,6 @@ export const useShoppingCart = () => useContext(ShoppingCartContext)
 export function ShoppingCartProvider({ children }: Props) {
       const [cartItems, setCartItems] = useState<Cart[]>(cartService.getCart())
 
-      console.log(cartItems)
       const cartQuantity = cartItems ? cartItems.reduce((acc, item) => acc + item.quantity, 0) : 0
 
       function getItemQuantity(id: string) {
@@ -31,16 +30,16 @@ export function ShoppingCartProvider({ children }: Props) {
             return item ? item.quantity : 0
       }
 
-      function increaseItemQuantity(id: string): void {
+      function increaseItemQuantity(cartItem: Cart): void {
             setCartItems(prevState => {
-                  const item = cartItems.find(item => item.id === id)
+                  const item = cartItems.find(item => item.id === cartItem.id)
                   if (item) {
                         item.quantity++
                         cartService.addToCart(item)
                         return [...prevState]
                   } else {
-                        const product = productService.getProductById(id)
-                        return [...cartItems, { ...product, quantity: 1 }] as Cart[]
+                        // const product = productService.getProductById(id)
+                        return [...cartItems, { ...cartItem, quantity: 1 }] as Cart[]
                   }
             })
       }

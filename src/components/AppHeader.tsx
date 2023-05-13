@@ -41,7 +41,7 @@ function AppHeader({ page }: Props) {
             </Link>
             <Link className='header-icon' href="/cart">
               <IconButton>
-                <Badge badgeContent={cartItems.length} color="warning">
+                <Badge badgeContent={cartItems?.length} color="warning">
                   <IoBagOutline />
                 </Badge>
               </IconButton>

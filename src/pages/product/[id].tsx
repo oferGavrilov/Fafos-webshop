@@ -12,15 +12,17 @@ import { BiShekel } from 'react-icons/bi'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
 import { Carousel } from 'react-responsive-carousel'
 import { toast } from 'react-toastify'
+import { useShoppingCart } from '@context/ShoppingCart'
 
 function ProductDetails() {
       const [product, setProduct] = useState<Product>()
-      const [size , setSize] = useState<string>('')
+      const [size, setSize] = useState<string>('')
       const router = useRouter()
       const id = useRouter().query.id as string
       const { item } = useRouter().query
       const images = product?.inventory.filter(type => type.id === item).map(item => item.imgUrl).flat()
       const data = product?.inventory.find(type => type.id === item)
+      const { increaseItemQuantity } = useShoppingCart()
 
       useEffect(() => {
             loadProduct()
@@ -33,17 +35,19 @@ function ProductDetails() {
       }
 
       function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-            console.log(e.target.value)
             setSize(e.target.value)
       }
 
-      function onAddToCart(){
-            if(!size) return toast.error('You must choose a size')
-            console.log(size)
+      function onAddToCart() {
+            if (!size) return toast.error('You must choose a size')
+            const { color, id, imgUrl } = data
+            const { title, price } = product
+            const productToAdd = { color, id, imgUrl, size, title, price }
+            increaseItemQuantity(productToAdd)
+            toast.success('Item added to cart')
       }
 
       if (!product) return <div>loading...</div>
-      console.log(data)
       return (
             <Layout page='Product'>
                   <div className='my-24 mx-16 md:mx-20 flex flex-col md:flex-row-reverse'>

@@ -30,7 +30,7 @@ export interface Product {
 
 interface Inventory {
       [x: string]: any
-      id:string
+      id: string
       color: string
       bulletColor: string
       imgUrl: string[]
@@ -42,6 +42,12 @@ interface Quantity {
       amount: number
 }
 
-export interface Cart  extends Product{
-      quantity: number
+export interface Cart  {
+      color: string;
+      id: string;
+      imgUrl: string[];
+      size: string;
+      title: string;
+      price: number;
+      quantity?: number;
 }
