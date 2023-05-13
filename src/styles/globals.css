@@ -72,6 +72,11 @@
     @apply animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900;
   }
 
+  /* Cart */
+  .cart-title {
+    @apply w-[350px] border-2 border-gray-300 py-2 px-4;
+  }
+
 }
 
 @layer utilities {
@@ -90,4 +95,17 @@
   .swiper-pagination-bullet {
     @apply !w-7 !h-7 !bottom-5 border-2 border-black;
   }
+  
+  .flow-btn {
+    @apply text-xl md:text-2xl relative z-10 overflow-hidden bg-transparent py-3 px-7 main-text border-4  border-gray-300;
+   }
+   
+   .flow-btn::before {
+    @apply content-[""] absolute left-0 top-0 w-full h-full bg-gray-300 -translate-x-full transition-all duration-300 -z-10;
+   }
+   
+   .flow-btn:hover::before {
+    @apply translate-x-0;
+   }
 }
+

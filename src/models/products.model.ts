@@ -43,6 +43,7 @@ interface Quantity {
 }
 
 export interface Cart  {
+      bulletColor: string
       color: string;
       id: string;
       imgUrl: string[];

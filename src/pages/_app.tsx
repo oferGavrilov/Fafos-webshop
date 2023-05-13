@@ -4,6 +4,7 @@ import { ShoppingCartProvider } from '../context/ShoppingCart'
 import '../styles/globals.css'
 import '../styles/login-page.css'
 import 'react-toastify/dist/ReactToastify.css'
+import '../styles/checkout-modal.css'
 
 import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'

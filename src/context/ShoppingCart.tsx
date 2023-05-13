@@ -38,6 +38,7 @@ export function ShoppingCartProvider({ children }: Props) {
                         cartService.addToCart(item)
                         return [...prevState]
                   } else {
+                        cartService.addToCart(cartItem)
                         // const product = productService.getProductById(id)
                         return [...cartItems, { ...cartItem, quantity: 1 }] as Cart[]
                   }

@@ -40,9 +40,9 @@ function ProductDetails() {
 
       function onAddToCart() {
             if (!size) return toast.error('You must choose a size')
-            const { color, id, imgUrl } = data
+            const { color, id, imgUrl , bulletColor} = data
             const { title, price } = product
-            const productToAdd = { color, id, imgUrl, size, title, price }
+            const productToAdd = { color, id, imgUrl, size, title, price ,bulletColor }
             increaseItemQuantity(productToAdd)
             toast.success('Item added to cart')
       }
@@ -77,7 +77,7 @@ function ProductDetails() {
                                     </RadioGroup>
                               </FormControl>}
                               <button onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>הוספה לסל</button>
-                              <span className='text-center main-text mt-1'>✦ משלוח חינם בהזמנה מעל ₪600 ✦</span>
+                              <span className='text-center main-text mt-1'>✦ Free Shipping On Orders Above 600₪ ✦</span>
                         </div>
                   </div>
                   <IoClose className='absolute top-24 right-4 text-3xl cursor-pointer' onClick={() => router.back()} />
