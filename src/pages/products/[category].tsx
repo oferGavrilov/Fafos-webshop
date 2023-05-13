@@ -30,9 +30,9 @@ export default function ProductPage() {
 
       if (!products || !products?.length) return <div>Loading...</div>
       return (
-            <Layout page='Products'>
+            <>
                   <ProductFilter category={category} handleSort={handleSort} sort={sort} />
                   <ProductList products={products} />
-            </Layout>
+            </>
       )
 }

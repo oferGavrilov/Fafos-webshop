@@ -49,7 +49,7 @@ function ProductDetails() {
 
       if (!product) return <div>loading...</div>
       return (
-            <Layout page='Product'>
+            <>
                   <div className='my-24 mx-16 md:mx-20 flex flex-col md:flex-row-reverse'>
                         <Carousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
                               {images && images.map((item, idx) => (
@@ -81,7 +81,7 @@ function ProductDetails() {
                         </div>
                   </div>
                   <IoClose className='absolute top-24 right-4 text-3xl cursor-pointer' onClick={() => router.back()} />
-            </Layout >
+            </>
 
       )
 }

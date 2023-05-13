@@ -20,7 +20,7 @@ function getCart(): Cart[] {
       return cart
 }
 
-function addToCart(product: Product): void {
+function addToCart(product: Cart): void {
       const cart = loadFromStorage(STORAGE_KEY)
       const index = cart.findIndex((item: { id: string }) => item.id === product.id)
       if (index === -1) {
