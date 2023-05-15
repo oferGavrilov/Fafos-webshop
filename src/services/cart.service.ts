@@ -5,7 +5,7 @@ const STORAGE_KEY = 'cart'
 export const cartService = {
       getCart,
       addToCart,
-      // removeFromCart,
+      removeFromCart,
       // updateCart,
       // clearCart
 }
@@ -21,7 +21,6 @@ function getCart(): Cart[] {
 }
 
 function addToCart(product: Cart): void {
-      console.log('product', product)
       const cart = loadFromStorage(STORAGE_KEY)
       const index = cart.findIndex((item: { id: string }) => item.id === product.id)
       if (index === -1) {
@@ -29,6 +28,13 @@ function addToCart(product: Cart): void {
       } else {
             cart[index].quantity++
       }
-      console.log('here')
+      saveToStorage(STORAGE_KEY, cart)
+}
+
+function removeFromCart(id: string): void {
+      const cart = loadFromStorage(STORAGE_KEY)
+      const index = cart.findIndex((item: { id: string }) => item.id === id)
+      if (index === -1) return
+      cart.splice(index, 1)
       saveToStorage(STORAGE_KEY, cart)
 }

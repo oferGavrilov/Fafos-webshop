@@ -25,7 +25,7 @@ function Cart() {
               {cartItems.map((item) => (
                 <li key={item.id} className='flex md:mx-12 border-b-2 border-gray-300 p-2'>
                   <div className='flex w-full'>
-                    <img src={'/' + item.imgUrl[0]} className='object-cover  w-1/2 max-w-[410px]' alt="product-image" />
+                    <img src={'/' + item.imgUrl[0]} className='object-cover  w-1/2 max-w-[250px] lg:max-w-[410px]' alt="product-image" />
                     <div className='relative ml-5 mt-6 gap-y-4 md:gap-y-8 text-xl flex flex-col flex-grow '>
                       <span className='text-sm md:text-2xl'>{item.title}</span>
                       <span><span className='text-gray-400'>Size: </span>{item.size.toUpperCase()}</span>

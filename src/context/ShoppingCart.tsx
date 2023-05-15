@@ -2,6 +2,7 @@ import { Cart } from '@models/products.model'
 import { cartService } from '@services/cart.service'
 import { productService } from '@services/product.service'
 import { createContext, useContext, useMemo, useState } from 'react'
+import { toast } from 'react-toastify'
 
 interface Props {
       children: React.ReactNode
@@ -57,8 +58,10 @@ export function ShoppingCartProvider({ children }: Props) {
             })
       }
 
-      function removeItem(id: string): void {
+      async function removeItem(id: string): Promise<void> {
             setCartItems(prevState => prevState.filter(item => item.id !== id))
+            await cartService.removeFromCart(id)
+            toast.success('Item removed from cart')
       }
 
       const contextValue = useMemo(() => ({

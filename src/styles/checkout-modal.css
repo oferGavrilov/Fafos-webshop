@@ -1,13 +1,14 @@
 .slide-bottom {
       position: sticky;
       padding: .5rem 1rem;
-      top: 4rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      top: 0;
       z-index: 50;
       display: flex;
       width: max-content;
       justify-content: center;
       margin: auto;
-      background: rgba(226, 236, 231, 0.8);
+      background: rgba(233, 235, 234, 0.8);
       border-radius: 10px;
       transition: all .3s ease-out;
       -webkit-animation: slide-bottom 0.8s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s both;
