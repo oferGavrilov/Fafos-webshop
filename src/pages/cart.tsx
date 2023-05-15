@@ -4,10 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import CheckoutModal from 'src/components/CheckoutModal'
-import Layout from 'src/components/Layout'
 
 function Cart() {
-  const { cartItems } = useShoppingCart()
+  const { cartItems, removeItem, decreaseItemQuantity, increaseItemQuantity } = useShoppingCart()
   return (
     <>
       <CheckoutModal />
@@ -21,13 +20,7 @@ function Cart() {
             </Link>
           </div>
         ) :
-          <section className='flex flex-col '>
-            {/* <ul className='md:mx-10 justify-between hidden md:flex'>
-            <li className='cart-title w-[100%]'>Products</li>
-            <li className='cart-title'>Price</li>
-            <li className='cart-title'>Quantity</li>
-            <li className='cart-title'>Total</li>
-          </ul> */}
+          <section className='flex flex-col md:mx-8 lg:max-w-7xl lg:mx-auto'>
             <ul className='flex flex-col gap-y-2 text-sm md:main-text'>
               {cartItems.map((item) => (
                 <li key={item.id} className='flex md:mx-12 border-b-2 border-gray-300 p-2'>
@@ -54,20 +47,15 @@ function Cart() {
                           <span>{formatCurrency(item.price * item.quantity)}</span>
                         </p>
                       </div>
-                      <button className='absolute main-text text-base right-0 underline underline-offset-4'>Remove</button>
-                    </div>
+                      <button className='absolute main-text text-base right-0 underline underline-offset-4' onClick={() => removeItem(item.id)}>Remove</button>
                   </div>
-                  {/* <div className='hidden md:block'>
-                  <span className='w-[350px]'>{formatCurrency(item.price)}</span>
-                  <span className='w-[350px]'>{item.quantity}</span>
-                  <span className='w-[350px]'>{formatCurrency(item.price * item.quantity)}</span>
-                </div> */}
+                </div>
                 </li>
               ))}
-            </ul>
+          </ul>
           </section>
         }
-      </section>
+    </section >
     </>
   )
 }
