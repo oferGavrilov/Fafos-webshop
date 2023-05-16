@@ -3,14 +3,15 @@ import 'firebase/auth'
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
-      apiKey: "AIzaSyC2Y-pVEShZN4vUrqdAyOzD123Nbd3S9CM",
-      authDomain: "webshop-74e48.firebaseapp.com",
-      projectId: "webshop-74e48",
-      storageBucket: "webshop-74e48.appspot.com",
-      messagingSenderId: "28728582100",
-      appId: "1:28728582100:web:46254c2d98b59580f9c041",
-      measurementId: "G-CZ07239E1W"
+      apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+      authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+      projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+      storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGIN_SENDER_ID,
+      appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+      measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 }
+
 const app = firebase.initializeApp(firebaseConfig)
 
 export const auth = getAuth(app)

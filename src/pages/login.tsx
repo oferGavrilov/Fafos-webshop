@@ -45,8 +45,8 @@ function login() {
 
   const { step, currentStep, steps, isFirstStep, isLastStep, onBack, onNext } = useMultiStepForm(isLogin ?
     [<AccountForm data={credentials} updateFields={updateFields} />] :
-    [<UserForm data={credentials} updateFields={updateFields} />, <AddressForm data={credentials} updateFields={updateFields} />, <AccountForm data={credentials} updateFields={updateFields} />])
-
+    [ <AccountForm data={credentials} updateFields={updateFields} />])
+    // [<UserForm data={credentials} updateFields={updateFields} />, <AddressForm data={credentials} updateFields={updateFields} />,
   return (
     <section className='login-page'>
       <div className='animate-wrapper max-w-3xl w-[90%] text-[#242424] relative mx-auto'>

@@ -71,7 +71,7 @@ export function ShoppingCartProvider({ children }: Props) {
             removeItem,
             cartItems,
             cartQuantity
-      }), [cartItems, setCartItems])
+      }), [cartItems])
 
       return (
             <ShoppingCartContext.Provider value={contextValue} >
