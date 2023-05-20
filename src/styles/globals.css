@@ -77,6 +77,11 @@
     @apply w-[350px] border-2 border-gray-300 py-2 px-4;
   }
 
+  /* Login page */
+  .social-icons {
+    @apply grayscale transition-all duration-300 hover:grayscale-0 cursor-pointer border border-gray-300 p-3 w-max;
+  }
+
 }
 
 @layer utilities {

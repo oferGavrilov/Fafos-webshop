@@ -11,19 +11,20 @@ import dynamic from 'next/dynamic'
 
 import NextNProgress from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
+import { initFirebase } from 'src/firebase/firebase'
 
-const Layout = dynamic(() => import('../components/Layout') , { ssr: false })
+const Layout = dynamic(() => import('../components/Layout'), { ssr: false })
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App ({ Component, pageProps }: AppProps) {
   return (
-    <AuthProvider>
-      <ShoppingCartProvider>
-        <NextNProgress />
-        <Layout page=''>
-          <Component {...pageProps} />
-        </Layout>
-        <ToastContainer />
-      </ShoppingCartProvider>
-    </AuthProvider>
+    // <AuthProvider>
+    <ShoppingCartProvider>
+      <NextNProgress />
+      <Layout page=''>
+        <Component {...pageProps} />
+      </Layout>
+      <ToastContainer />
+    </ShoppingCartProvider>
+    // </AuthProvider>
   )
 }

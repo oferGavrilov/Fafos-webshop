@@ -6,14 +6,33 @@ import { useMultiStepForm } from '../hooks/useMultiStepForm'
 import { userService } from '../services/user.service'
 import { useRouter } from 'next/router'
 import React, { FormEvent, useState } from 'react'
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { initFirebase } from 'src/firebase/firebase'
+import Image from 'next/image'
+import { toast } from 'react-toastify'
 
-function login() {
+function login () {
   const [isLogin, setIsLogin] = useState(false)
   const [credentials, setCredentials] = useState(userService.getEmptyUser())
   const router = useRouter()
-  const { createUser } = useAuth()
+  // const { createUser } = useAuth()
 
-  function onSubmit(e: FormEvent) {
+  initFirebase()
+  const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+
+  async function signInWithGoogle () {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log(result.user)
+    } catch(err) {
+      toast.error("Login with google failed, please try again.")
+    }
+  }
+
+
+
+  function onSubmit (e: FormEvent) {
     e.preventDefault()
     console.log(credentials)
     if (!isLastStep) return onNext()
@@ -21,7 +40,7 @@ function login() {
     router.push('/')
   }
 
-  async function signIn() {
+  async function signIn () {
     try {
       console.log('signIn', credentials)
       // await userService.signIn(credentials)
@@ -30,26 +49,26 @@ function login() {
     }
   }
 
-  async function signUp() {
+  async function signUp () {
     try {
       console.log('signUp', credentials)
-      await createUser(credentials.email, credentials.password)
+      // await createUser(credentials.email, credentials.password)
     } catch (error) {
       console.log(error)
     }
   }
 
-  function updateFields(fields: Partial<FormData>) {
+  function updateFields (fields: Partial<FormData>) {
     setCredentials(prev => ({ ...prev, ...fields }))
   }
 
   const { step, currentStep, steps, isFirstStep, isLastStep, onBack, onNext } = useMultiStepForm(isLogin ?
     [<AccountForm data={credentials} updateFields={updateFields} />] :
-    [ <AccountForm data={credentials} updateFields={updateFields} />])
-    // [<UserForm data={credentials} updateFields={updateFields} />, <AddressForm data={credentials} updateFields={updateFields} />,
+    [<AccountForm data={credentials} updateFields={updateFields} />])
+  // [<UserForm data={credentials} updateFields={updateFields} />, <AddressForm data={credentials} updateFields={updateFields} />,
   return (
     <section className='login-page'>
-      <div className='animate-wrapper max-w-3xl w-[90%] text-[#242424] relative mx-auto'>
+      <div className='animate-wrapper max-w-3xl w-[90%] text-[#242424] mt-10 relative mx-auto'>
         <form onSubmit={onSubmit} className=''>
           {step}
           {!isLogin && <div className='absolute top-2 right-2'>
@@ -61,6 +80,22 @@ function login() {
           </div>
           <div className='text-center'>{!isLogin ? 'Already have account ?' : 'Not a member yet ? '} <span onClick={() => setIsLogin(!isLogin)} className='cursor-pointer underline underline-offset-2 text-sm text-[#726e6e] hover:text-[#242424]'>{!isLogin ? 'Login Here' : 'Sign up Here'}</span> </div>
         </form>
+        <div className='flex items-center justify-center gap-4 my-12'>
+          <div className='bg-gray-300 w-full h-[1px]'></div>
+          <span className='whitespace-nowrap'>Or sign in with</span>
+          <div className='bg-gray-300 w-full h-[1px]'></div>
+        </div>
+        <div className='flex gap-x-6 mx-auto justify-center'>
+          <div onClick={signInWithGoogle} className='social-icons'>
+            <Image src='/imgs/etc/google.png' width={40} height={40} alt='google' />
+          </div>
+          <div className='social-icons'>
+            <Image src='/imgs/etc/facebook.png' width={40} height={40} alt='google' />
+          </div>
+          <div className='social-icons'>
+            <Image src='/imgs/etc/apple.png' width={40} height={40} alt='google' />
+          </div>
+        </div>
       </div>
     </section>
   )
