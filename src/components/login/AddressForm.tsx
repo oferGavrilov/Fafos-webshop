@@ -1,7 +1,7 @@
 import React from 'react'
 import FormWrapper from './FormWrapper'
 import { TextField } from '@mui/material'
-import { User } from '@/models/user.model'
+import { User } from '../../models/user.model'
 
 interface Props {
       data: User
