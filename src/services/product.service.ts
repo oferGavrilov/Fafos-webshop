@@ -5,6 +5,7 @@ import hotCategoriesData from '../hot-categories.json'
 import collectionsData from '../collections.json'
 import { Filter } from "../models/filter.model"
 
+// eslint-disable-next-line import/prefer-default-export
 export const productService = {
       getAllProducts,
       getCategoriesData,
@@ -13,7 +14,7 @@ export const productService = {
       getProductById
 }
 
-function getAllProducts(filter: Filter = getEmptyFilter(), sort: string = '') {
+function getAllProducts(filter: Filter = getEmptyFilter(), sort = '') {
       let filteredProducts: Product[] = products.slice()
       if (filter.category && filter.category !== 'all-swimwear') {
             filteredProducts = products.filter(product => product.category === filter.category)
@@ -43,9 +44,7 @@ function setSort(sort: string, products: Product[]) {
 }
 
 function getCategoriesData() {
-      const categoriesWithId = hotCategoriesData.map((item) => {
-            return item = { ...item, id: makeId() } as CategoriesData
-      })
+      const categoriesWithId = hotCategoriesData.map((item)=> item = { ...item, id: makeId() } as CategoriesData)
       return categoriesWithId
 }
 function getCollections() {

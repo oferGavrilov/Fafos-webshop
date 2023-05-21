@@ -1,7 +1,8 @@
-import { Cart, Product } from "../models/products.model"
+import { Cart } from "../models/products.model"
 import { loadFromStorage, saveToStorage } from "../utils/util.service"
 
 const STORAGE_KEY = 'cart'
+// eslint-disable-next-line import/prefer-default-export
 export const cartService = {
       getCart,
       addToCart,
@@ -10,8 +11,8 @@ export const cartService = {
       // clearCart
 }
 
-function getCart(): Cart[] {
-      if(typeof window === 'undefined' || !window.localStorage) return 
+function getCart(): Cart[] | undefined {
+      if(typeof window === 'undefined' || !window.localStorage) return []
       let cart = loadFromStorage(STORAGE_KEY)
       if (!cart || !cart.length) {
             cart = []

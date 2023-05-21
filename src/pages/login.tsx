@@ -1,15 +1,15 @@
+import React, { FormEvent, useState } from 'react'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { toast } from 'react-toastify'
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { initFirebase } from '../firebase/firebase'
 import AccountForm from '../components/login/AccountForm'
 import AddressForm from '../components/login/AddressForm'
 import UserForm from '../components/login/UserForm'
 import { useAuth } from '../context/AuthContext'
 import { useMultiStepForm } from '../hooks/useMultiStepForm'
 import { userService } from '../services/user.service'
-import { useRouter } from 'next/router'
-import React, { FormEvent, useState } from 'react'
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { initFirebase } from 'src/firebase/firebase'
-import Image from 'next/image'
-import { toast } from 'react-toastify'
 
 function login () {
   const [isLogin, setIsLogin] = useState(false)
@@ -37,7 +37,7 @@ function login () {
     console.log(credentials)
     if (!isLastStep) return onNext()
     isLogin ? signIn() : signUp()
-    router.push('/')
+    return router.push('/')
   }
 
   async function signIn () {
@@ -81,9 +81,9 @@ function login () {
           <div className='text-center'>{!isLogin ? 'Already have account ?' : 'Not a member yet ? '} <span onClick={() => setIsLogin(!isLogin)} className='cursor-pointer underline underline-offset-2 text-sm text-[#726e6e] hover:text-[#242424]'>{!isLogin ? 'Login Here' : 'Sign up Here'}</span> </div>
         </form>
         <div className='flex items-center justify-center gap-4 my-12'>
-          <div className='bg-gray-300 w-full h-[1px]'></div>
+          <div className='bg-gray-300 w-full h-[1px]' />
           <span className='whitespace-nowrap'>Or sign in with</span>
-          <div className='bg-gray-300 w-full h-[1px]'></div>
+          <div className='bg-gray-300 w-full h-[1px]' />
         </div>
         <div className='flex gap-x-6 mx-auto justify-center'>
           <div onClick={signInWithGoogle} className='social-icons'>

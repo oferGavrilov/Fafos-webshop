@@ -1,7 +1,6 @@
-'use client'; // Error components must be Client Components
+'use client' 
 
-import React, { memo } from 'react';
-import { useEffect } from 'react';
+import React , { useEffect }from 'react';
 
 function Error({
   error,
@@ -17,7 +16,7 @@ function Error({
   return (
     <div>
       <h2>Something went wrong!</h2>
-      <button
+      <button type='button'
         onClick={
           () => reset()
         }
@@ -28,4 +27,4 @@ function Error({
   );
 }
 
-export default memo(Error)
+export default React.memo(Error)

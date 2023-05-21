@@ -1,15 +1,15 @@
-import Layout from '../../components/Layout'
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import { SelectChangeEvent } from '@mui/material'
+
 import ProductFilter from '../../components/ProductFilter'
 import ProductList from '../../components/ProductList'
 import { Filter } from '../../models/filter.model'
 import { Product } from '../../models/products.model'
 import { productService } from '../../services/product.service'
-import { SelectChangeEvent } from '@mui/material'
-import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
 
 export default function ProductPage() {
-      const category = useRouter().query.category
+      const {category} = useRouter().query
       const [filterBy, setFilterBy] = useState<Filter>(productService.getEmptyFilter())
       const [sort, setSort] = React.useState('none')
       const [products, setProducts] = useState<Product[]>([])
@@ -20,7 +20,7 @@ export default function ProductPage() {
       }, [sort, category])
 
       async function loadProducts() {
-            let data = productService.getAllProducts({ ...filterBy, category: category }, sort)
+            let data = productService.getAllProducts({ ...filterBy, category }, sort)
             setProducts([...data])
       }
 

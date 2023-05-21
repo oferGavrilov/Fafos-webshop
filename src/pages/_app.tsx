@@ -1,5 +1,6 @@
-import { AuthProvider } from '../context/AuthContext'
-import { ShoppingCartProvider } from '../context/ShoppingCart'
+import dynamic from 'next/dynamic'
+// import { initFirebase } from 'src/firebase/firebase'
+// import { AuthProvider } from '../context/AuthContext'
 
 import '../styles/globals.css'
 import '../styles/login-page.css'
@@ -7,11 +8,10 @@ import 'react-toastify/dist/ReactToastify.css'
 import '../styles/checkout-modal.css'
 
 import type { AppProps } from 'next/app'
-import dynamic from 'next/dynamic'
 
 import NextNProgress from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
-import { initFirebase } from 'src/firebase/firebase'
+import { ShoppingCartProvider } from '../context/ShoppingCart'
 
 const Layout = dynamic(() => import('../components/Layout'), { ssr: false })
 

@@ -1,9 +1,8 @@
-import Layout from '../components/Layout'
-import { productService } from '../services/product.service'
-import Link from 'next/link'
 import React from 'react'
+import Link from 'next/link'
+import { productService } from '../services/product.service'
 
-function collections() {
+function collections () {
       const collections = productService.getCollections()
       return (
             <>

@@ -32,12 +32,17 @@ module.exports = {
             'react/no-unescaped-entities': 'off',
             'import/no-cycle': [0, { ignoreExternal: true }],
             'prefer-const': 'off',
-            // needed because of https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use & https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined
             'no-use-before-define': 'off',
-            '@typescript-eslint/no-use-before-define': [
-                  'error',
-                  { functions: false, classes: false, variables: true, endOfLine: 'off' },
-            ],
+            "react/react-in-jsx-scope": "off",
+            "no-shadow": "off",
+            "react/jsx-uses-react": "off",
+            "no-return-assign": "off",
+            "no-param-reassign": 0,
+            'no-plusplus': 'off',
+            "react-hooks/rules-of-hooks": "off",
+            "react-hooks/exhaustive-deps": "off",
+            "no-extra-boolean-cast": "off",
+            "jsx-no-bind": "off",
       },
       settings: {
             'import/resolver': {

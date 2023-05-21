@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react'
+/* eslint-disable react/no-array-index-key */
+import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import { toast } from 'react-toastify'
+import { IoClose } from 'react-icons/io5'
+import { BiShekel } from 'react-icons/bi'
+import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
+import { Carousel } from 'react-responsive-carousel'
+import NoSuchItem from '../../components/NoSuchItem'
+import { useShoppingCart } from '../../context/ShoppingCart'
 
-import Layout from '../../components/Layout'
 import { Product } from '../../models/products.model'
 import { productService } from '../../services/product.service'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
-import { IoClose } from 'react-icons/io5'
-import { BiShekel } from 'react-icons/bi'
-import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
-import { Carousel } from 'react-responsive-carousel'
-import { toast } from 'react-toastify'
-import { useShoppingCart } from '@context/ShoppingCart'
-
-function ProductDetails() {
+function ProductDetails () {
       const [product, setProduct] = useState<Product>()
       const [size, setSize] = useState<string>('')
       const router = useRouter()
@@ -28,33 +28,33 @@ function ProductDetails() {
             loadProduct()
       }, [id])
 
-      function loadProduct() {
-            if (!id) return <Layout page=''><div>No such product</div></Layout>
+      function loadProduct (): void {
+            if (!id) return
             const data = productService.getProductById(id)
             setProduct(data)
       }
 
-      function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+      const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
             setSize(e.target.value)
-      }
+      } , [setSize]) 
 
-      function onAddToCart() {
+      function onAddToCart () {
             if (!size) return toast.error('You must choose a size')
-            const { color, id, imgUrl , bulletColor} = data
+            const { color, id, imgUrl, bulletColor } = data
             const { title, price } = product
-            const productToAdd = { color, id, imgUrl, size, title, price ,bulletColor }
+            const productToAdd = { color, id, imgUrl, size, title, price, bulletColor }
             increaseItemQuantity(productToAdd)
-            toast.success('Item added to cart')
+            return toast.success('Item added to cart')
       }
 
-      if (!product) return <div>loading...</div>
+      if (!product) return <NoSuchItem />
       return (
             <>
                   <div className='my-24 mx-16 md:mx-20 flex flex-col md:flex-row-reverse'>
                         <Carousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
                               {images && images.map((item, idx) => (
                                     <div key={item + idx} className='flex flex-col'>
-                                          < img src={'/' + item} className='w-full' alt="" />
+                                          < img src={`/${  item}`} className='w-full' alt={item} />
                                     </div>
                               ))}
                         </Carousel>
@@ -72,11 +72,11 @@ function ProductDetails() {
                                           className='mx-auto mt-4 gap-2'
                                     >
                                           {data.quantity.map((item, idx) => (
-                                                <FormControlLabel key={item.size + idx} disabled={!!(!item.amount)} onChange={handleChange} defaultChecked={true} className='border !ml-0 !mr-0 border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
+                                                <FormControlLabel key={item.size + idx} disabled={!!(!item.amount)} onChange={handleChange} defaultChecked className='border !ml-0 !mr-0 border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
                                           ))}
                                     </RadioGroup>
                               </FormControl>}
-                              <button onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>הוספה לסל</button>
+                              <button type='button' onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>הוספה לסל</button>
                               <span className='text-center main-text mt-1'>✦ Free Shipping On Orders Above 600₪ ✦</span>
                         </div>
                   </div>
