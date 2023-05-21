@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Inter&family=Outfit&family=Raleway:wght@600&family=Roboto+Slab&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @layer base {
   body {
     @apply text-[#212529] bg-[#f8f9fa] !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#adb5bd];
@@ -35,7 +37,7 @@
   }
 
   .teaser-name {
-    @apply absolute bottom-36 left-5 text-white text-4xl font-fuzzy;
+    @apply absolute bottom-36 left-5 text-white text-4xl;
   }
 
   /* Footer */
@@ -49,7 +51,7 @@
 
   /* Side Menu */
   .menu-list {
-    @apply p-4 border-t border-gray-300 transition-colors duration-200 cursor-pointer hover:bg-[#e9ecef];
+    @apply text-base md:text-xl p-4 border-t border-gray-300 transition-colors duration-200 cursor-pointer hover:bg-[#e9ecef];
   }
 
   .card {

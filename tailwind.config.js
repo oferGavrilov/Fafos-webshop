@@ -10,6 +10,9 @@ module.exports = {
       'sans': ['ui-sans-serif', 'system-ui'],
       'mono': ['ui-monospace', 'SFMono-Regular'],
       'fuzzy': ['Fuzzy' , 'ui-sans-serif', 'system-ui'],
+      'rubik':['Rubik'],
+      'marker':['Permanent Marker' , 'cursive'],
+      'montserrat':['Montserrat'],
     },
     extend: {
     },
