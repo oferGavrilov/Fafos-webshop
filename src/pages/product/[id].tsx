@@ -48,31 +48,33 @@ function ProductDetails () {
       }
 
       if (!product) return <NoSuchItem />
+      console.log(product)
+      console.log(data)
       return (
             <>
-                  <div className='my-24 mx-16 md:mx-20 flex flex-col md:flex-row-reverse'>
+                  <div className='py-24 px-16 md:px-20 flex flex-col md:flex-row-reverse' >
                         <Carousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
                               {images && images.map((item, idx) => (
                                     <div key={item + idx} className='flex flex-col'>
-                                          < img src={`/${  item}`} className='w-full' alt={item} />
+                                          < img src={`/${  item}`} className='w-full ' alt={item} />
                                     </div>
                               ))}
                         </Carousel>
                         <div className='flex flex-col w-full mr-5'>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
-                                    <span className='main-text text-xl'>{product.title}</span>
-                                    <span className='flex items-center justify-center text-lg'><BiShekel />{product.price.toFixed(2)}</span>
+                                    <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data.bulletColor}` }}>{product.title}</span>
+                                    <span className='flex items-center justify-center text-xl font-marker'><BiShekel />{product.price.toFixed(2)}</span>
                               </div >
                               {data && <FormControl className='!mx-auto !my-5'>
-                                    <FormLabel id="demo-row-radio-buttons-group-label">Size</FormLabel>
+                                    <FormLabel id="demo-row-radio-buttons-group-label" className='!text-xl !text-gray-400'>Size</FormLabel>
                                     <RadioGroup
                                           row
                                           aria-labelledby="demo-row-radio-buttons-group-label"
                                           name="row-radio-buttons-group"
-                                          className='mx-auto mt-4 gap-2'
+                                          className='mx-auto gap-6 mt-2'
                                     >
                                           {data.quantity.map((item, idx) => (
-                                                <FormControlLabel key={item.size + idx} disabled={!!(!item.amount)} onChange={handleChange} defaultChecked className='border !ml-0 !mr-0 border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
+                                                <FormControlLabel key={item.size + idx} disabled={!!(!item.amount)} onChange={handleChange} defaultChecked className='border !mx-0  border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
                                           ))}
                                     </RadioGroup>
                               </FormControl>}

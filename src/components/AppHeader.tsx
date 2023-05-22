@@ -32,7 +32,7 @@ function AppHeader ({ page }: Props) {
     <>
       <header className={`fixed w-[100%] z-10 transition duration-500  ${isScrolled ? 'scrolled' : 'text-white'}`}>
         <nav className={`flex h-[70px] items-center px-4 justify-between ${page !== 'Home' ? 'text-[#212529]' : ''}`}>
-          <div className='flex gap-5 items-center hidden lg:block'>
+          <div className='gap-5 items-center hidden lg:flex'>
             <Link className='header-icon ' href="/login">
               <IconButton>
                 <AiOutlineUser />
