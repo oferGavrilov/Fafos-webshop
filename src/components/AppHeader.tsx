@@ -1,30 +1,29 @@
 import Link from 'next/link'
-import { useEffect } from 'react'
-import { useState } from "react"
+import { useEffect, useState } from 'react'
 
 import { IoBagOutline } from 'react-icons/io5'
 import { AiOutlineUser, AiOutlineSearch, AiOutlineGlobal } from 'react-icons/ai'
 import { Badge, IconButton } from "@mui/material"
 
 import MenuIcon from '@mui/icons-material/Menu'
-import SideMenu from './SideMenu'
 import { useShoppingCart } from '@context/ShoppingCart'
+import SideMenu from './SideMenu'
 
 interface Props {
   page: string
 }
 
-function AppHeader({ page }: Props) {
+function AppHeader ({ page }: Props) {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const {cartItems} = useShoppingCart()
+  const { cartItems } = useShoppingCart()
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 33) setIsScrolled(true)
       else setIsScrolled(false)
     }
-    addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll)
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -59,7 +58,7 @@ function AppHeader({ page }: Props) {
             <span className='text-3xl font-mono uppercase tracking-wider'>Fafos</span>
           </Link>
           <IconButton className='text-inherit  lg:!hidden' edge='start' size='large' aria-label='logo' onClick={() => setIsOpen(true)}>
-            <MenuIcon/>
+            <MenuIcon />
           </IconButton>
         </nav>
       </header >

@@ -43,6 +43,18 @@ module.exports = {
             "react-hooks/exhaustive-deps": "off",
             "no-extra-boolean-cast": "off",
             "jsx-no-bind": "off",
+            "no-console": "off",
+            "import/prefer-default-export": "off",
+            'jsx-a11y/click-events-have-key-events': 'off',
+            'jsx-a11y/no-noninteractive-element-interactions': 'off',
+            "import/no-unresolved": "off",
+            "react/require-default-props": [
+                  "error",
+                  {
+                        "forbidDefaultForRequired": true,
+                        "functions": "defaultArguments"
+                  }
+            ]
       },
       settings: {
             'import/resolver': {

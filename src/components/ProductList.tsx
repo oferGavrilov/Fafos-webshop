@@ -1,5 +1,5 @@
-import { Product } from '../models/products.model'
 import React from 'react'
+import { Product } from '../models/products.model'
 import ProductPreview from './ProductPreview'
 
 interface Props {

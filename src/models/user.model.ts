@@ -1,4 +1,10 @@
 export interface User {
+      firstName?: string
+      lastName?: string
+      street?: string
+      city?: string
+      state?: string
+      zip?: string
       email: string
       password: string
 }

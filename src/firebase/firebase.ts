@@ -1,6 +1,7 @@
 import { initializeApp, getApps, getApp } from "firebase/app"
 import 'firebase/auth'
 import 'firebase/firestore'
+
 const firebaseConfig = {
       apiKey: "AIzaSyD5sm7PbfTGQ7ytzPqA6wHw7zN5bdqh78k",
       authDomain: "webshop-c2120.firebaseapp.com",
@@ -14,6 +15,4 @@ const firebaseConfig = {
 // initialize firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-export const initFirebase = () => {
-      return app
-}
+export const initFirebase = () => app

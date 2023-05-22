@@ -1,14 +1,15 @@
 import React from 'react'
-import FormWrapper from './FormWrapper'
 import { TextField } from '@mui/material'
+import FormWrapper from './FormWrapper'
 import { User } from '../../models/user.model'
 
 interface Props {
       data: User
-      updateFields: Function
+      updateFields:  (fields: Partial<User>) => void
 }
 
 function AccountForm({data , updateFields}:Props) {
+
       return (
             <FormWrapper title='Account Details'>
                   <TextField autoFocus id="filled-basic" required type='email' label="Email" variant="filled" name='email' value={data.email} onChange={e => updateFields({ email: e.target.value })} />

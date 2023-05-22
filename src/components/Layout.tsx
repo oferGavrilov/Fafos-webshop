@@ -1,9 +1,12 @@
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/jsx-props-no-spreading */
+import { Suspense, useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import AppHeader from './AppHeader'
 import AppFooter from './AppFooter'
 import AboveHeader from './AboveHeader'
-import { useRouter } from 'next/router'
-import { Suspense, useEffect, useState } from 'react'
+
 interface Props {
       children?: React.ReactNode
       page: string

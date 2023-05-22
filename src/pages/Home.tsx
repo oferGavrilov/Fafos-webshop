@@ -1,9 +1,9 @@
+import React from 'react'
 import Hero from '../components/Hero'
 import HomeVideo from '../components/HomeVideo'
 import HotCategories from '../components/HotCategories'
 import ImgCarousel from '../components/ImgCarousel'
 import Teaser from '../components/Teaser'
-import React from 'react'
 
 function Home() {
       return (

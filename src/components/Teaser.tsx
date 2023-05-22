@@ -11,7 +11,7 @@ function Teaser() {
         </Link>
       </li>
       <li className='flex-1 relative overflow-hidden shadow-gray-400 shadow-2xl'>
-        <Link href={`/products/bottoms`}>
+        <Link href="/products/bottoms">
           <img className='teaser-img' src="imgs/home/teaser2.jpg" alt="teaser" />
           <h2 className='teaser-name'>Bottoms</h2>
         </Link>

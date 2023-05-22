@@ -1,20 +1,19 @@
 import React from "react"
+import { useRouter } from "next/router"
 import { Box, Drawer, Typography } from "@mui/material"
 import { BsInstagram } from "react-icons/bs"
 import { FaFacebookF } from "react-icons/fa"
 import { SiTiktok } from "react-icons/si"
 import CloseIcon from '@mui/icons-material/Close'
-import { ReactJSXElement } from "@emotion/react/types/jsx-namespace"
 import { productService } from '../services/product.service'
-import { useRouter } from "next/router"
 
 interface Props {
       isOpen: boolean
-      setIsOpen: Function
+      setIsOpen: (isOpen: boolean) => void
       menuType: string
 }
 
-export default function SideMenu({ isOpen, setIsOpen, menuType }: Props): JSX.Element {
+export default function SideMenu ({ isOpen, setIsOpen, menuType }: Props): JSX.Element {
 
       return (
             <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
@@ -30,10 +29,9 @@ export default function SideMenu({ isOpen, setIsOpen, menuType }: Props): JSX.El
       )
 }
 
-function DynamicList(type: string, setIsOpen: Function): ReactJSXElement {
-
+function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.Element {
       const router = useRouter()
-      function onNavigate(path: string) {
+      function onNavigate (path: string) {
             router.push(path)
             setIsOpen(false)
       }
@@ -56,21 +54,19 @@ function DynamicList(type: string, setIsOpen: Function): ReactJSXElement {
                         </li>
                   </>
             )
-      } else {
-            const collections = productService.getCollections().map(item => item.category)
-            const { category } = useRouter().query
-            const router = useRouter()
-
-            const navigate = (cat: string) => {
-                  router.push(`/products/${cat}`)
-                  setIsOpen(false)
-            }
-            return (
-                  <ul className="mt-14">
-                        {collections.map((collection, idx) => (
-                              <li onClick={() => navigate(collection)} key={collection + idx} className={`${category === collection && 'bg-blue-50 border-y-2 border-blue-300'} menu-list`}>{collection}</li>
-                        ))}
-                  </ul>
-            )
       }
+      const collections = productService.getCollections().map(item => item.category)
+      const { category } = useRouter().query
+      const navigate = (cat: string) => {
+            router.push(`/products/${cat}`)
+            setIsOpen(false)
+      }
+
+      return (
+            <ul className="mt-14">
+                  {collections.map(collection => (
+                        <li onClick={() => navigate(collection)} key={collection} className={`${category === collection && 'bg-blue-50 border-y-2 border-blue-300'} menu-list`}>{collection}</li>
+                  ))}
+            </ul>
+      )
 }

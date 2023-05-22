@@ -1,11 +1,11 @@
 import React from 'react'
-import FormWrapper from './FormWrapper'
 import { TextField } from '@mui/material'
+import FormWrapper from './FormWrapper'
 import { User } from '../../models/user.model'
 
 interface Props {
       data: User
-      updateFields: Function
+      updateFields: (fields: Partial<User>) => void
 }
 
 function AddressForm({ data, updateFields }: Props) {
