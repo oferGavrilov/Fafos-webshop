@@ -9,7 +9,7 @@ function Home() {
       return (
             <div className='scroll-smooth '>
                   <Hero />
-                  <div className='md:mx-10 lg:mx-28 xl:mx-32'>
+                  <div className='mx-0 max-w-[1400px] md:mx-auto'>
                         <Teaser />
                         <ImgCarousel />
                         <HotCategories />

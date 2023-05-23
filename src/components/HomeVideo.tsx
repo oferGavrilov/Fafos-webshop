@@ -14,6 +14,7 @@ function HomeVideo () {
           playing
           loop = {true}
           muted ={true}
+          playsinline
         />
       </div>
     </Suspense>
