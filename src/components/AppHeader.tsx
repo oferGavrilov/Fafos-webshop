@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 import { IoBagOutline } from 'react-icons/io5'
@@ -7,6 +8,7 @@ import { Badge, IconButton } from "@mui/material"
 
 import MenuIcon from '@mui/icons-material/Menu'
 import { useShoppingCart } from '@context/ShoppingCart'
+import { useAuth } from '@context/AuthContext'
 import SideMenu from './SideMenu'
 
 interface Props {
@@ -28,6 +30,9 @@ function AppHeader ({ page }: Props) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const { currentUser } = useAuth()
+  console.log(currentUser)
+
   return (
     <>
       <header className={`fixed w-[100%] z-10 transition duration-500  ${isScrolled ? 'scrolled' : 'text-white'}`}>
@@ -35,7 +40,7 @@ function AppHeader ({ page }: Props) {
           <div className='gap-5 items-center hidden lg:flex'>
             <Link className='header-icon ' href="/login">
               <IconButton>
-                <AiOutlineUser />
+                {currentUser ? <img   className='w-8 h-8 rounded-full' src={currentUser?.photoURL || 'imgs/etc/default-user.png'} alt="user"/> :  <AiOutlineUser />}
               </IconButton>
             </Link>
             <Link className='header-icon' href="/cart">

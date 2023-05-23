@@ -6,10 +6,10 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 function AppFooter () {
-  const isLogin = useRouter().pathname === '/login'
+  const hidden = useRouter().pathname === '/login' || useRouter().pathname === '/user'
 
   return (
-    <footer className={`${isLogin && 'hidden'} w-full py-10 px-2 md:px-10 flex-col bg-[#e9ecef] justify-center items-center shadow-inner`}>
+    <footer className={`${hidden && 'hidden'} w-full py-10 px-2 md:px-10 flex-col bg-[#e9ecef] justify-center items-center shadow-inner`}>
       <div className='flex gap-x-16 justify-between w-full'>
         <ul>
           <li className='footer-links'>משלוחים</li>

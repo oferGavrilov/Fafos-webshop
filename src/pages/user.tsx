@@ -2,20 +2,15 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 import { useAuth } from '@context/AuthContext'
+import Link from 'next/link'
 
 
 export default function user (): JSX.Element {
       const router = useRouter()
-      const {currentUser , loading , signOut} = useAuth()
-      
-      if (loading) return <h1>Loading...</h1>
-      const adminId = process.env.ADMIN_ID
-      console.log(currentUser?.uid)
-      console.log(adminId)
+      const { currentUser, loading, signOut, isAdmin } = useAuth()
 
-      if(currentUser?.uid == adminId) {
-            console.log('is admin')
-      }
+      if (loading) return <h1>Loading...</h1>
+      console.log(isAdmin())
 
       if (!currentUser) {
             router.push('/login')
@@ -28,9 +23,12 @@ export default function user (): JSX.Element {
       }
 
       return (
-            <section className='h-screen mt-16'>
-                  <h1 className='text-center font-pangolin text-2xl'>Welcome back {currentUser?.displayName}</h1>
-                  <button type='button' onClick={() => onSignOut()}>Sign Out</button>
+            <section className='h-screen pt-20 custom-gradient'>
+                  <h1 className='animate-fade text-center font-montserrat text-3xl font-bold tracking-wider'>Welcome back {currentUser?.displayName}</h1>
+                  <div className='flex flex-col w-max mx-auto gap-y-6 py-6'>
+                        {isAdmin() &&<Link href='/admin' className='main-btn  shadow-lg'>Admin Page</Link>}
+                        <button type='button' onClick={() => onSignOut()} className='main-btn'>Sign Out</button>
+                  </div>
             </section>
       )
 }

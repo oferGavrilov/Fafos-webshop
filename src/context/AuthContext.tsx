@@ -12,9 +12,9 @@ interface AuthContextProps {
       loading: boolean,
       googleSignIn?: () => Promise<void>,
       signOut?: () => void,
+      isAdmin : () => boolean,
       signupWithCredentials?: (user: IUser) => Promise<void>,
       signInWithCredentials?: (user: IUser) => Promise<void>
-      // createUser: (email: string, password: string) => Promise<any>
 }
 
 const AuthContext = createContext<AuthContextProps>({
@@ -22,9 +22,9 @@ const AuthContext = createContext<AuthContextProps>({
       loading: true,
       googleSignIn: async () => { },
       signOut: () => { },
+      isAdmin: () => false,
       signupWithCredentials: async () => { },
       signInWithCredentials: async () => { }
-      // createUser: async () => { }
 })
 
 export function useAuth () {
@@ -54,6 +54,11 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
             }
       }
 
+      function isAdmin (): boolean {
+            const adminId = 'xWI6uTLBiDdmOxV8oTfmMtreNtG3'
+            return currentUser?.uid === adminId
+      }
+
       async function signupWithCredentials ({ email, password }: IUser) {
             await createUserWithEmailAndPassword(auth, email, password)
       }
@@ -72,6 +77,7 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
                   currentUser,
                   googleSignIn,
                   signOut,
+                  isAdmin,
                   signupWithCredentials,
                   signInWithCredentials
             }),
