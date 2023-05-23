@@ -55,7 +55,8 @@ module.exports = {
                         "functions": "defaultArguments"
                   }
             ],
-            "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+            "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+            "eqeqeq": "off",
       },
       settings: {
             'import/resolver': {

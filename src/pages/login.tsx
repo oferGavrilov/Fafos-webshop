@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 
-import { User } from "firebase/auth";
 import { useAuth } from '@context/AuthContext'
+import { IUser } from '../models/user.model'
 import AccountForm from '../components/login/AccountForm'
 // import AddressForm from '../components/login/AddressForm'
 // import UserForm from '../components/login/UserForm'
@@ -13,11 +13,12 @@ import { useMultiStepForm } from '../hooks/useMultiStepForm'
 import { userService } from '../services/user.service'
 
 function Login () {
-  const [isLogin, setIsLogin] = useState(false)
-  const [credentials, setCredentials] = useState(userService.getEmptyUser())
+  const [isLogin, setIsLogin] = useState(true)
+  const [credentials, setCredentials] = useState<IUser>(userService.getEmptyUser())
+  const { loading, googleSignIn, signInWithCredentials, signupWithCredentials, currentUser } = useAuth()
   const router = useRouter()
-  
-  const updateFields = useCallback((fields: Partial<User>) => {
+
+  const updateFields = useCallback((fields: Partial<IUser>) => {
     setCredentials(prev => ({ ...prev, ...fields }))
   }, [])
 
@@ -25,10 +26,12 @@ function Login () {
     [<AccountForm key={1} data={credentials} updateFields={updateFields} />] :
     [<AccountForm key={2} data={credentials} updateFields={updateFields} />])
 
-  const {loading , googleSignIn} = useAuth()
 
-  if(loading) return <h1>Loading...</h1>
- 
+  if (currentUser && !loading) {
+    router.push('/user')
+  }
+
+  if (loading) return <h1>Loading...</h1>
   async function signInWithGoogle () {
     try {
       await googleSignIn()
@@ -41,17 +44,16 @@ function Login () {
 
   function onSubmit (e: FormEvent) {
     e.preventDefault()
-    console.log(credentials)
     if (!isLastStep) return onNext()
-    if (isLogin) signIn()
-    else signUp()
-    return router.push('/')
+    if (isLogin) return signIn()
+    return signUp()
   }
 
   async function signIn () {
     try {
-      console.log('signIn', credentials)
-      // await userService.signIn(credentials)
+      await signInWithCredentials(credentials)
+      router.push('/user')
+      toast.success("Login success.")
     } catch (error) {
       console.log(error)
     }
@@ -59,25 +61,20 @@ function Login () {
 
   async function signUp () {
     try {
-      console.log('signUp', credentials)
-      // await createUser(credentials.email, credentials.password)
+      await signupWithCredentials(credentials)
+      router.push('/user')
+      toast.success("Signup success.")
     } catch (error) {
       console.log(error)
     }
   }
-
-  // function updateFields (fields: Partial<FormData>) {
-  //   setCredentials(prev => ({ ...prev, ...fields }))
-  // }
- 
-
 
   // [<UserForm data={credentials} updateFields={updateFields} />, <AddressForm data={credentials} updateFields={updateFields} />,
   return (
     <section className='login-page'>
       <div className='animate-wrapper max-w-3xl w-[90%] text-[#242424] mt-10 relative mx-auto'>
         <form onSubmit={onSubmit} className=''>
-          <h2 className='text-center font-pangolin text-xl tracking-wide py-4'>{isLogin ?'Login' : 'Signup' }</h2>
+          <h2 className='text-center font-pangolin text-xl tracking-wide py-4'>{isLogin ? 'Login' : 'Signup'}</h2>
           {step}
           {!isLogin && <div className='absolute top-2 right-2'>
             {currentStep + 1} / {steps.length}

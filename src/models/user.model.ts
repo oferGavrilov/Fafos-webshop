@@ -1,4 +1,4 @@
-export interface User {
+export interface IUser {
       firstName?: string
       lastName?: string
       street?: string
@@ -6,7 +6,7 @@ export interface User {
       state?: string
       zip?: string
       email: string
-      password: string
+      password?: string
 }
 // export interface User {
 //       email: string

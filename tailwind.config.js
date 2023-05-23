@@ -14,7 +14,7 @@ module.exports = {
       'rubik':['Rubik'],
       'marker':['Permanent Marker' , 'cursive'],
       'montserrat':['Montserrat'],
-      'pangolin':['Pangolin' , 'cursive']
+      'pangolin':['Pangolin']
     },
     extend: {
     },
