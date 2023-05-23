@@ -80,7 +80,7 @@ function login () {
           </div>}
           <div className='h-full w-full px-6 pt-12 pb-3 flex items-end relative'>
             {!isFirstStep && <button type='button' className='login-btn left-7' onClick={onBack}>Back</button>}
-            <button type='submit' className='login-btn right-4'>{!isLastStep ? 'Next' : 'Submit'}</button>
+            <button type='submit' className='login-btn right-9'>{!isLastStep ? 'Next' : 'Submit'}</button>
           </div>
           <div className='text-center'>{!isLogin ? 'Already have account ?' : 'Not a member yet ? '} <span role='presentation' onClick={() => setIsLogin(!isLogin)} className='cursor-pointer underline underline-offset-2 text-sm text-[#726e6e] hover:text-[#242424]'>{!isLogin ? 'Login Here' : 'Sign up Here'}</span> </div>
         </form>

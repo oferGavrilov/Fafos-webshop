@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-boolean-value */
 import React, { Suspense } from 'react'
 import dynamic from 'next/dynamic'
 
@@ -11,8 +12,8 @@ function HomeVideo () {
           width="100%"
           height="100%"
           playing
-          loop
-          muted
+          loop = {true}
+          muted ={true}
         />
       </div>
     </Suspense>

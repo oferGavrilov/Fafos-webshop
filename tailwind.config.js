@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -13,9 +14,10 @@ module.exports = {
       'rubik':['Rubik'],
       'marker':['Permanent Marker' , 'cursive'],
       'montserrat':['Montserrat'],
+      'pangolin':['Pangolin' , 'cursive']
     },
     extend: {
     },
   },
-  plugins: [require('tailwind-scrollbar'),],
+  plugins: [require('tailwind-scrollbar')],
 }

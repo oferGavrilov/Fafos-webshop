@@ -3,9 +3,9 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 import { IoClose } from 'react-icons/io5'
-import { BiShekel } from 'react-icons/bi'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
 import { Carousel } from 'react-responsive-carousel'
+import formatCurrency from '@services/formatCurrency'
 import NoSuchItem from '../../components/NoSuchItem'
 import { useShoppingCart } from '../../context/ShoppingCart'
 
@@ -63,7 +63,7 @@ function ProductDetails () {
                         <div className='flex flex-col w-full mr-5'>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
                                     <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data.bulletColor}` }}>{product.title}</span>
-                                    <span className='flex items-center justify-center text-xl font-marker'><BiShekel />{product.price.toFixed(2)}</span>
+                                    <span className='flex items-center justify-center text-xl font-marker'>{formatCurrency(+product.price.toFixed(2))}</span>
                               </div >
                               {data && <FormControl className='!mx-auto !my-5'>
                                     <FormLabel id="demo-row-radio-buttons-group-label" className='!text-xl !text-gray-400'>Size</FormLabel>

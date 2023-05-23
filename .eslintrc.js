@@ -54,7 +54,8 @@ module.exports = {
                         "forbidDefaultForRequired": true,
                         "functions": "defaultArguments"
                   }
-            ]
+            ],
+            "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
       },
       settings: {
             'import/resolver': {

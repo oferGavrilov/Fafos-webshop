@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
 @layer base {
   body {
     @apply text-[#212529] bg-[#f8f9fa] !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#adb5bd];
@@ -63,7 +65,7 @@
   }
 
   .login-btn {
-    @apply absolute uppercase bg-white px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#242424] hover:text-white;
+    @apply  main-text absolute uppercase bg-white px-4 py-2 rounded-xl transition-colors duration-300 hover:bg-[#242424] hover:text-white;
   }
 
   /* Loader */
@@ -81,7 +83,7 @@
 
   /* Login page */
   .social-icons {
-    @apply grayscale transition-all duration-300 hover:grayscale-0 cursor-pointer border border-gray-300 p-3 w-max;
+    @apply  transition-all duration-300 cursor-pointer border border-gray-300 p-3 w-max;
   }
 
 }
