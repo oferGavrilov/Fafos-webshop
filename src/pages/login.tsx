@@ -2,8 +2,9 @@ import React, { FormEvent, useCallback, useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
-import { getAuth, signInWithPopup, GoogleAuthProvider, User } from "firebase/auth";
-import { initFirebase } from '../firebase/firebase'
+
+import { User } from "firebase/auth";
+import { useAuth } from '@context/AuthContext'
 import AccountForm from '../components/login/AccountForm'
 // import AddressForm from '../components/login/AddressForm'
 // import UserForm from '../components/login/UserForm'
@@ -11,26 +12,32 @@ import AccountForm from '../components/login/AccountForm'
 import { useMultiStepForm } from '../hooks/useMultiStepForm'
 import { userService } from '../services/user.service'
 
-function login () {
+function Login () {
   const [isLogin, setIsLogin] = useState(false)
   const [credentials, setCredentials] = useState(userService.getEmptyUser())
   const router = useRouter()
-  // const { createUser } = useAuth()
+  
+  const updateFields = useCallback((fields: Partial<User>) => {
+    setCredentials(prev => ({ ...prev, ...fields }))
+  }, [])
 
-  initFirebase()
-  const auth = getAuth();
-  const provider = new GoogleAuthProvider();
+  const { step, currentStep, steps, isFirstStep, isLastStep, onBack, onNext } = useMultiStepForm(isLogin ?
+    [<AccountForm key={1} data={credentials} updateFields={updateFields} />] :
+    [<AccountForm key={2} data={credentials} updateFields={updateFields} />])
 
+  const {loading , googleSignIn} = useAuth()
+
+  if(loading) return <h1>Loading...</h1>
+ 
   async function signInWithGoogle () {
     try {
-      const result = await signInWithPopup(auth, provider);
-      console.log(result.user)
+      await googleSignIn()
+      toast.success("Login with google success.")
+      router.push('/user')
     } catch (err) {
       toast.error("Login with google failed, please try again.")
     }
   }
-
-
 
   function onSubmit (e: FormEvent) {
     e.preventDefault()
@@ -62,18 +69,15 @@ function login () {
   // function updateFields (fields: Partial<FormData>) {
   //   setCredentials(prev => ({ ...prev, ...fields }))
   // }
-  const updateFields = useCallback((fields: Partial<User>) => {
-    setCredentials(prev => ({ ...prev, ...fields }))
-  }, [])
+ 
 
-  const { step, currentStep, steps, isFirstStep, isLastStep, onBack, onNext } = useMultiStepForm(isLogin ?
-    [<AccountForm key={1} data={credentials} updateFields={updateFields} />] :
-    [<AccountForm key={2} data={credentials} updateFields={updateFields} />])
+
   // [<UserForm data={credentials} updateFields={updateFields} />, <AddressForm data={credentials} updateFields={updateFields} />,
   return (
     <section className='login-page'>
       <div className='animate-wrapper max-w-3xl w-[90%] text-[#242424] mt-10 relative mx-auto'>
         <form onSubmit={onSubmit} className=''>
+          <h2 className='text-center font-pangolin text-xl tracking-wide py-4'>{isLogin ?'Login' : 'Signup' }</h2>
           {step}
           {!isLogin && <div className='absolute top-2 right-2'>
             {currentStep + 1} / {steps.length}
@@ -105,4 +109,4 @@ function login () {
   )
 }
 
-export default login
+export default Login

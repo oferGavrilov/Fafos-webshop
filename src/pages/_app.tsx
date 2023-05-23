@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic'
 // import { initFirebase } from 'src/firebase/firebase'
-// import { AuthProvider } from '../context/AuthContext'
 
 import '../styles/globals.css'
 import '../styles/login-page.css'
@@ -11,13 +10,14 @@ import type { AppProps } from 'next/app'
 
 import NextNProgress from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
+import { AuthProvider } from '../context/AuthContext'
 import { ShoppingCartProvider } from '../context/ShoppingCart'
 
 const Layout = dynamic(() => import('../components/Layout'), { ssr: false })
 
 export default function App ({ Component, pageProps }: AppProps) {
   return (
-    // <AuthProvider>
+    <AuthProvider>
     <ShoppingCartProvider>
       <NextNProgress />
       <Layout page=''>
@@ -25,6 +25,6 @@ export default function App ({ Component, pageProps }: AppProps) {
       </Layout>
       <ToastContainer />
     </ShoppingCartProvider>
-    // </AuthProvider>
+    </AuthProvider>
   )
 }
