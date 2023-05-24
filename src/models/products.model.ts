@@ -20,6 +20,7 @@ export interface CollectionsData {
 }
 
 export interface Product {
+      _id?: string
       id: string
       imgUrl: string
       title: string

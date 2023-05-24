@@ -8,21 +8,25 @@ import { Filter } from '../../models/filter.model'
 import { Product } from '../../models/products.model'
 import { productService } from '../../services/product.service'
 
-export default function ProductPage(props) {
-      console.log('props',props)
-      const {category} = useRouter().query
-      const [filterBy, setFilterBy] = useState<Filter>(productService.getEmptyFilter())
+export default function ProductPage ({ productsFromServer }) {
+      console.log('props', productsFromServer)
+      const { category } = useRouter().query
+      // const [filterBy, setFilterBy] = useState<Filter>(productService.getEmptyFilter())
       const [sort, setSort] = React.useState('none')
       const [products, setProducts] = useState<Product[]>([])
 
       useEffect(() => {
-            if (!category) return
             loadProducts()
       }, [sort, category])
 
-      async function loadProducts() {
-            let data = productService.getAllProducts({ ...filterBy, category }, sort)
-            setProducts([...data])
+      function loadProducts () {
+            if (category !== 'all-swimwear') {
+                  productsFromServer = productsFromServer.filter((product: Product) => product.category === category)
+            }
+            if (sort !== 'none') {
+                  productsFromServer = productService.setSort(sort, productsFromServer)
+            }
+            setProducts([...productsFromServer])
       }
 
       const handleSort = (event: SelectChangeEvent) => {
@@ -38,12 +42,11 @@ export default function ProductPage(props) {
       )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps () {
       try {
             let response = await fetch('http://localhost:3000/api/products')
             let data = await response.json()
-            console.log('data',data)
-            return { props: { products: data } }
+            return { props: { productsFromServer: data } }
       } catch (error) {
             console.log(error)
             return { props: { products: [] } }

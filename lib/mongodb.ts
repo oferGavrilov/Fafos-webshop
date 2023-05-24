@@ -6,7 +6,7 @@ const url = 'mongodb://localhost:27017'
 
 const options = {}
 
-let client 
+let client: MongoClient 
 // eslint-disable-next-line import/no-mutable-exports
 let clientPromise: Promise<MongoClient>
 
