@@ -12,9 +12,9 @@ function Cart () {
   const { cartItems, removeItem, decreaseItemQuantity, increaseItemQuantity } = useShoppingCart()
   return (
     <>
-      <Link href="/" className='flow-btn !text-base md:text-2xl slide-bottom before:bg-green-400 !border-2 rounded-md !border-green-400 hover:text-white '>
+      {cartItems.length > 0 && <Link href="/" className='flow-btn !text-base md:text-2xl slide-bottom before:bg-green-400 !border-2 rounded-md !border-green-400 hover:text-white '>
         <span>Apply Purchase</span>
-      </Link>
+      </Link>}
       <section className='pt-10 pb-20'>
         <h2 className='text-center py-6 text-3xl main-text'>My Shopping Cart</h2>
         {!cartItems.length ? (

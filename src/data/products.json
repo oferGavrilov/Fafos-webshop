@@ -199,8 +199,8 @@
                         "color": "pink",
                         "bulletColor":"pink",
                         "imgUrl": [
-                              "imgs/products/bottoms/donna-pink1.jpg",
-                              "imgs/products/bottoms/donna-pink2.jpg"
+                              "imgs/products/bottoms/donna-pink2.jpg",
+                              "imgs/products/bottoms/donna-pink1.jpg"
                         ],
                         "quantity": [
                               {
@@ -613,6 +613,116 @@
                               "imgs/products/tops/jasmin-lime1.jpg",
                               "imgs/products/tops/jasmin-lime2.jpg",
                               "imgs/products/tops/jasmin-lime3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "112",
+            "imgUrl": "imgs/products/emi-white1.jpg",
+            "title": "emi",
+            "price": 375,
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "32",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/tops/emi-white1.jpg",
+                              "imgs/products/tops/emi-white2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "33",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/tops/emi-black2.jpg",
+                              "imgs/products/tops/emi-black1.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "113",
+            "imgUrl": "imgs/products/emi-white1.jpg",
+            "title": "emi",
+            "price": 300,
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "id": "34",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/bottoms/emi-white1.jpg",
+                              "imgs/products/bottoms/emi-white2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "35",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/bottoms/emi-black1.jpg",
+                              "imgs/products/bottoms/emi-black2.jpg"
                         ],
                         "quantity": [
                               {
