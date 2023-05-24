@@ -4,7 +4,7 @@ import { SelectChangeEvent } from '@mui/material'
 
 import ProductFilter from '../../components/ProductFilter'
 import ProductList from '../../components/ProductList'
-import { Filter } from '../../models/filter.model'
+// import { Filter } from '../../models/filter.model'
 import { Product } from '../../models/products.model'
 import { productService } from '../../services/product.service'
 
@@ -20,6 +20,7 @@ export default function ProductPage ({ productsFromServer }) {
       }, [sort, category])
 
       function loadProducts () {
+            if(!productsFromServer) productService.getProductsFromJson()
             if (category !== 'all-swimwear') {
                   productsFromServer = productsFromServer.filter((product: Product) => product.category === category)
             }

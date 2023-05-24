@@ -15,7 +15,12 @@ export const productService = {
       getEmptyFilter,
       getProductById,
       isInStock,
-      getAmountFromStock
+      getAmountFromStock,
+      getProductsFromJson
+}
+
+function getProductsFromJson () {
+      return productsJson
 }
 
 function getAllProducts (products:Product[] = null, filter: Filter = getEmptyFilter(), sort = '' ) {
