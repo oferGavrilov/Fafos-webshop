@@ -87,7 +87,7 @@
                   {
                         "id": "13",
                         "color": "lime",
-                        "bulletColor":"lime",
+                        "bulletColor":"greenyellow",
                         "imgUrl": [
                               "imgs/products/one-piece/jade-lime1.jpg",
                               "imgs/products/one-piece/jade-lime2.jpg"
@@ -365,17 +365,254 @@
       {
             "id": "108",
             "imgUrl": "imgs/products/plus-size1.jpg",
-            "title": "Spring-mint",
+            "title": "Jasmin",
             "price": 360,
             "category": "plus-size",
             "inventory": [
                   {
                         "id": "26",
-                        "color": "spring-mint",
-                        "bulletColor":"springgreen",
+                        "color": "pink",
+                        "bulletColor":"pink",
                         "imgUrl": [
-                              "imgs/products/plus-size/spring-mint1.jpg",
-                              "imgs/products/plus-size/spring-mint2.jpg"
+                              "imgs/products/plus-size/jasmin-pink1.jpg",
+                              "imgs/products/plus-size/jasmin-pink2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "27",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/plus-size/jasmin-black1.jpg",
+                              "imgs/products/plus-size/jasmin-black2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "109",
+            "imgUrl": "imgs/products/rings-leopard1.jpg",
+            "title": "Rings",
+            "price": 350,
+            "category": "plus-size",
+            "inventory": [
+                  {
+                        "id": "28",
+                        "color": "leopard",
+                        "bulletColor":"saddlebrown",
+                        "imgUrl": [
+                              "imgs/products/plus-size/rings-leopard1.jpg",
+                              "imgs/products/plus-size/rings-leopard2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "29",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/plus-size/rings-black1.jpg",
+                              "imgs/products/plus-size/rings-black2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "110",
+            "imgUrl": "imgs/products/amber-red1.jpg",
+            "title": "Amber",
+            "price": 850,
+            "category": "one-piece",
+            "inventory": [
+                  {
+                        "id": "29",
+                        "color": "red",
+                        "bulletColor":"red",
+                        "imgUrl": [
+                              "imgs/products/one-piece/amber-red1.jpg",
+                              "imgs/products/one-piece/amber-red2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "30",
+                        "color": "turquoise",
+                        "bulletColor":"turquoise",
+                        "imgUrl": [
+                              "imgs/products/one-piece/amber-blue1.jpg",
+                              "imgs/products/one-piece/amber-blue2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "111",
+            "imgUrl": "imgs/products/jasmin-turquoise1.jpg",
+            "title": "jasmin",
+            "price": 375,
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "31",
+                        "color": "turquoise",
+                        "bulletColor":"turquoise",
+                        "imgUrl": [
+                              "imgs/products/tops/jasmin-turquoise1.jpg",
+                              "imgs/products/tops/jasmin-turquoise2.jpg",
+                              "imgs/products/tops/jasmin-turquoise3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "32",
+                        "color": "purple",
+                        "bulletColor":"purple",
+                        "imgUrl": [
+                              "imgs/products/tops/jasmin-purple3.jpg",
+                              "imgs/products/tops/jasmin-purple1.jpg",
+                              "imgs/products/tops/jasmin-purple2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "33",
+                        "color": "ice",
+                        "bulletColor":"lightpink",
+                        "imgUrl": [
+                              "imgs/products/tops/jasmin-ice1.jpg",
+                              "imgs/products/tops/jasmin-ice2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "34",
+                        "color": "lime",
+                        "bulletColor":"greenyellow",
+                        "imgUrl": [
+                              "imgs/products/tops/jasmin-lime1.jpg",
+                              "imgs/products/tops/jasmin-lime2.jpg",
+                              "imgs/products/tops/jasmin-lime3.jpg"
                         ],
                         "quantity": [
                               {

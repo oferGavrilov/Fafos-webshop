@@ -13,10 +13,10 @@
   }
 }
 
-.swiper-pagination {
-  @apply !bottom-5 !w-[30%];
+.swiper-pagination-bullets {
+  @apply flex justify-center pb-3 gap-x-1;
+  position: unset !important;
 }
-
 @layer components {
 
   /* Header */

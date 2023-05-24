@@ -79,5 +79,5 @@
     "**/*.tsx",
     "next-env.d.ts",
     "next.config.js"
-  ]
+, "src/pages/api/getProducts.js"  ]
 }

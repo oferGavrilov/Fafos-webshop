@@ -8,7 +8,8 @@ import { Filter } from '../../models/filter.model'
 import { Product } from '../../models/products.model'
 import { productService } from '../../services/product.service'
 
-export default function ProductPage() {
+export default function ProductPage(props) {
+      console.log('props',props)
       const {category} = useRouter().query
       const [filterBy, setFilterBy] = useState<Filter>(productService.getEmptyFilter())
       const [sort, setSort] = React.useState('none')
@@ -35,4 +36,16 @@ export default function ProductPage() {
                   <ProductList products={products} />
             </>
       )
+}
+
+export async function getServerSideProps() {
+      try {
+            let response = await fetch('http://localhost:3000/api/products')
+            let data = await response.json()
+            console.log('data',data)
+            return { props: { products: data } }
+      } catch (error) {
+            console.log(error)
+            return { props: { products: [] } }
+      }
 }
