@@ -19,7 +19,6 @@ export const productService = {
 }
 
 function getAllProducts (products:Product[] = null, filter: Filter = getEmptyFilter(), sort = '' ) {
-      console.log('products', products)
       let filteredProducts: Product[] = products?.slice() || productsJson.slice()
       if (filter.category && filter.category !== 'all-swimwear') {
             filteredProducts = products.filter(product => product.category === filter.category)
@@ -32,7 +31,7 @@ function getAllProducts (products:Product[] = null, filter: Filter = getEmptyFil
 
 async function getProductById (id: string) {
       // eslint-disable-next-line no-return-await
-      return await httpService.get(`products/${  id}`)
+      // return await httpService.get(`products/${  id}`)
       return productsJson.find(product => product.id === id)
 }
 

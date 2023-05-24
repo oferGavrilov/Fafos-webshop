@@ -31,7 +31,6 @@ function ProductDetails () {
       async function loadProduct (): Promise<void> {
             if (!id) return
             const data = await productService.getProductById(id)
-            console.log(data)
             setProduct(data)
       }
 
