@@ -39,7 +39,7 @@ function Layout ({ children, ...props }: Props) {
                   <AboveHeader />
                   <AppHeader page={props.page} />
                   <Suspense fallback={<div>Loading...</div>}>
-                        <main {...props} className={`${router.asPath === "/products" ? 'container m-auto mt-4 px-4' : ''}`}>
+                        <main {...props} className={`${router.asPath !== "/" ? ' ' : ''}`}>
                               {children}
                         </main>
                   </Suspense>

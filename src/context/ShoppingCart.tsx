@@ -1,5 +1,6 @@
 import { toast } from 'react-toastify'
 import { createContext, useContext, useMemo, useState } from 'react'
+import { productService } from '@services/product.service'
 import { cartService } from '../services/cart.service'
 import { Cart } from '../models/products.model'
 
@@ -33,13 +34,17 @@ export function ShoppingCartProvider ({ children }: Props) {
       function increaseItemQuantity (cartItem: Cart): void {
             setCartItems(prevState => {
                   const item = cartItems.find(item => item.id === cartItem.id)
+                  const isInStock = productService.isInStock(cartItem.id , cartItem.itemId , cartItem.size , (cartItem.quantity + 1 || 1))
+                  if (!isInStock) {
+                        toast.error('There`s no more stock of this item')
+                        return [...prevState]
+                  } 
                   if (item) {
                         item.quantity++
                         cartService.addToCart(item)
                         return [...prevState]
                   }
                   cartService.addToCart(cartItem)
-                  // const product = productService.getProductById(id)
                   return [...cartItems, { ...cartItem, quantity: 1 }] as Cart[]
             })
       }

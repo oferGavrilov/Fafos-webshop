@@ -1,4 +1,4 @@
-import {  makeId } from "../utils/util.service"
+import { makeId } from "../utils/util.service"
 import { CategoriesData, Product } from "../models/products.model"
 import products from '../data/products.json'
 import hotCategoriesData from '../hot-categories.json'
@@ -11,10 +11,12 @@ export const productService = {
       getCategoriesData,
       getCollections,
       getEmptyFilter,
-      getProductById
+      getProductById,
+      isInStock,
+      getAmountFromStock
 }
 
-function getAllProducts(filter: Filter = getEmptyFilter(), sort = '') {
+function getAllProducts (filter: Filter = getEmptyFilter(), sort = '') {
       let filteredProducts: Product[] = products.slice()
       if (filter.category && filter.category !== 'all-swimwear') {
             filteredProducts = products.filter(product => product.category === filter.category)
@@ -25,15 +27,15 @@ function getAllProducts(filter: Filter = getEmptyFilter(), sort = '') {
       return filteredProducts
 }
 
-function getProductById(id: string) {
+function getProductById (id: string) {
       return products.find(product => product.id === id)
 }
 
-function getEmptyFilter() {
+function getEmptyFilter () {
       return { category: '' }
 }
 
-function setSort(sort: string, products: Product[]) {
+function setSort (sort: string, products: Product[]) {
       switch (sort) {
             case 'title-ascending': return products.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
             case 'title-descending': return products.sort((a, b) => b.title.toLowerCase().localeCompare(a.title.toLowerCase()))
@@ -43,10 +45,21 @@ function setSort(sort: string, products: Product[]) {
       }
 }
 
-function getCategoriesData() {
-      const categoriesWithId = hotCategoriesData.map((item)=> item = { ...item, id: makeId() } as CategoriesData)
+function getCategoriesData () {
+      const categoriesWithId = hotCategoriesData.map((item) => item = { ...item, id: makeId() } as CategoriesData)
       return categoriesWithId
 }
-function getCollections() {
+function getCollections () {
       return collectionsData
+}
+
+function isInStock (id: string, itemId: string, size: string, itemAmount: number) {
+      const amount = getAmountFromStock(id, itemId, size)
+      return amount >= itemAmount
+}
+
+function getAmountFromStock (id: string, itemId: string, size: string) {
+      const product = products.find(product => product.id === id)
+      const { quantity } = product.inventory.find(item => item.id === itemId)
+      return quantity.find(item => item.size === size).amount
 }

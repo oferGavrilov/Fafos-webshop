@@ -71,8 +71,8 @@ function Login () {
 
   // [<UserForm data={credentials} updateFields={updateFields} />, <AddressForm data={credentials} updateFields={updateFields} />,
   return (
-    <section className='login-page'>
-      <div className='animate-wrapper max-w-3xl w-[90%] text-[#242424] mt-10 relative mx-auto'>
+    <section className='custom-gradient h-screen pt-20'>
+      <div className='animate-wrapper max-w-3xl w-[90%] text-[#242424] relative mx-auto'>
         <form onSubmit={onSubmit} className=''>
           <h2 className='text-center font-pangolin text-xl tracking-wide py-4'>{isLogin ? 'Login' : 'Signup'}</h2>
           {step}

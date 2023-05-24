@@ -40,9 +40,9 @@ function ProductDetails () {
 
       function onAddToCart () {
             if (!size) return toast.error('You must choose a size')
-            const { color, id, imgUrl, bulletColor } = data
-            const { title, price } = product
-            const productToAdd = { color, id, imgUrl, size, title, price, bulletColor }
+            const { color, imgUrl, bulletColor , id:itemId } = data
+            const { title, price , id} = product
+            const productToAdd = { color, id, imgUrl, size, title, price, bulletColor , itemId }
             increaseItemQuantity(productToAdd)
             return toast.success('Item added to cart')
       }
@@ -52,7 +52,7 @@ function ProductDetails () {
       console.log(data)
       return (
             <>
-                  <div className='py-24 px-16 md:px-20 flex flex-col md:flex-row-reverse' >
+                  <div className='py-24 max-w-[32rem] md:max-w-[75rem] px-4 mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
                         <Carousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
                               {images && images.map((item, idx) => (
                                     <div key={item + idx} className='flex flex-col'>
@@ -60,7 +60,7 @@ function ProductDetails () {
                                     </div>
                               ))}
                         </Carousel>
-                        <div className='flex flex-col w-full mr-5'>
+                        <div className='flex flex-col w-full '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
                                     <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data.bulletColor}` }}>{product.title}</span>
                                     <span className='flex items-center justify-center text-xl font-marker'>{formatCurrency(+product.price.toFixed(2))}</span>

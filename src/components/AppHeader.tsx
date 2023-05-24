@@ -31,7 +31,6 @@ function AppHeader ({ page }: Props) {
   }, [])
 
   const { currentUser } = useAuth()
-  console.log(currentUser)
 
   return (
     <>

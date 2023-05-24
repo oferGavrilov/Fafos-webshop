@@ -1,8 +1,4 @@
-.login-page {
-      padding-top: 2rem;
-      height: 100vh;
-      background-image: linear-gradient(to bottom, #cfebeb, #cfe4e0, #eaf3e8, #c8d7ce, #b8d8ae);
-}
+
 
 .animate-wrapper {
       animation-name: header;

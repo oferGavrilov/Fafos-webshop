@@ -87,7 +87,7 @@
 
   /* Login page */
   .social-icons {
-    @apply  transition-all duration-300 cursor-pointer border border-gray-300 p-3 w-max;
+    @apply  transition-all duration-300 cursor-pointer border border-gray-300 p-3 w-max shadow-md;
   }
 
 }
@@ -101,7 +101,7 @@
     @apply transition duration-200 hover:bg-slate-100 hover:border-x-blue-500;
   }
   .custom-gradient {
-    background-image: linear-gradient(to bottom, #cfebeb, #cfe4e0, #eaf3e8, #c8d7ce, #b8d8ae);
+    background-image: linear-gradient(to bottom, #ffffff, #e2ecea, #eaf3e8, #dce5df, #cae7c1);
   }
 
   .main-text {

@@ -43,6 +43,7 @@ interface Quantity {
 }
 
 export interface Cart  {
+      itemId: string
       bulletColor: string
       color: string;
       id: string;

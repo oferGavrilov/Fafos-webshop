@@ -5,6 +5,8 @@ import { BsInstagram } from "react-icons/bs"
 import { FaFacebookF } from "react-icons/fa"
 import { SiTiktok } from "react-icons/si"
 import CloseIcon from '@mui/icons-material/Close'
+import { useShoppingCart } from "@context/ShoppingCart"
+import { useAuth } from "@context/AuthContext"
 import { productService } from '../services/product.service'
 
 interface Props {
@@ -20,6 +22,7 @@ export default function SideMenu ({ isOpen, setIsOpen, menuType }: Props): JSX.E
                   <Box width='270px' textAlign='right' role='presentation'>
                         <Typography variant="h6" component='div' className="relative">
                               <CloseIcon className='absolute left-2 top-3 !text-3xl cursor-pointer' onClick={() => setIsOpen(false)} />
+                              <h2 className="py-4 text-center shadow-md shadow-gray-300">{menuType === 'main' ? 'Main Menu' : 'Collection'}</h2>
                               <ul className='flex flex-col main-text'>
                                     {DynamicList(menuType, setIsOpen)}
                               </ul>
@@ -31,6 +34,8 @@ export default function SideMenu ({ isOpen, setIsOpen, menuType }: Props): JSX.E
 
 function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.Element {
       const router = useRouter()
+      const { cartItems } = useShoppingCart()
+      const {currentUser , signOut} = useAuth()
       function onNavigate (path: string) {
             router.push(path)
             setIsOpen(false)
@@ -39,8 +44,8 @@ function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.E
       if (type === 'main') {
             return (
                   <>
-                        <li className='menu-list mt-14' onClick={() => onNavigate('/login')}>Login</li>
-                        <li className='menu-list' onClick={() => onNavigate('/cart')}>Cart</li>
+                        {!currentUser ? <li className='menu-list' onClick={() => onNavigate('/login')}>Login</li> : <li className='menu-list' onClick={() => onNavigate('/user')}>Profile</li>}
+                        <li className={`menu-list ${cartItems.length && 'text-green-400'}`} onClick={() => onNavigate('/cart')}>Cart {cartItems.length !== 0 &&<span className="bg-green-400 text-white px-[6px] py-[1px] rounded-full">{cartItems.length}</span>}</li>
                         <li className='menu-list' onClick={() => onNavigate('/products/all-swimwear')}>All Swimwear</li>
                         <li className='menu-list' onClick={() => onNavigate('/collections')}>Collections</li>
                         <li className='menu-list'>Beach Clothes</li>
@@ -52,6 +57,7 @@ function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.E
                                     <BsInstagram className='footer-icon' />
                               </div>
                         </li>
+                        {currentUser && <li className='menu-list border-0 border-b border-gray-300' onClick={() => signOut()}>Logout</li>}
                   </>
             )
       }
@@ -63,7 +69,7 @@ function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.E
       }
 
       return (
-            <ul className="mt-14">
+            <ul className="">
                   {collections.map(collection => (
                         <li onClick={() => navigate(collection)} key={collection} className={`${category === collection && 'bg-blue-50 border-y-2 border-blue-300'} menu-list`}>{collection}</li>
                   ))}
