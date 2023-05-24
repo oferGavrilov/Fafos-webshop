@@ -1,6 +1,7 @@
 import { makeId } from "../utils/util.service"
+import { httpService } from "./http.service"
 import { CategoriesData, Product } from "../models/products.model"
-import products from '../data/products.json'
+import productsJson from '../data/products.json'
 import hotCategoriesData from '../hot-categories.json'
 import collectionsData from '../collections.json'
 import { Filter } from "../models/filter.model"
@@ -8,6 +9,7 @@ import { Filter } from "../models/filter.model"
 // eslint-disable-next-line import/prefer-default-export
 export const productService = {
       getAllProducts,
+      setSort,
       getCategoriesData,
       getCollections,
       getEmptyFilter,
@@ -16,8 +18,8 @@ export const productService = {
       getAmountFromStock
 }
 
-function getAllProducts (filter: Filter = getEmptyFilter(), sort = '') {
-      let filteredProducts: Product[] = products.slice()
+function getAllProducts (products:Product[] = null, filter: Filter = getEmptyFilter(), sort = '' ) {
+      let filteredProducts: Product[] = products?.slice() || productsJson.slice()
       if (filter.category && filter.category !== 'all-swimwear') {
             filteredProducts = products.filter(product => product.category === filter.category)
       }
@@ -27,8 +29,10 @@ function getAllProducts (filter: Filter = getEmptyFilter(), sort = '') {
       return filteredProducts
 }
 
-function getProductById (id: string) {
-      return products.find(product => product.id === id)
+async function getProductById (id: string) {
+      // eslint-disable-next-line no-return-await
+      // return await httpService.get(`products/${  id}`)
+      return productsJson.find(product => product.id === id)
 }
 
 function getEmptyFilter () {
@@ -59,7 +63,7 @@ function isInStock (id: string, itemId: string, size: string, itemAmount: number
 }
 
 function getAmountFromStock (id: string, itemId: string, size: string) {
-      const product = products.find(product => product.id === id)
+      const product = productsJson.find(product => product.id === id)
       const { quantity } = product.inventory.find(item => item.id === itemId)
       return quantity.find(item => item.size === size).amount
 }

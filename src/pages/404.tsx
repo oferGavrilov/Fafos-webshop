@@ -1,6 +1,5 @@
 'use client'
 
-import { maxHeaderSize } from 'http'
 import Image from 'next/image'
 import React, { memo, useEffect } from 'react'
 

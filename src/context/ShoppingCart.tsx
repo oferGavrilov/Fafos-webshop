@@ -12,7 +12,7 @@ type ShoppingCartContextType = {
       getItemQuantity: (id: string) => number
       increaseItemQuantity: (cartItem: Cart) => void
       decreaseItemQuantity: (id: string) => void
-      removeItem: (id: string) => void
+      removeItem: (id: string) => void | Cart[]
       cartItems: Cart[]
       cartQuantity: number
 }
@@ -53,18 +53,29 @@ export function ShoppingCartProvider ({ children }: Props) {
             setCartItems(prevState => {
                   const item = prevState.find(item => item.id === id)
                   if (item) {
-                        if (item.quantity === 1) removeItem(id)
+                        if (item.quantity === 1) {
+                               const state = removeItem(id)
+                              item.quantity--
+                              return [...state as Cart[]]
+                        }
                         item.quantity--
+
                         return [...prevState]
                   }
                   return [...prevState, { id, quantity: 1 }] as Cart[]
             })
       }
 
-      async function removeItem (id: string): Promise<void> {
-            setCartItems(prevState => prevState.filter(item => item.id !== id))
-            await cartService.removeFromCart(id)
-            toast.success('Item removed from cart')
+      function removeItem (id: string): void | Cart[] {
+            let filteredItems
+            setCartItems(prevState => {
+                  filteredItems = prevState.filter(item => item.id !== id)
+                  cartService.removeFromCart(id)
+                  toast.success('Item removed from cart')
+                  return [...filteredItems]
+            })
+            return filteredItems || cartItems
+
       }
 
       const contextValue = useMemo(() => ({
@@ -74,7 +85,7 @@ export function ShoppingCartProvider ({ children }: Props) {
             removeItem,
             cartItems,
             cartQuantity
-      }), [cartItems])
+      }), [cartItems , setCartItems])
 
       return (
             <ShoppingCartContext.Provider value={contextValue} >

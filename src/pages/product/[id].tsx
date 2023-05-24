@@ -28,9 +28,9 @@ function ProductDetails () {
             loadProduct()
       }, [id])
 
-      function loadProduct (): void {
+      async function loadProduct (): Promise<void> {
             if (!id) return
-            const data = productService.getProductById(id)
+            const data = await productService.getProductById(id)
             setProduct(data)
       }
 
