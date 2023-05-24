@@ -5,7 +5,6 @@ import Link from 'next/link'
 import ControlPointRoundedIcon from '@mui/icons-material/ControlPointRounded'
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded'
 import { productService } from '@services/product.service'
-import CheckoutModal from '../components/CheckoutModal'
 import { useShoppingCart } from '../context/ShoppingCart'
 import formatCurrency from '../services/formatCurrency'
 
@@ -13,7 +12,9 @@ function Cart () {
   const { cartItems, removeItem, decreaseItemQuantity, increaseItemQuantity } = useShoppingCart()
   return (
     <>
-      <CheckoutModal />
+      <Link href="/" className='flow-btn !text-base md:text-2xl slide-bottom before:bg-green-400 !border-2 rounded-md !border-green-400 hover:text-white '>
+        <span>Apply Purchase</span>
+      </Link>
       <section className='pt-10 pb-20'>
         <h2 className='text-center py-6 text-3xl main-text'>My Shopping Cart</h2>
         {!cartItems.length ? (
@@ -48,7 +49,7 @@ function Cart () {
                           <div className='flex gap-x-5 pt-4 md:pt-0'>
                             <button type='button' onClick={() => decreaseItemQuantity(item.id)} ><RemoveCircleOutlineRoundedIcon className='!text-3xl cursor-pointer text-blue-500' /></button>
                             <span >{item.quantity}</span>
-                            <button type='button' className=" text-blue-500 disabled:cursor-not-allowed disabled:text-gray-400" onClick={() => increaseItemQuantity(item)} disabled={productService.getAmountFromStock(item.id , item.itemId , item.size) <= item.quantity}><ControlPointRoundedIcon className='!text-3xl' /></button>
+                            <button type='button' className=" text-blue-500 disabled:cursor-not-allowed disabled:text-gray-400" onClick={() => increaseItemQuantity(item)} disabled={productService.getAmountFromStock(item.id, item.itemId, item.size) <= item.quantity}><ControlPointRoundedIcon className='!text-3xl' /></button>
                           </div>
                         </div>
                         <p>

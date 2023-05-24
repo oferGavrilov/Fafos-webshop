@@ -48,8 +48,6 @@ function ProductDetails () {
       }
 
       if (!product) return <NoSuchItem />
-      console.log(product)
-      console.log(data)
       return (
             <>
                   <div className='py-24 max-w-[32rem] md:max-w-[75rem] px-4 mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >

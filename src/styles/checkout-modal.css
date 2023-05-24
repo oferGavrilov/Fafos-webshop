@@ -9,7 +9,6 @@
       justify-content: center;
       margin: auto;
       background: rgba(233, 235, 234, 0.8);
-      border-radius: 10px;
       transition: all .3s ease-out;
       -webkit-animation: slide-bottom 0.8s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s both;
       animation: slide-bottom 0.8s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s both;
