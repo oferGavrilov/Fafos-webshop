@@ -1,9 +1,11 @@
 [
       {
+            "id":"1",
             "img":"imgs/hot-categories/category1.jpg",
             "title":"Accessories"
       },
       {
+            "id":"2",
             "img":"imgs/hot-categories/category2.jpg",
             "title":"Beachwear"
       }

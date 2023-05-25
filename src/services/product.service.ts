@@ -1,16 +1,15 @@
-import { makeId } from "../utils/util.service"
 import { httpService } from "./http.service"
-import { CategoriesData, Product } from "../models/products.model"
+import { Product } from "../models/products.model"
 import productsJson from '../data/products.json'
-import hotCategoriesData from '../hot-categories.json'
 import collectionsData from '../collections.json'
 import { Filter } from "../models/filter.model"
+
+const findOneUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/product' : 'http://localhost:3000/api/product/'
 
 // eslint-disable-next-line import/prefer-default-export
 export const productService = {
       getAllProducts,
       setSort,
-      getCategoriesData,
       getCollections,
       getEmptyFilter,
       getProductById,
@@ -23,7 +22,7 @@ function getProductsFromJson () {
       return productsJson
 }
 
-function getAllProducts (products:Product[] = null, filter: Filter = getEmptyFilter(), sort = '' ) {
+function getAllProducts (products: Product[] = null, filter: Filter = getEmptyFilter(), sort = '') {
       let filteredProducts: Product[] = products?.slice() || productsJson.slice()
       if (filter.category && filter.category !== 'all-swimwear') {
             filteredProducts = products.filter(product => product.category === filter.category)
@@ -35,9 +34,14 @@ function getAllProducts (products:Product[] = null, filter: Filter = getEmptyFil
 }
 
 async function getProductById (id: string) {
-      // eslint-disable-next-line no-return-await
-      return await httpService.get(`products/${  id}`)
-      return productsJson.find(product => product.id === id)
+      let res = await fetch(`${findOneUrl}/?id=${id}`, {
+            method: 'GET',
+            headers: {
+                  'Content-Type': 'application/json'
+            }
+      })
+      let data = await res.json()
+      return data
 }
 
 function getEmptyFilter () {
@@ -54,10 +58,6 @@ function setSort (sort: string, products: Product[]) {
       }
 }
 
-function getCategoriesData () {
-      const categoriesWithId = hotCategoriesData.map((item) => item = { ...item, id: makeId() } as CategoriesData)
-      return categoriesWithId
-}
 function getCollections () {
       return collectionsData
 }

@@ -1,8 +1,7 @@
 import React from 'react'
-import { productService } from '../services/product.service'
+import hotCategories from '../hot-categories.json'
 
 function HotCategories() {
-      const hotCategories = productService.getCategoriesData()
 
       return (
             <ul className="flex gap-[20px] flex-col sm:flex-row sm:mx-14">

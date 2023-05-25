@@ -1,11 +1,11 @@
-/* eslint-disable react/no-array-index-key */
 import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
+
 import { IoClose } from 'react-icons/io5'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
 import { Carousel } from 'react-responsive-carousel'
-import formatCurrency from '@services/formatCurrency'
+import formatCurrency from '../../utils/formatCurrency'
 import NoSuchItem from '../../components/NoSuchItem'
 import { useShoppingCart } from '../../context/ShoppingCart'
 

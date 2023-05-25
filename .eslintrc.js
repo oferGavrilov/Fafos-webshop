@@ -58,6 +58,7 @@ module.exports = {
             "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
             "eqeqeq": "off",
             "jsx-a11y/control-has-associated-label": "off",
+            "react/no-array-index-key": "off",
       },
       settings: {
             'import/resolver': {

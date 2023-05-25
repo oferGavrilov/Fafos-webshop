@@ -6,7 +6,7 @@ import ControlPointRoundedIcon from '@mui/icons-material/ControlPointRounded'
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded'
 import { productService } from '@services/product.service'
 import { useShoppingCart } from '../context/ShoppingCart'
-import formatCurrency from '../services/formatCurrency'
+import formatCurrency from '../utils/formatCurrency'
 
 function Cart () {
   const { cartItems, removeItem, decreaseItemQuantity, increaseItemQuantity } = useShoppingCart()
