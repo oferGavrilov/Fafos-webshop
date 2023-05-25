@@ -36,7 +36,7 @@ function getAllProducts (products:Product[] = null, filter: Filter = getEmptyFil
 
 async function getProductById (id: string) {
       // eslint-disable-next-line no-return-await
-      // return await httpService.get(`products/${  id}`)
+      return await httpService.get(`products/${  id}`)
       return productsJson.find(product => product.id === id)
 }
 

@@ -2,7 +2,6 @@ import clientPromise from "../../../../lib/mongodb"
 
 
 export default async function handler(req, res) {
-      console.log(process.env.NODE_ENV)
       const client = await clientPromise
       const db = await client.db("fafos")
 
