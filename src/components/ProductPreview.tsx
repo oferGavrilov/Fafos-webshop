@@ -29,7 +29,7 @@ function ProductPreview({ product }: Props) {
               <img className='rounded relative shadow w-[100%]' src={`/${  item[0]}`} alt={item[idx]} />
             </Link>
             <div className='flex flex-col items-center gap-4 p-5'>
-              <Link href={`/product/${product.id}`} className='hover:underline underline-offset-2 h-12 cursor-pointer uppercase'>{product.title} {product.inventory[idx].color} {product.category}</Link>
+              <Link href={`/product/${product.id}?item=${product.inventory[idx].id}`} className='hover:underline underline-offset-2 h-12 cursor-pointer uppercase'>{product.title} {product.inventory[idx].color} {product.category}</Link>
               <span className='text-lg'>{formatCurrency(product.price)}</span>
               <Link href={`/product/${product.id}?item=${product.inventory[idx].id}`}>
                 <button type='button' className='primary-button'>

@@ -4,6 +4,7 @@ const nextConfig = {
   env:{
     ADMIN_ID: process.env.ADMIN_ID,
   },
+  output: 'standalone'
 }
 
 module.exports = nextConfig
