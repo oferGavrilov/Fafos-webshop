@@ -20,7 +20,7 @@ export default function ProductPage ({ productsFromServer }) {
       }, [sort, category])
 
       function loadProducts () {
-            if(!productsFromServer) productService.getProductsFromJson()
+            if(!productsFromServer?.length) productService.getProductsFromJson()
             if (category !== 'all-swimwear') {
                   productsFromServer = productsFromServer.filter((product: Product) => product.category === category)
             }
