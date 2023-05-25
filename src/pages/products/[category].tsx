@@ -4,7 +4,7 @@ import { SelectChangeEvent } from '@mui/material'
 
 import { httpService } from '@services/http.service'
 
-import  clientPromise  from '../../../lib/mongodb'
+import clientPromise from '../../../lib/mongodb'
 import ProductFilter from '../../components/ProductFilter'
 import ProductList from '../../components/ProductList'
 // import { Filter } from '../../models/filter.model'
@@ -46,7 +46,8 @@ export default function ProductPage ({ productsFromServer }) {
 }
 
 export async function getServerSideProps () {
-      let res = await fetch("http://localhost:3000/api/products" , {
+      const url = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/products' : 'http://localhost:3000/api/products'
+      let res = await fetch(url, {
             method: 'GET',
             headers: {
                   'Content-Type': 'application/json'
