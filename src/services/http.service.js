@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const BASE_URL = process.env.NODE_ENV === 'production'
       ? '/api/'
-      : '//localhost:3000/api/products'
+      : 'http://localhost:3000/api/'
 
 let axiosInstance = axios.create({ withCredentials: true })
 

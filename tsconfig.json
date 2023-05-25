@@ -82,5 +82,5 @@
     "**/*.tsx",
     "next-env.d.ts",
     "next.config.js"
-, "src/pages/api/getProducts.js"  ]
+, "src/pages/api/getProducts.js", "lib/mongodb.js"  ]
 }

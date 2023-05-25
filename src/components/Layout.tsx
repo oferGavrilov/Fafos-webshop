@@ -39,7 +39,7 @@ function Layout ({ children, ...props }: Props) {
                   <AboveHeader />
                   <AppHeader page={props.page} />
                   <Suspense fallback={<div>Loading...</div>}>
-                        <main {...props} className={`${router.asPath !== "/" ? ' ' : ''}`}>
+                        <main {...props} className='min-h-screen'>
                               {children}
                         </main>
                   </Suspense>

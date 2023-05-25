@@ -1,15 +1,15 @@
-import clientPromise from '../../../../lib/mongodb'
+import clientPromise from "../../../../lib/mongodb"
 
 
-export default async(req, res) =>  {
-      try {
-            const client = await clientPromise
-            const db = client.db('fafos')
-            const data = await db.collection('product').find({}).toArray()
-            res.json(data)
-      } catch (err) {
-            console.error(err)
-            throw new Error(err).message
-      }
+export default async function handler(req, res) {
+      const client = await clientPromise
+      const db = await client.db("fafos")
+
+      const products = await db
+            .collection("product")
+            .find({})
+            .limit(20)
+            .toArray()
+
+      res.json(products)
 }
-
