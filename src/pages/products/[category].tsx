@@ -17,12 +17,10 @@ export default function ProductPage ({ productsFromServer }) {
       }, [sort, category])
 
       function loadProducts () {
-            if (category !== 'all-swimwear') {
-                  productsFromServer = productsFromServer.filter((product: Product) => product.category === category)
-            }
             if (sort !== 'none') {
                   productsFromServer = productService.setSort(sort, productsFromServer)
             }
+            console.log(productsFromServer)
             setProducts([...productsFromServer])
       }
 

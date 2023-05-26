@@ -33,7 +33,6 @@ export interface Product {
 }
 
 interface Inventory {
-      [x: string]: any
       id: string
       color: string
       bulletColor: string
