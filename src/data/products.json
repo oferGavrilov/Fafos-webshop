@@ -111,7 +111,7 @@
       },
       {
             "id": "102",
-            "imgUrl": "imgs/products/bottoms1.jpg",
+            "imgUrl": "imgs/products/bottoms/tai-ice-blue1.jpg",
             "title": "Tai",
             "price": 430,
             "category": "bottoms",
@@ -166,7 +166,7 @@
       },
       {
             "id": "103",
-            "imgUrl": "imgs/products/bottoms2.jpg",
+            "imgUrl": "imgs/products/bottoms/donna-black1.jpg",
             "title": "Donna",
             "price": 350,
             "category": "bottoms",
@@ -221,7 +221,7 @@
       },
       {
             "id": "104",
-            "imgUrl": "imgs/products/tops-pink1.jpg",
+            "imgUrl": "imgs/products/tops/mila-pink1.jpg",
             "title": "Mila",
             "price": 375,
             "category": "tops",
@@ -253,7 +253,7 @@
       },
       {
             "id": "105",
-            "imgUrl": "imgs/products/tops2.jpg",
+            "imgUrl": "imgs/products/tops/bell-ruby1.jpg",
             "title": "Bell",
             "price": 370,
             "category": "tops",
@@ -309,7 +309,7 @@
       
       {
             "id": "107",
-            "imgUrl": "imgs/products/b-man2.jpg",
+            "imgUrl": "imgs/products/b-man/swim-white1.jpg",
             "title": "Swim short",
             "price": 350,
             "category": "b-man",
@@ -364,7 +364,7 @@
       },
       {
             "id": "108",
-            "imgUrl": "imgs/products/plus-size1.jpg",
+            "imgUrl": "imgs/products/plus-size/jasmin-pink1.jpg",
             "title": "Jasmin",
             "price": 360,
             "category": "plus-size",
@@ -419,7 +419,7 @@
       },
       {
             "id": "109",
-            "imgUrl": "imgs/products/rings-leopard1.jpg",
+            "imgUrl": "imgs/products/plus-size/rings-leopard1.jpg",
             "title": "Rings",
             "price": 350,
             "category": "plus-size",
@@ -529,7 +529,7 @@
       },
       {
             "id": "111",
-            "imgUrl": "imgs/products/jasmin-turquoise1.jpg",
+            "imgUrl": "imgs/products/tops/jasmin-turquoise1.jpg",
             "title": "jasmin",
             "price": 375,
             "category": "tops",
@@ -633,7 +633,7 @@
       },
       {
             "id": "112",
-            "imgUrl": "imgs/products/emi-white1.jpg",
+            "imgUrl": "imgs/products/tops/emi-white1.jpg",
             "title": "emi",
             "price": 375,
             "category": "tops",
@@ -688,7 +688,7 @@
       },
       {
             "id": "113",
-            "imgUrl": "imgs/products/emi-white1.jpg",
+            "imgUrl": "imgs/products/bottoms/emi-white1.jpg",
             "title": "emi",
             "price": 300,
             "category": "bottoms",

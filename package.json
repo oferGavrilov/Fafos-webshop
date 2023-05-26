@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dev:up":"docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
+    "dev:up": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
     "prod:up": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up"
   },
   "dependencies": {

@@ -2,18 +2,15 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import 'react-multi-carousel/lib/styles.css'
 
 import { IoClose } from 'react-icons/io5'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
-import { Carousel as MainCarousel } from 'react-responsive-carousel'
-import Link from 'next/link';
-import RelativeProducts from 'src/components/RelativeProducts';
+import RelativeProducts from 'src/components/RelativeProducts'
+import Carousel from 'src/components/Carousel'
 import formatCurrency from '../../utils/formatCurrency'
 import NoSuchItem from '../../components/NoSuchItem'
 import { useShoppingCart } from '../../context/ShoppingCart'
-
 
 import { Product } from '../../models/products.model'
 import { productService } from '../../services/product.service'
@@ -46,7 +43,8 @@ function ProductDetails () {
 
       const loadRelativeProducts = async (category: string) => {
             const data = await productService.getRelativeProducts(category)
-            setRelativeProducts([...data])
+            const products = data.filter((item :{ id: string }) => item.id !== id)
+            setRelativeProducts([...products])
       }
 
       const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -62,20 +60,11 @@ function ProductDetails () {
             return toast.success('Item added to cart')
       }
 
-      
-
       if (!product) return <NoSuchItem />
-
       return (
             <section className='relative'>
                   <div className='pt-24 pb-16 mt-8  md:max-w-[75rem]  mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
-                        <MainCarousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg px-4' >
-                              {images && images.map((item, idx) => (
-                                    <div key={item + idx} className='flex flex-col'>
-                                          < img src={`/${item}`} className='w-full ' alt={item} />
-                                    </div>
-                              ))}
-                        </MainCarousel>
+                        <Carousel images={images}/>
                         <div className='flex flex-col w-full py-6 '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
                                     <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data?.bulletColor}` }}>{product.title}</span>
@@ -99,11 +88,8 @@ function ProductDetails () {
                         </div>
                   </div>
                   <IoClose className='absolute top-12 right-4 text-3xl cursor-pointer' onClick={() => router.back()} />
-
                   {relativeProducts?.length > 0 && <RelativeProducts relativeProducts={relativeProducts} />}
-                  
             </section>
-
       )
 }
 

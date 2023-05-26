@@ -55,10 +55,10 @@ module.exports = {
                         "functions": "defaultArguments"
                   }
             ],
-            "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
             "eqeqeq": "off",
             "jsx-a11y/control-has-associated-label": "off",
             "react/no-array-index-key": "off",
+            'import/no-extraneous-dependencies': 'off',
       },
       settings: {
             'import/resolver': {
