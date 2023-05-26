@@ -68,15 +68,15 @@ function ProductDetails () {
 
       return (
             <section className='relative'>
-                  <div className='py-24 mt-8 max-w-[32rem] md:max-w-[75rem] px-4 mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
-                        <MainCarousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
+                  <div className='pt-24 pb-16 mt-8  md:max-w-[75rem]  mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
+                        <MainCarousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg px-4' >
                               {images && images.map((item, idx) => (
                                     <div key={item + idx} className='flex flex-col'>
                                           < img src={`/${item}`} className='w-full ' alt={item} />
                                     </div>
                               ))}
                         </MainCarousel>
-                        <div className='flex flex-col w-full '>
+                        <div className='flex flex-col w-full py-6 '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
                                     <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data?.bulletColor}` }}>{product.title}</span>
                                     <span className='flex items-center justify-center text-xl font-marker'>{formatCurrency(+product.price.toFixed(2))}</span>
@@ -94,7 +94,7 @@ function ProductDetails () {
                                           ))}
                                     </RadioGroup>
                               </FormControl>}
-                              <button type='button' onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>הוספה לסל</button>
+                              <button type='button' onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>Add to cart</button>
                               <span className='text-center main-text mt-1'>✦ Free Shipping On Orders Above 600₪ ✦</span>
                         </div>
                   </div>

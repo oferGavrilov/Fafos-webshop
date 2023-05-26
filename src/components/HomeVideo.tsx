@@ -12,9 +12,10 @@ function HomeVideo () {
           width="100%"
           height="100%"
           playing={true}
+          
           loop={true}
           muted={true}
-          playsinline={true}
+          playsInline={true}
         />
       </div>
     </Suspense>
