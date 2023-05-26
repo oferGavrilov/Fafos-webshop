@@ -2,12 +2,18 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 import { IoClose } from 'react-icons/io5'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
-import { Carousel } from 'react-responsive-carousel'
+import { Carousel as MainCarousel } from 'react-responsive-carousel'
+import Link from 'next/link';
+import RelativeProducts from 'src/components/RelativeProducts';
 import formatCurrency from '../../utils/formatCurrency'
 import NoSuchItem from '../../components/NoSuchItem'
 import { useShoppingCart } from '../../context/ShoppingCart'
+
 
 import { Product } from '../../models/products.model'
 import { productService } from '../../services/product.service'
@@ -16,6 +22,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 function ProductDetails () {
       const [product, setProduct] = useState<Product>()
+      const [relativeProducts, setRelativeProducts] = useState<Product[]>([])
       const [size, setSize] = useState<string>('')
       const router = useRouter()
       const id = useRouter().query.id as string
@@ -24,43 +31,54 @@ function ProductDetails () {
       const data = product?.inventory.find(type => type.id === item)
       const { increaseItemQuantity } = useShoppingCart()
 
+
       useEffect(() => {
+            if (!router.isReady) return
             loadProduct()
       }, [id])
 
       async function loadProduct (): Promise<void> {
             if (!id) return
-            const data = await productService.getProductById(id)
-            setProduct(data)
+            const product = await productService.getProductById(id)
+            loadRelativeProducts(product?.category)
+            setProduct(product)
+      }
+
+      const loadRelativeProducts = async (category: string) => {
+            const data = await productService.getRelativeProducts(category)
+            setRelativeProducts([...data])
       }
 
       const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
             setSize(e.target.value)
-      } , [setSize]) 
+      }, [setSize])
 
       function onAddToCart () {
             if (!size) return toast.error('You must choose a size')
-            const { color, imgUrl, bulletColor , id:itemId } = data
-            const { title, price , id} = product
-            const productToAdd = { color, id, imgUrl, size, title, price, bulletColor , itemId }
+            const { color, imgUrl, bulletColor, id: itemId } = data
+            const { title, price, id } = product
+            const productToAdd = { color, id, imgUrl, size, title, price, bulletColor, itemId }
             increaseItemQuantity(productToAdd)
             return toast.success('Item added to cart')
       }
 
+      
+
       if (!product) return <NoSuchItem />
+
       return (
-            <>
-                  <div className='py-24 max-w-[32rem] md:max-w-[75rem] px-4 mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
-                        <Carousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
+            <section className='relative'>
+                  <div className='py-24 mt-8 max-w-[32rem] md:max-w-[75rem] px-4 mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
+                        <MainCarousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg' >
                               {images && images.map((item, idx) => (
                                     <div key={item + idx} className='flex flex-col'>
-                                          < img src={`/${  item}`} className='w-full ' alt={item} />
+                                          < img src={`/${item}`} className='w-full ' alt={item} />
                                     </div>
                               ))}
-                        </Carousel>
+                        </MainCarousel>
                         <div className='flex flex-col w-full '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
-                                    <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data.bulletColor}` }}>{product.title}</span>
+                                    <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data?.bulletColor}` }}>{product.title}</span>
                                     <span className='flex items-center justify-center text-xl font-marker'>{formatCurrency(+product.price.toFixed(2))}</span>
                               </div >
                               {data && <FormControl className='!mx-auto !my-5'>
@@ -80,8 +98,11 @@ function ProductDetails () {
                               <span className='text-center main-text mt-1'>✦ Free Shipping On Orders Above 600₪ ✦</span>
                         </div>
                   </div>
-                  <IoClose className='absolute top-24 right-4 text-3xl cursor-pointer' onClick={() => router.back()} />
-            </>
+                  <IoClose className='absolute top-12 right-4 text-3xl cursor-pointer' onClick={() => router.back()} />
+
+                  {relativeProducts?.length > 0 && <RelativeProducts relativeProducts={relativeProducts} />}
+                  
+            </section>
 
       )
 }

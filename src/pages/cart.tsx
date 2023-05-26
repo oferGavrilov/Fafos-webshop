@@ -20,7 +20,7 @@ function Cart () {
         {!cartItems.length ? (
           <div className='flex flex-col items-center justify-center h-[68vh]'>
             <h2 className='text-2xl md:text-4xl main-text'>Cart Is Empty</h2>
-            <Image src="/imgs/etc/empty-cart.gif" priority height="300" width="180" alt="" />
+            <Image src="/imgs/etc/empty-cart.gif" loading='eager' priority height="300" width="180" alt="" />
             <Link href="/collections">
               <button type='button' className='flow-btn'>Explore Products</button>
             </Link>

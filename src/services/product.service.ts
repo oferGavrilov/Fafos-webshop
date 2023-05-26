@@ -1,11 +1,10 @@
-import { httpService } from "./http.service"
 import { Product } from "../models/products.model"
 import productsJson from '../data/products.json'
 import collectionsData from '../collections.json'
 import carousel from '../carousel-data.json'
-import { Filter } from "../models/filter.model"
 
 const findOneUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/product' : 'http://localhost:3000/api/product/'
+const getProductsUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/products' : 'http://localhost:3000/api/products/'
 
 // eslint-disable-next-line import/prefer-default-export
 export const productService = {
@@ -16,7 +15,8 @@ export const productService = {
       getProductById,
       isInStock,
       getAmountFromStock,
-      getProductsFromJson
+      getProductsFromJson,
+      getRelativeProducts
 }
 
 function getProductsFromJson () {
@@ -66,4 +66,15 @@ function getAmountFromStock (id: string, itemId: string, size: string) {
       const product = productsJson.find(product => product.id === id)
       const { quantity } = product.inventory.find(item => item.id === itemId)
       return quantity.find(item => item.size === size).amount
+}
+
+async function getRelativeProducts(category: string) {
+      let res = await fetch(`${getProductsUrl}/?category=${category}`, {
+            method: 'GET',
+            headers: {
+                  'Content-Type': 'application/json'
+            }
+      })
+      let data = await res.json()
+      return data
 }

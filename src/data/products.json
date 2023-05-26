@@ -1,7 +1,7 @@
 [
       {
             "id": "100",
-            "imgUrl": "imgs/products/one-piece1.jpg",
+            "imgUrl": "imgs/products/one-piece/mulan-apple1.jpg",
             "title": "Mulan",
             "price": 835,
             "category": "one-piece",
@@ -56,7 +56,7 @@
       },
       {
             "id": "101",
-            "imgUrl": "imgs/products/one-piece2.jpg",
+            "imgUrl": "imgs/products/one-piece/jade-turquoise1.jpg",
             "title": "Jade",
             "price": 835,
             "category": "one-piece",
@@ -474,7 +474,7 @@
       },
       {
             "id": "110",
-            "imgUrl": "imgs/products/amber-red1.jpg",
+            "imgUrl": "imgs/products/one-piece/amber-red1.jpg",
             "title": "Amber",
             "price": 850,
             "category": "one-piece",

@@ -14,7 +14,13 @@ export default function ProductPage ({ productsFromServer }: { productsFromServe
             setSort(event.target.value as string)
       }
 
-      if (!productsFromServer || !productsFromServer?.length) return <div>Loading...</div>
+      // TODO: ADD SKELTON LOADER
+      if (!productsFromServer || !productsFromServer?.length) {
+            console.log('loading')
+            return (
+                  <div>Loading...</div>
+                  )
+      }
       return (
             <>
                   <ProductFilter category={category} handleSort={handleSort} sort={sort} />
