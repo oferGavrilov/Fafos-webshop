@@ -20,3 +20,11 @@ function getRandomInt (num1: number, num2: number): number {
       const min = num1 <= num2 ? num1 : num2
       return Math.floor(Math.random() * (max - min)) + min
 }
+
+export function shuffle (arr: any[]): any[] {
+      for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+}

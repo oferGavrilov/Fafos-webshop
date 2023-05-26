@@ -2,13 +2,14 @@ import { httpService } from "./http.service"
 import { Product } from "../models/products.model"
 import productsJson from '../data/products.json'
 import collectionsData from '../collections.json'
+import carousel from '../carousel-data.json'
 import { Filter } from "../models/filter.model"
 
 const findOneUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/product' : 'http://localhost:3000/api/product/'
 
 // eslint-disable-next-line import/prefer-default-export
 export const productService = {
-      getAllProducts,
+      getCarouselData,
       setSort,
       getCollections,
       getEmptyFilter,
@@ -22,15 +23,9 @@ function getProductsFromJson () {
       return productsJson
 }
 
-function getAllProducts (products: Product[] = null, filter: Filter = getEmptyFilter(), sort = '') {
-      let filteredProducts: Product[] = products?.slice() || productsJson.slice()
-      if (filter.category && filter.category !== 'all-swimwear') {
-            filteredProducts = products.filter(product => product.category === filter.category)
-      }
-      if (sort !== 'none') {
-            filteredProducts = setSort(sort, filteredProducts)
-      }
-      return filteredProducts
+function getCarouselData () {
+      return carousel
+
 }
 
 async function getProductById (id: string) {

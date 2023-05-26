@@ -1,77 +1,119 @@
 [
       {
-            "img": "imgs/carousel/carousel9.jpg",
-            "title": "JASMIN TURQUOISE - TOP",
-            "price": 375
+            "id": "100",
+            "title": "Mulan",
+            "price": 835,
+            "imgUrl": "imgs/products/one-piece/mulan-apple1.jpg",
+            "itemId": "10",
+            "color": "apple",
+            "category": "one-piece"
       },
       {
-            "img": "imgs/carousel/carousel8.jpg",
-            "title": "JASMIN TURQUOISE - BOTTOM",
-            "price": 375
+            "id": "100",
+            "title": "Mulan",
+            "price": 835,
+            "imgUrl": "imgs/products/one-piece/mulan-white1.jpg",
+            "itemId": "11",
+            "color": "white",
+            "category": "one-piece"
       },
       {
-            "img": "imgs/carousel/carousel1.jpg",
-            "title": "Rings purple paisley- Top",
-            "price": 370
+            "id": "101",
+            "title": "Jade",
+            "price": 835,
+            "imgUrl": "imgs/products/one-piece/jade-turquoise1.jpg",
+            "itemId": "12",
+            "color": "turquoise",
+            "category": "one-piece"
       },
       {
-            "img": "imgs/carousel/carousel3.jpg",
-            "title": "Rings purple paisley - Bottom",
-            "price": 370
+            "id": "101",
+            "title": "Jade",
+            "price": 835,
+            "imgUrl": "imgs/products/one-piece/jade-lime1.jpg",
+            "itemId": "13",
+            "color": "lime",
+            "category": "one-piece"
       },
       {
-            "img": "imgs/carousel/carousel2.jpg",
-            "title": "Tommy purple paisley - Pants",
-            "price": 350
+            "id": "102",
+            "title": "Tai",
+            "price": 430,
+            "imgUrl": "imgs/products/bottoms/tai-ice-blue1.jpg",
+            "itemId": "14",
+            "color": "ice-blue",
+            "category": "bottoms"
       },
       {
-            "img": "imgs/carousel/carousel14.jpg",
-            "title": "Mulan brown - One piece",
-            "price": 850
+            "id": "102",
+            "title": "Tai",
+            "price": 835,
+            "imgUrl": "imgs/products/bottoms/tai-ivory1.jpg",
+            "itemId": "15",
+            "color": "ivory",
+            "category": "bottoms"
       },
       {
-            "img": "imgs/carousel/carousel15.jpg",
-            "title": "Chain brown jungle - Top",
-            "price": 420
+            "id": "103",
+            "title": "Donna",
+            "price": 350,
+            "imgUrl": "imgs/products/bottoms/donna-black1.jpg",
+            "itemId": "16",
+            "color": "black",
+            "category": "bottoms"
       },
       {
-            "img": "imgs/carousel/carousel6.jpg",
-            "title": "Chain india paisley - Top",
-            "price": 450
+            "id": "103",
+            "title": "Donna",
+            "price": 350,
+            "imgUrl": "imgs/products/bottoms/donna-pink1.jpg",
+            "itemId": "17",
+            "color": "pink",
+            "category": "bottoms"
       },
       {
-            "img": "imgs/carousel/carousel7.jpg",
-            "title": "Chain india paisley - Bottom",
-            "price": 400
+            "id": "104",
+            "title": "Mila",
+            "price": 375,
+            "imgUrl": "imgs/products/tops/mila-pink1.jpg",
+            "itemId": "18",
+            "color": "pink",
+            "category": "tops"
       },
       {
-            "img": "imgs/carousel/carousel4.jpg",
-            "title": "Chain yellow flowers - Top",
-            "price": 400
+            "id": "105",
+            "title": "Bell",
+            "price": 370,
+            "imgUrl": "imgs/products/tops/bell-ruby1.jpg",
+            "itemId": "20",
+            "color": "ruby",
+            "category": "tops"
       },
       {
-            "img": "imgs/carousel/carousel5.jpg",
-            "title": "Chain yellow flowers - Bottom",
-            "price": 400
+            "id": "105",
+            "title": "Bell",
+            "price": 370,
+            "imgUrl": "imgs/products/tops/bell-purple1.jpg",
+            "itemId": "21",
+            "color": "purple",
+            "category": "tops"
       },
       {
-            "img": "imgs/carousel/carousel10.jpg",
-            "title": "Mila hot pink - Top",
-            "price": 375
+            "id": "110",
+            "title": "Amber",
+            "price": 850,
+            "imgUrl": "imgs/products/one-piece/amber-red1.jpg",
+            "itemId": "29",
+            "color": "red",
+            "category": "one-piece"
       },
       {
-            "img": "imgs/carousel/carousel11.jpg",
-            "title": "Donna hot pink - Bottom",
-            "price": 350
-      },
-      {
-            "img": "imgs/carousel/carousel13.jpg",
-            "title": "Kelly hot pink - One piece",
-            "price": 800
-      },
-      {
-            "img": "imgs/carousel/carousel12.jpg",
-            "title": "Midi net sarong - Hot pink",
-            "price": 320
+            "id": "110",
+            "title": "Amber",
+            "price": 850,
+            "imgUrl": "imgs/products/one-piece/amber-blue1.jpg",
+            "itemId": "30",
+            "color": "blue",
+            "category": "one-piece"
       }
 ]

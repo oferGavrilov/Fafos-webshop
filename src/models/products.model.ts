@@ -1,9 +1,12 @@
 
-export interface CarouselData {
-      img: string
+export interface ICarousel {
+      imgUrl: string
       title: string
       price: number
-      id?: string
+      id: string
+      itemId: string,
+      color: string
+      category: string
 }
 
 export interface CategoriesData {

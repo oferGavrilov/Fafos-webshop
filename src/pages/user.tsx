@@ -10,7 +10,6 @@ export default function user (): JSX.Element {
       const { currentUser, loading, signOut, isAdmin } = useAuth()
 
       if (loading) return <h1>Loading...</h1>
-      console.log(isAdmin())
 
       if (!currentUser) {
             router.push('/login')

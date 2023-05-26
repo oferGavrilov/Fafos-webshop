@@ -167,7 +167,7 @@
       {
             "id": "103",
             "imgUrl": "imgs/products/bottoms2.jpg",
-            "title": "Donna - BOTTOM",
+            "title": "Donna",
             "price": 350,
             "category": "bottoms",
             "inventory": [
@@ -504,7 +504,7 @@
                   },
                   {
                         "id": "30",
-                        "color": "turquoise",
+                        "color": "blue",
                         "bulletColor":"turquoise",
                         "imgUrl": [
                               "imgs/products/one-piece/amber-blue1.jpg",
