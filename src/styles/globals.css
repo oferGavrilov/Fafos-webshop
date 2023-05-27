@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply text-[#212529] bg-[#f8f9fa] !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#adb5bd];
+    @apply text-[#212529] bg-[#f8f9fa] !scrollbar-thin !scrollbar-thumb-[#adb5bd];
   }
 }
 
@@ -44,7 +44,7 @@
 
   /* Footer */
   .footer-icon {
-    @apply text-2xl cursor-pointer transition duration-300 hover:scale-125 hover:text-blue-500;
+    @apply text-2xl cursor-pointer transition duration-300 hover:scale-125 hover:text-blue;
   }
 
   .footer-links {
@@ -61,15 +61,15 @@
   }
 
   .primary-button {
-    @apply rounded font-fuzzy tracking-wider text-lg bg-[#ced4da] py-2 px-5 transition-colors duration-300 shadow outline-none hover:bg-[#adb5bd] active:bg-amber-500;
+    @apply rounded font-fuzzy tracking-wider text-lg bg-[#ced4da] py-2 px-5 transition-colors duration-300 shadow outline-none hover:bg-[#adb5bd] active:bg-amber;
   }
 
   /* Buttons */
   .login-btn {
-    @apply  main-text absolute uppercase bg-white px-4 py-2 rounded-xl transition-colors duration-300 hover:bg-[#242424] hover:text-white;
+    @apply  main-text absolute uppercase bg-white px-4 py-2 rounded-xl transition-colors duration-300 hover:bg-primary hover:text-white;
   }
   .main-btn {
-    @apply  font-bold uppercase bg-[#242424] text-white tracking-wider whitespace-nowrap font-montserrat px-8 text-center py-3 rounded-xl transition-colors duration-300 hover:bg-[#fff] hover:text-black;
+    @apply  font-bold uppercase bg-primary text-white tracking-wider whitespace-nowrap font-montserrat px-8 text-center py-3 rounded-xl transition-colors duration-300 hover:bg-white hover:text-primary;
   }
 
   /* Loader */
@@ -98,7 +98,7 @@
   }
 
   .custom-hover {
-    @apply transition duration-200 hover:bg-slate-100 hover:border-x-blue-500;
+    @apply transition duration-200 hover:bg-slate-100 hover:border-x-blue;
   }
   .custom-gradient {
     background-image: linear-gradient(to bottom, #ffffff, #e2ecea, #eaf3e8, #dce5df, #cae7c1);
@@ -109,7 +109,7 @@
   }
 
   .swiper-pagination-bullet {
-    @apply !w-7 !h-7 !bottom-5 border-2 border-black;
+    @apply !w-7 !h-7 !bottom-5 border-2 border-primary;
   }
   
   .flow-btn {

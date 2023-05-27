@@ -1,21 +1,19 @@
 import React, { FormEvent, useCallback, useState } from 'react'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 
+import EasyLogin from 'src/components/Login/EasyLogin'
 import { useAuth } from '@context/AuthContext'
+import AccountForm from '../components/Login/AccountForm'
 import { IUser } from '../models/user.model'
-import AccountForm from '../components/login/AccountForm'
-// import AddressForm from '../components/login/AddressForm'
-// import UserForm from '../components/login/UserForm'
-// import { useAuth } from '../context/AuthContext'
+
 import { useMultiStepForm } from '../hooks/useMultiStepForm'
 import { userService } from '../services/user.service'
 
 function Login () {
   const [isLogin, setIsLogin] = useState(true)
   const [credentials, setCredentials] = useState<IUser>(userService.getEmptyUser())
-  const { loading, googleSignIn, signInWithCredentials, signupWithCredentials, currentUser } = useAuth()
+  const { loading, signInWithCredentials, signupWithCredentials, currentUser } = useAuth()
   const router = useRouter()
 
   const updateFields = useCallback((fields: Partial<IUser>) => {
@@ -32,15 +30,7 @@ function Login () {
   }
 
   if (loading) return <h1>Loading...</h1>
-  async function signInWithGoogle () {
-    try {
-      await googleSignIn()
-      toast.success("Login with google success.")
-      router.push('/user')
-    } catch (err) {
-      toast.error("Login with google failed, please try again.")
-    }
-  }
+  
 
   function onSubmit (e: FormEvent) {
     e.preventDefault()
@@ -69,7 +59,6 @@ function Login () {
     }
   }
 
-  // [<UserForm data={credentials} updateFields={updateFields} />, <AddressForm data={credentials} updateFields={updateFields} />,
   return (
     <section className='custom-gradient h-screen pt-20'>
       <div className='animate-wrapper max-w-3xl w-[90%] text-[#242424] relative mx-auto'>
@@ -83,24 +72,14 @@ function Login () {
             {!isFirstStep && <button type='button' className='login-btn left-7' onClick={onBack}>Back</button>}
             <button type='submit' className='login-btn right-9'>{!isLastStep ? 'Next' : 'Submit'}</button>
           </div>
-          <div className='text-center'>{!isLogin ? 'Already have account ?' : 'Not a member yet ? '} <span role='presentation' onClick={() => setIsLogin(!isLogin)} className='cursor-pointer underline underline-offset-2 text-sm text-[#726e6e] hover:text-[#242424]'>{!isLogin ? 'Login Here' : 'Sign up Here'}</span> </div>
+          <div className='text-center'>{!isLogin ? 'Already have account ?' : 'Not a member yet ? '} <span role='presentation' onClick={() => setIsLogin(!isLogin)} className='cursor-pointer underline underline-offset-2 text-sm text-[#726e6e] hover:text-[#242424] px-1'>{!isLogin ? 'Login Here' : 'Sign up Here'}</span> </div>
         </form>
         <div className='flex items-center justify-center gap-4 my-12'>
           <div className='bg-gray-300 w-full h-[1px]' />
           <span className='whitespace-nowrap'>Or sign in with</span>
           <div className='bg-gray-300 w-full h-[1px]' />
         </div>
-        <div className='flex gap-x-6 mx-auto justify-center'>
-          <div role='presentation' onClick={signInWithGoogle} className='social-icons'>
-            <Image src='/imgs/etc/google.png' width={40} height={40} alt='google' />
-          </div>
-          <div className='social-icons'>
-            <Image src='/imgs/etc/facebook.png' width={40} height={40} alt='google' />
-          </div>
-          <div className='social-icons'>
-            <Image src='/imgs/etc/apple.png' width={40} height={40} alt='google' />
-          </div>
-        </div>
+        <EasyLogin />
       </div>
     </section>
   )

@@ -58,7 +58,7 @@ function AppHeader ({ page }: Props) {
             </IconButton>
           </div>
           <Link href="/" className='flex gap-4 items-center'>
-            <span className='text-3xl font-mono uppercase tracking-wider'>Fafos</span>
+            <span className='text-2xl md:text-3xl font-mono uppercase tracking-wider'>Fafos</span>
           </Link>
           <IconButton className='text-inherit  lg:!hidden' edge='start' size='large' aria-label='logo' onClick={() => setIsOpen(true)}>
             <Badge badgeContent={cartItems?.length} color="warning">

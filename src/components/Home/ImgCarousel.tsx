@@ -3,9 +3,9 @@ import Link from 'next/link'
 import "react-multi-carousel/lib/styles.css"
 import Carousel from 'react-multi-carousel'
 import formatCurrency from '@utils/formatCurrency'
-import carouselData from '../carousel-data.json'
-import { ICarousel} from '../models/products.model'
-import { shuffle } from '../utils/util.service'
+import carouselData from '../../carousel-data.json'
+import { ICarousel} from '../../models/products.model'
+import { shuffle } from '../../utils/util.service'
 
 function ImgCarousel() {
       const carousel = shuffle(carouselData)

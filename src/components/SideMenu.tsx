@@ -45,7 +45,7 @@ function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.E
             return (
                   <>
                         {!currentUser ? <li className='menu-list' onClick={() => onNavigate('/login')}>Login</li> : <li className='menu-list' onClick={() => onNavigate('/user')}>Profile</li>}
-                        <li className={`menu-list ${cartItems.length && 'text-green-400'}`} onClick={() => onNavigate('/cart')}>Cart {cartItems.length !== 0 &&<span className="bg-green-400 text-white px-[6px] py-[1px] rounded-full">{cartItems.length}</span>}</li>
+                        <li className={`menu-list ${cartItems.length && 'text-green'}`} onClick={() => onNavigate('/cart')}>Cart {cartItems.length !== 0 &&<span className="bg-green text-white px-[6px] py-[1px] rounded-full">{cartItems.length}</span>}</li>
                         <li className='menu-list' onClick={() => onNavigate('/products/all-swimwear')}>All Swimwear</li>
                         <li className='menu-list' onClick={() => onNavigate('/collections')}>Collections</li>
                         <li className='menu-list'>Beach Clothes</li>

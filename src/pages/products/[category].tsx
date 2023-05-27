@@ -2,8 +2,8 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { SelectChangeEvent } from '@mui/material'
 
-import ProductFilter from '../../components/ProductFilter'
-import ProductList from '../../components/ProductList'
+import ProductFilter from '../../components/Category/ProductFilter'
+import ProductList from '../../components/Category/ProductList'
 import { Product } from '../../models/products.model'
 
 export default function ProductPage ({ productsFromServer }: { productsFromServer: Product[] }) {

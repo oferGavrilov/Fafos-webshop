@@ -3,6 +3,7 @@ import React, { ReactNode, useContext, useEffect, useMemo, useState, createConte
 
 import { onAuthStateChanged, signInWithPopup, User, getAuth, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 
+import { toast } from 'react-toastify'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { IUser } from '@models/user.model'
 import { initFirebase } from '../firebase/firebase'
@@ -12,7 +13,7 @@ interface AuthContextProps {
       loading: boolean,
       googleSignIn?: () => Promise<void>,
       signOut?: () => void,
-      isAdmin : () => boolean,
+      isAdmin: () => boolean,
       signupWithCredentials?: (user: IUser) => Promise<void>,
       signInWithCredentials?: (user: IUser) => Promise<void>
 }
@@ -68,7 +69,13 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
       }
 
       function signOut () {
-            auth.signOut()
+            try {
+                  auth.signOut()
+                  toast.success("Logout success.")
+            } catch (error) {
+                  toast.error("Sign out failed, please try again.")
+                  console.log(error)
+            }
       }
 
       const memoedValue = useMemo(

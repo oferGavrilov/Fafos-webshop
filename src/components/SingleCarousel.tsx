@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel as MainCarousel } from 'react-responsive-carousel'
 
-export default function Carousel ({ images }: { images: string[] }) {
+export default function SingleCarousel ({ images }: { images: string[] }) {
       return (
             <MainCarousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-lg px-4' >
                   {images && images.map((item, idx) => (

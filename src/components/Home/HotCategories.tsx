@@ -1,5 +1,5 @@
 import React from 'react'
-import hotCategories from '../hot-categories.json'
+import hotCategories from '../../hot-categories.json'
 
 function HotCategories() {
 

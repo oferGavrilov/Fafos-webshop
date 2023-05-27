@@ -5,11 +5,11 @@ import { toast } from 'react-toastify'
 import 'react-multi-carousel/lib/styles.css'
 
 import { IoClose } from 'react-icons/io5'
-import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
-import RelativeProducts from 'src/components/RelativeProducts'
-import Carousel from 'src/components/Carousel'
+import RelativeProducts from 'src/components/Product/RelativeProducts'
+import SingleCarousel from 'src/components/SingleCarousel'
+import ProductForm from 'src/components/Product/ProductForm'
 import formatCurrency from '../../utils/formatCurrency'
-import NoSuchItem from '../../components/NoSuchItem'
+import NoSuchItem from '../../components/Product/NoSuchItem'
 import { useShoppingCart } from '../../context/ShoppingCart'
 
 import { Product } from '../../models/products.model'
@@ -66,25 +66,13 @@ function ProductDetails () {
       return (
             <section className='relative'>
                   <div className='pt-24 pb-16 mt-8  md:max-w-[75rem]  mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
-                        <Carousel images={images} />
+                        <SingleCarousel images={images} />
                         <div className='flex flex-col w-full py-6 '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
                                     <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data?.bulletColor}` }}>{product.title}</span>
                                     <span className='flex items-center justify-center text-xl font-marker'>{formatCurrency(+product.price.toFixed(2))}</span>
                               </div >
-                              {data && <FormControl className='!mx-auto !my-5'>
-                                    <FormLabel id="demo-row-radio-buttons-group-label" className='!text-xl !text-gray-400'>Size</FormLabel>
-                                    <RadioGroup
-                                          row
-                                          aria-labelledby="demo-row-radio-buttons-group-label"
-                                          name="row-radio-buttons-group"
-                                          className='mx-auto gap-6 mt-2'
-                                    >
-                                          {data.quantity.map((item, idx) => (
-                                                <FormControlLabel key={item.size + idx} disabled={!!(!item.amount)} onChange={handleChange} defaultChecked className='border !mx-0  border-blue-500 w-16 md:w-20 rounded uppercase' value={item.size} control={<Radio />} label={item.size} />
-                                          ))}
-                                    </RadioGroup>
-                              </FormControl>}
+                              <ProductForm product={data} handleChange={handleChange} />
                               <button type='button' onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>Add to cart</button>
                               <span className='text-center main-text mt-1'>✦ Free Shipping On Orders Above 600₪ ✦</span>
                         </div>
