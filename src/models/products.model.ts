@@ -46,6 +46,7 @@ interface Quantity {
 }
 
 export interface Cart  {
+      uid?: string
       itemId: string
       bulletColor: string
       color: string;

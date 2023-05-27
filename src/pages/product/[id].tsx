@@ -43,7 +43,7 @@ function ProductDetails () {
 
       const loadRelativeProducts = async (category: string) => {
             const data = await productService.getRelativeProducts(category)
-            const products = data.filter((item :{ id: string }) => item.id !== id)
+            const products = data.filter((item: { id: string }) => item.id !== id)
             setRelativeProducts([...products])
       }
 
@@ -51,20 +51,22 @@ function ProductDetails () {
             setSize(e.target.value)
       }, [setSize])
 
-      function onAddToCart () {
-            if (!size) return toast.error('You must choose a size')
+      function onAddToCart ():void {
+            if (!size) {
+                  toast.error('You must choose a size')
+                  return
+            }
             const { color, imgUrl, bulletColor, id: itemId } = data
             const { title, price, id } = product
             const productToAdd = { color, id, imgUrl, size, title, price, bulletColor, itemId }
             increaseItemQuantity(productToAdd)
-            return toast.success('Item added to cart')
       }
 
       if (!product) return <NoSuchItem />
       return (
             <section className='relative'>
                   <div className='pt-24 pb-16 mt-8  md:max-w-[75rem]  mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
-                        <Carousel images={images}/>
+                        <Carousel images={images} />
                         <div className='flex flex-col w-full py-6 '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
                                     <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data?.bulletColor}` }}>{product.title}</span>

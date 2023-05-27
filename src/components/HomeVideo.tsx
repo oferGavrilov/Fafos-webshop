@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable react/jsx-boolean-value */
 import React, { Suspense } from 'react'
 import dynamic from 'next/dynamic'
 
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
+// const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
+import ReactPlayer from 'react-player/lazy'
 
 function HomeVideo () {
   return (
