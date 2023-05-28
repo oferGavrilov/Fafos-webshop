@@ -2,9 +2,9 @@ import React, { FormEvent, useCallback, useState } from 'react'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 
-import EasyLogin from 'src/components/Login/EasyLogin'
+import EasyLogin from 'src/components/login/EasyLogin'
 import { useAuth } from '@context/AuthContext'
-import AccountForm from '../components/Login/AccountForm'
+import AccountForm from '../components/login/AccountForm'
 import { IUser } from '../models/user.model'
 
 import { useMultiStepForm } from '../hooks/useMultiStepForm'
