@@ -22,7 +22,7 @@ export default function user (): JSX.Element {
       }
 
       return (
-            <section className='h-screen pt-20 custom-gradient'>
+            <section className='h-screen pt-20'>
                   <h1 className='animate-fade text-center font-montserrat text-3xl font-bold tracking-wider'>Welcome back {currentUser?.displayName}</h1>
                   <div className='flex flex-col w-max mx-auto gap-y-6 py-6'>
                         {isAdmin() &&<Link href='/admin' className='main-btn  shadow-lg'>Admin Page</Link>}

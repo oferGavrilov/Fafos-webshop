@@ -1,7 +1,12 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React, { ReactNode, useContext, useEffect, useMemo, useState, createContext } from 'react'
 
-import { onAuthStateChanged, signInWithPopup, User, getAuth, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
+import {
+      onAuthStateChanged, signInWithPopup, User, getAuth,
+      GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword,
+      FacebookAuthProvider
+} from 'firebase/auth'
 
 import { toast } from 'react-toastify'
 import { useAuthState } from 'react-firebase-hooks/auth'
@@ -11,7 +16,7 @@ import { initFirebase } from '../firebase/firebase'
 interface AuthContextProps {
       currentUser: User | null,
       loading: boolean,
-      googleSignIn?: () => Promise<void>,
+      socialSignIn: (platform: string) => Promise<void>,
       signOut?: () => void,
       isAdmin: () => boolean,
       signupWithCredentials?: (user: IUser) => Promise<void>,
@@ -21,9 +26,9 @@ interface AuthContextProps {
 const AuthContext = createContext<AuthContextProps>({
       currentUser: null,
       loading: true,
-      googleSignIn: async () => { },
       signOut: () => { },
       isAdmin: () => false,
+      socialSignIn: async () => { },
       signupWithCredentials: async () => { },
       signInWithCredentials: async () => { }
 })
@@ -36,7 +41,8 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
       const [currentUser, setCurrentUser] = useState<User | null>(null)
       initFirebase()
       const auth = getAuth()
-      const provider = new GoogleAuthProvider()
+      const googleProvider = new GoogleAuthProvider()
+      const facebookProvider = new FacebookAuthProvider()
       const [user, loading] = useAuthState(auth)
 
       useEffect(() => {
@@ -47,9 +53,23 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
             return () => unsubscribe()
       }, [])
 
-      async function googleSignIn () {
+      async function socialSignIn (platform: string): Promise<void> {
+            let res = null
             try {
-                  await signInWithPopup(auth, provider)
+                  switch (platform) {
+                        case 'google':
+                              res = await signInWithPopup(auth, googleProvider)
+                              setCurrentUser(res.user)
+                              break
+                        case 'facebook':
+                              res = await signInWithPopup(auth, facebookProvider)
+                              setCurrentUser(res.user)
+                              break
+                        case 'apple':
+                              break
+                        default:
+                              break
+                  }
             } catch (error) {
                   console.log(error)
             }
@@ -82,7 +102,7 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
             () => ({
                   loading,
                   currentUser,
-                  googleSignIn,
+                  socialSignIn,
                   signOut,
                   isAdmin,
                   signupWithCredentials,

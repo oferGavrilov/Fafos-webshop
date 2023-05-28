@@ -87,7 +87,7 @@
 
   /* Login page */
   .social-icons {
-    @apply  transition-all duration-300 cursor-pointer border border-gray-300 p-3 w-max shadow-md;
+    @apply  transition-all duration-300 cursor-pointer border border-gray-300 p-3 w-max shadow-md hover:scale-105;
   }
 
 }
@@ -113,6 +113,18 @@
   }
   
   .flow-btn {
+    @apply text-xl md:text-2xl relative z-10 overflow-hidden bg-transparent py-3 px-7 main-text transition-colors duration-300;
+   }
+   
+   .flow-btn::before {
+    @apply content-[""] absolute left-0 top-0 w-full h-full -translate-x-full transition-all duration-300 -z-10;
+   }
+   
+   .flow-btn:hover::before {
+    @apply translate-x-0;
+   }
+/*   
+  .flow-btn {
     @apply text-xl md:text-2xl relative z-10 overflow-hidden bg-transparent py-3 px-7 main-text border-4  border-gray-300;
    }
    
@@ -122,5 +134,5 @@
    
    .flow-btn:hover::before {
     @apply translate-x-0;
-   }
+   } */
 }
