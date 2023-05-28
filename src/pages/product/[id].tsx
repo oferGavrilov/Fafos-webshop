@@ -41,7 +41,7 @@ function ProductDetails () {
             const product = await productService.getProductById(id)
             loadRelativeProducts(product?.category)
             setProduct(product)
-            // setLoader(false)
+            setLoader(false)
       }
 
       const loadRelativeProducts = async (category: string) => {
