@@ -1,7 +1,7 @@
 import { Product } from "../models/products.model"
-import productsJson from '../data/products.json'
-import collectionsData from '../collections.json'
-import carousel from '../carousel-data.json'
+import productsJson from '../constants/products.json'
+import collectionsData from '../constants/collections.json'
+import carousel from '../constants/carousel-data.json'
 
 const findOneUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/product' : 'http://localhost:3000/api/product/'
 const getProductsUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/products' : 'http://localhost:3000/api/products/'

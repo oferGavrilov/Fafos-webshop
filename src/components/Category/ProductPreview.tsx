@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
 import { Product } from '../../models/products.model'
-import formatCurrency  from '../../utils/formatCurrency'
+import formatCurrency  from '../../helpers/formatCurrency'
 import "swiper/css/pagination"
 import "swiper/css"
 

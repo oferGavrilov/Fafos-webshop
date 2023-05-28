@@ -3,9 +3,9 @@
 import { Suspense, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import AppHeader from './AppHeader'
-import AppFooter from './AppFooter'
-import AboveHeader from './AboveHeader'
+import AppHeader from '../components/AppHeader'
+import AppFooter from '../components/AppFooter'
+import AboveHeader from '../components/AboveHeader'
 
 interface Props {
       children?: React.ReactNode

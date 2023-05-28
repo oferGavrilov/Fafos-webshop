@@ -8,7 +8,7 @@ import { IoClose } from 'react-icons/io5'
 import RelativeProducts from 'src/components/Product/RelativeProducts'
 import SingleCarousel from 'src/components/SingleCarousel'
 import ProductForm from 'src/components/Product/ProductForm'
-import formatCurrency from '../../utils/formatCurrency'
+import formatCurrency from '../../helpers/formatCurrency'
 import NoSuchItem from '../../components/Product/NoSuchItem'
 import { useShoppingCart } from '../../context/ShoppingCart'
 

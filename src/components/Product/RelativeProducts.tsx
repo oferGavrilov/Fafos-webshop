@@ -1,5 +1,5 @@
 import { Product } from '@models/products.model'
-import formatCurrency from '@utils/formatCurrency'
+import formatCurrency from 'src/helpers/formatCurrency'
 import Link from 'next/link'
 import React from 'react'
 import Carousel from 'react-multi-carousel'

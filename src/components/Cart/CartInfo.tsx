@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cart } from '@models/products.model'
 import { useShoppingCart } from '../../context/ShoppingCart'
-import formatCurrency from '../../utils/formatCurrency'
+import formatCurrency from '../../helpers/formatCurrency'
 
 interface Props {
       cartItems: Cart[]
