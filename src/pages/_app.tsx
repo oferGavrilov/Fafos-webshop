@@ -4,6 +4,7 @@ import '../styles/globals.css'
 import '../styles/login-page.css'
 import 'react-toastify/dist/ReactToastify.css'
 import '../styles/checkout-modal.css'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import type { AppProps } from 'next/app'
 

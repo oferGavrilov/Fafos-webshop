@@ -8,6 +8,7 @@ import { IoClose } from 'react-icons/io5'
 import RelativeProducts from 'src/components/Product/RelativeProducts'
 import SingleCarousel from 'src/components/SingleCarousel'
 import ProductForm from 'src/components/Product/ProductForm'
+import Loader from 'src/components/Loader'
 import formatCurrency from '../../helpers/formatCurrency'
 import NoSuchItem from '../../components/Product/NoSuchItem'
 import { useShoppingCart } from '../../context/ShoppingCart'
@@ -34,8 +35,8 @@ function ProductDetails () {
             loadProduct()
       }, [id])
 
-      async function loadProduct (): Promise<void> {
-            if (!id) return
+      async function loadProduct (): Promise<void | JSX.Element> {
+            if (!id || !item) return <NoSuchItem />
             const product = await productService.getProductById(id)
             loadRelativeProducts(product?.category)
             setProduct(product)
@@ -62,14 +63,14 @@ function ProductDetails () {
             increaseItemQuantity(productToAdd)
       }
 
-      if (!product) return <NoSuchItem />
+      if (!product) return <Loader />
       return (
             <section className='relative'>
                   <div className='pt-24 pb-16 mt-8  md:max-w-[75rem]  mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
                         <SingleCarousel images={images} />
                         <div className='flex flex-col w-full py-6 '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
-                                    <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data?.bulletColor}` }}>{product.title}</span>
+                                    <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data?.bulletColor}` }}>{product?.title}</span>
                                     <span className='flex items-center justify-center text-xl font-rubik'>{formatCurrency(+product.price.toFixed(2))}</span>
                               </div >
                               <ProductForm product={data} handleChange={handleChange} />

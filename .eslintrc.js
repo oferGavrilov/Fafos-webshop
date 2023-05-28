@@ -59,6 +59,7 @@ module.exports = {
             "jsx-a11y/control-has-associated-label": "off",
             "react/no-array-index-key": "off",
             'import/no-extraneous-dependencies': 'off',
+            'consistent-return': 'off',
       },
       settings: {
             'import/resolver': {
