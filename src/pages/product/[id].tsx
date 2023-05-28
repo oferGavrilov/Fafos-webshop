@@ -42,7 +42,7 @@ function ProductDetails () {
       }
 
       const loadRelativeProducts = async (category: string) => {
-            const data = await productService.getRelativeProducts(category)
+            const data = await productService.getProducts(category)
             const products = data.filter((item: { id: string }) => item.id !== id)
             setRelativeProducts([...products])
       }

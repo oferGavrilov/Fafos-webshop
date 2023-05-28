@@ -39,7 +39,7 @@ function Layout ({ children, ...props }: Props) {
                   <AboveHeader />
                   <AppHeader page={props.page} />
                   <Suspense fallback={<div>Loading...</div>}>
-                        <main {...props} className='min-h-screen'>
+                        <main className='min-h-screen' {...props} >
                               {children}
                         </main>
                   </Suspense>

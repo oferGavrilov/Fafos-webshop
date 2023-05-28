@@ -1,32 +1,31 @@
 import { Product } from "../models/products.model"
 import productsJson from '../constants/products.json'
-import collectionsData from '../constants/collections.json'
-import carousel from '../constants/carousel-data.json'
 
 const findOneUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/product' : 'http://localhost:3000/api/product/'
 const getProductsUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/products' : 'http://localhost:3000/api/products/'
 
 // eslint-disable-next-line import/prefer-default-export
 export const productService = {
-      getCarouselData,
       setSort,
-      getCollections,
       getEmptyFilter,
       getProductById,
       isInStock,
       getAmountFromStock,
-      getProductsFromJson,
-      getRelativeProducts
+      getProducts,
 }
 
-function getProductsFromJson () {
-      return productsJson
+async function getProducts (category = 'all-swimwear') {
+      let res = await fetch(`${getProductsUrl}/?category=${category}`, {
+            method: 'GET',
+            headers: {
+                  'Content-Type': 'application/json'
+            }
+      })
+      let data = await res.json()
+      return data
 }
 
-function getCarouselData () {
-      return carousel
 
-}
 
 async function getProductById (id: string) {
       let res = await fetch(`${findOneUrl}/?id=${id}`, {
@@ -53,9 +52,6 @@ function setSort (sort: string, products: Product[]) {
       }
 }
 
-function getCollections () {
-      return collectionsData
-}
 
 function isInStock (id: string, itemId: string, size: string, itemAmount: number) {
       const amount = getAmountFromStock(id, itemId, size)
@@ -68,13 +64,13 @@ function getAmountFromStock (id: string, itemId: string, size: string) {
       return quantity.find(item => item.size === size).amount
 }
 
-async function getRelativeProducts(category: string) {
-      let res = await fetch(`${getProductsUrl}/?category=${category}`, {
-            method: 'GET',
-            headers: {
-                  'Content-Type': 'application/json'
-            }
-      })
-      let data = await res.json()
-      return data
-}
+// async function getRelativeProducts (category: string) {
+//       let res = await fetch(`${getProductsUrl}/?category=${category}`, {
+//             method: 'GET',
+//             headers: {
+//                   'Content-Type': 'application/json'
+//             }
+//       })
+//       let data = await res.json()
+//       return data
+// }

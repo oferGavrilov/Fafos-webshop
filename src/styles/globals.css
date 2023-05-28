@@ -44,7 +44,7 @@
 
   /* Footer */
   .footer-icon {
-    @apply text-2xl cursor-pointer transition duration-300 hover:scale-125 hover:text-blue;
+    @apply text-2xl cursor-pointer transition duration-300 hover:scale-125 hover:text-blue-500;
   }
 
   .footer-links {
@@ -53,7 +53,7 @@
 
   /* Side Menu */
   .menu-list {
-    @apply text-base md:text-xl p-4 border-t border-gray-300 transition-colors duration-200 cursor-pointer hover:bg-[#e9ecef];
+    @apply text-base md:text-xl p-4 border-t border-gray-300 transition-colors duration-200 cursor-pointer hover:bg-tertiary;
   }
 
   .card {
@@ -98,7 +98,7 @@
   }
 
   .custom-hover {
-    @apply transition duration-200 hover:bg-slate-100 hover:border-x-blue;
+    @apply transition duration-200 hover:bg-slate-100 hover:border-x-blue-200;
   }
   .custom-gradient {
     background-image: linear-gradient(to bottom, #ffffff, #e2ecea, #eaf3e8, #dce5df, #cae7c1);

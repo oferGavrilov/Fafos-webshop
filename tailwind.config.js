@@ -22,7 +22,14 @@ module.exports = {
       'tertiary': '#e9ecef',
       'transparent': 'transparent',
       'white': '#ffffff',
-      'blue': '#3b82f6',
+      'blue': {
+        50:'#eff6ff',
+        100:'#dbeafe',
+        200:'#bfdbfe',
+        300:'#93c5fd',
+        400:'#60a5fa',
+        500:'#3b82f6',
+      },
       'amber': '#f59e0b',
       'green': '#4ade80',
       'gray': {

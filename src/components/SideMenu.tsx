@@ -7,7 +7,7 @@ import { SiTiktok } from "react-icons/si"
 import CloseIcon from '@mui/icons-material/Close'
 import { useShoppingCart } from "@context/ShoppingCart"
 import { useAuth } from "@context/AuthContext"
-import { productService } from '../services/product.service'
+import collectionsData from "../constants/collections.json"
 
 interface Props {
       isOpen: boolean
@@ -16,7 +16,6 @@ interface Props {
 }
 
 export default function SideMenu ({ isOpen, setIsOpen, menuType }: Props): JSX.Element {
-
       return (
             <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
                   <Box width='270px' textAlign='right' role='presentation'>
@@ -61,17 +60,17 @@ function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.E
                   </>
             )
       }
-      const collections = productService.getCollections().map(item => item.category)
+      const collections = collectionsData.map(item => item.category)
       const { category } = useRouter().query
       const navigate = (cat: string) => {
-            router.push(`/products/${cat}`)
+            router.push(`/products/?category=${cat}`)
             setIsOpen(false)
       }
 
       return (
             <ul className="">
                   {collections.map(collection => (
-                        <li onClick={() => navigate(collection)} key={collection} className={`${category === collection && 'bg-blue-50 border-y-2 border-blue-300'} menu-list`}>{collection}</li>
+                        <li onClick={() => navigate(collection)} key={collection} className={`${category === collection && 'bg-tertiary border-y-2 border-gray-400'} menu-list`}>{collection.charAt(0).toUpperCase() + collection.slice(1)}</li>
                   ))}
             </ul>
       )
