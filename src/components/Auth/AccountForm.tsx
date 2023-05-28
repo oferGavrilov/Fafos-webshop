@@ -1,19 +1,18 @@
 import React, {  useState } from 'react'
 import { useRouter } from 'next/router'
+
 import { TextField } from '@mui/material'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
+
 import { useAuth } from '@context/AuthContext'
 import { toast } from 'react-toastify'
 import LockIcon from '@mui/icons-material/Lock'
-import { IUser } from '../../models/user.model'
+
 import Button from '../custom/Button'
+import { IUser } from '../../models/user.model'
 
-interface Props {
-      data: IUser
-}
-
-function AccountForm ({ data }: Props) {
+function AccountForm () {
       const [isLogin, setIsLogin] = useState(true)
       const router = useRouter()
       const { signInWithCredentials, signupWithCredentials } = useAuth()
@@ -29,8 +28,8 @@ function AccountForm ({ data }: Props) {
 
       const formik = useFormik({
             initialValues: {
-                  email: data.email,
-                  password: data.password,
+                  email: '',
+                  password: '',
             },
             validationSchema,
             onSubmit: values => {
@@ -38,14 +37,14 @@ function AccountForm ({ data }: Props) {
             }
       })
 
-      function onSubmit (data: IUser) {
-            if (isLogin) return signIn(data)
-            return signUp(data)
+      function onSubmit (credentials: IUser) {
+            if (isLogin) return signIn(credentials)
+            return signUp(credentials)
       }
 
-      async function signIn (data: IUser) {
+      async function signIn (credentials: IUser) {
             try {
-                  await signInWithCredentials(data)
+                  await signInWithCredentials(credentials)
                   router.push('/user')
                   toast.success("Login success.")
             } catch (error) {
@@ -54,9 +53,9 @@ function AccountForm ({ data }: Props) {
             }
       }
 
-      async function signUp (data: IUser) {
+      async function signUp (credentials: IUser) {
             try {
-                  await signupWithCredentials(data)
+                  await signupWithCredentials(credentials)
                   router.push('/user')
                   toast.success("Signup success.")
             } catch (error) {
@@ -70,9 +69,10 @@ function AccountForm ({ data }: Props) {
             <form onSubmit={formik.handleSubmit} className=' max-w-3xl  pt-2 pb-6 px-6 m-3 md:mx-auto rounded-3xl'>
                   <LockIcon style={{ fontSize: 100 , display:'block', margin:'auto' , color:'#242424' }} />
                   <h2 className='text-center font-pangolin text-2xl md:text-3xl tracking-wide py-4'>{isLogin ? 'Login' : 'Signup'}</h2>
+                  
                   <TextField fullWidth id='email' name='email' label='Email' margin='normal' variant='filled'  className='mb-4' value={formik.values.email} onChange={formik.handleChange} error={formik.touched.email && Boolean(formik.errors.email)} helperText={formik.touched.email && formik.errors.email} />
                   <TextField fullWidth id='password' type='password' name='password' label='Password' margin='normal' variant='filled' className='mb-4' value={formik.values.password} onChange={formik.handleChange} error={formik.touched.password && Boolean(formik.errors.password)} helperText={formik.touched.password && formik.errors.password} />
-                  {/* <button type='submit' className='flow-btn w-full mt-4 mb-2 !border-2 !border-dark-gray before:!bg-dark-gray transition-colors duration-200 hover:!text-white'>Submit</button> */}
+                 
                   <Button buttonType='submit' backgroundColor='bg-dark-gray' width='100%' margin='12px 0' borderWidth='2px' borderColor='#6c757d' color='white' text='Submit' />
                   <div className='text-center my-2'>{!isLogin ? 'Already have account ?' : 'Not a member yet ? '} <span role='presentation' onClick={() => setIsLogin(!isLogin)} className='cursor-pointer underline underline-offset-2 text-sm text-[#726e6e] hover:text-[#242424] px-1'>{!isLogin ? 'Login Here' : 'Sign up Here'}</span> </div>
             </form>
