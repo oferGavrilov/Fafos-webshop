@@ -29,8 +29,8 @@ function ImgCarousel() {
       }
       return (
             <>
-                  <div className='font-fuzzy text-center mb-4 tracking-wider'>
-                        <h2 className='text-4xl mb-4 font-rubik'>Just Landed</h2>
+                  <div className='font-fuzzy text-center mb-4 tracking-wider pt-12 md:pt-0'>
+                        <h2 className='page-header' >Just Landed</h2>
                         <Link href="/collections" className='uppercase underline underline-offset-2 font-mono'>Shop 23' Collection</Link>
                   </div>
                   <Carousel itemClass='px-4' centerMode={false} responsive={responsive} infinite className='mb-[85px] sm:mx-10'>

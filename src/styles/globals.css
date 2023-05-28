@@ -107,6 +107,11 @@
   .main-text {
     @apply font-fuzzy text-[#212529] tracking-wider;
   }
+  
+  .page-header {
+    @apply text-4xl mb-4 font-rubik ;
+    filter: drop-shadow(3px 3px 2px #5d5c5c);
+  }
 
   .swiper-pagination-bullet {
     @apply !w-7 !h-7 !bottom-5 border-2 border-primary;

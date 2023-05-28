@@ -70,7 +70,7 @@ function ProductDetails () {
                         <div className='flex flex-col w-full py-6 '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>
                                     <span className='!font-rubik main-text text-4xl ' style={{ textShadow: `-2px 2px 5px ${data?.bulletColor}` }}>{product.title}</span>
-                                    <span className='flex items-center justify-center text-xl font-marker'>{formatCurrency(+product.price.toFixed(2))}</span>
+                                    <span className='flex items-center justify-center text-xl font-rubik'>{formatCurrency(+product.price.toFixed(2))}</span>
                               </div >
                               <ProductForm product={data} handleChange={handleChange} />
                               <button type='button' onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>Add to cart</button>

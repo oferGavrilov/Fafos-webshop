@@ -42,6 +42,7 @@ module.exports = {
       'slate': {
         100:'#f1f5f9',
       },
+      'text-shadow': '#5d5c5c',
     },
     extend: {
     },

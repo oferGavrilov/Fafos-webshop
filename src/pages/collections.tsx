@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import collectionsData from '../constants/collections.json' 
+import collectionsData from '../constants/collections.json'
 
 function collections () {
       return (
             <>
-                  <h2 className='font-pangolin font-bold text-3xl text-center pt-12 my-5 '>Collections</h2>
+                  <h2 className='text-center pt-12 my-5 page-header' >Collections</h2>
                   <ul className='grid gap-4 mx-10 mb-12 md:grid-cols-3 xl:grid-cols-4 md:mx-10 lg:mx-28 xl:mx-32'>
                         {collectionsData.map(collection => (
                               <Link key={collection.id} href={`/products/?category=${collection.category}`}>

@@ -15,8 +15,8 @@ function Cart () {
         <span>Apply Purchase</span>
       </Link>}
       <section className='pt-10 pb-20'>
-        <div className='relative pt-6 pb-8'>
-          <h2 className='text-2xl drop-shadow-lg md:text-3xl main-text bg-tertiary w-max mx-auto py-4 px-8 rounded-full'>My Shopping Cart</h2>
+        <div className='relative py-4'>
+          <h2 className='page-header !text-2xl md:!text-3xl text-center tracking-wider'>My Shopping Cart</h2>
         </div>
         {!cartItems.length ? (
           <div className='flex flex-col items-center justify-center h-[68vh]'>

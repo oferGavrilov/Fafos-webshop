@@ -1,12 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import { useRouter } from "next/router"
-import { Box, Drawer, Typography } from "@mui/material"
+import { Box, Collapse, Drawer, Typography } from "@mui/material"
 import { BsInstagram } from "react-icons/bs"
 import { FaFacebookF } from "react-icons/fa"
 import { SiTiktok } from "react-icons/si"
 import CloseIcon from '@mui/icons-material/Close'
 import { useShoppingCart } from "@context/ShoppingCart"
 import { useAuth } from "@context/AuthContext"
+import { ExpandMore } from "@mui/icons-material"
 import collectionsData from "../constants/collections.json"
 
 interface Props {
@@ -32,21 +33,35 @@ export default function SideMenu ({ isOpen, setIsOpen, menuType }: Props): JSX.E
 }
 
 function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.Element {
+      const [open, setOpen] = useState(false)
       const router = useRouter()
+      const { category } = useRouter().query
       const { cartItems } = useShoppingCart()
-      const {currentUser , signOut} = useAuth()
-      function onNavigate (path: string) {
+      const { currentUser, signOut } = useAuth()
+      const collections = collectionsData.map(item => item.category)
+
+      function onNavigate (path: string): void {
             router.push(path)
             setIsOpen(false)
+      }
+
+      function getTitle (title: string): string {
+            return title.charAt(0).toUpperCase() + title.slice(1)
       }
 
       if (type === 'main') {
             return (
                   <>
                         {!currentUser ? <li className='menu-list' onClick={() => onNavigate('/login')}>Login</li> : <li className='menu-list' onClick={() => onNavigate('/user')}>Profile</li>}
-                        <li className={`menu-list ${cartItems.length && 'text-green'}`} onClick={() => onNavigate('/cart')}>Cart {cartItems.length !== 0 &&<span className="bg-green text-white px-[6px] py-[1px] rounded-full">{cartItems.length}</span>}</li>
-                        <li className='menu-list' onClick={() => onNavigate('/products/all-swimwear')}>All Swimwear</li>
-                        <li className='menu-list' onClick={() => onNavigate('/collections')}>Collections</li>
+                        <li className={`menu-list ${cartItems.length && 'text-green'}`} onClick={() => onNavigate('/cart')}>Cart {cartItems.length !== 0 && <span className="bg-green text-white px-[6px] py-[1px] rounded-full">{cartItems.length}</span>}</li>
+                        <li onClick={() => setOpen(!open)} className='menu-list flex justify-end gap-x-2'>Collections <ExpandMore className={`${open && 'rotate-180'}`} /> </li>
+                        <Collapse in={open} timeout='auto' component="li" >
+                              <li className='menu-list text-sm underline underline-offset-2 border-none' onClick={() => onNavigate('/collections')}>All Collections</li>
+                              {collections.map(collection => (
+                                    <li onClick={() => onNavigate(`/products/?category=${collection}`)} key={collection} className={`${category === collection && 'bg-tertiary border-y-2 border-gray-400'} menu-list text-sm underline underline-offset-2 border-none`}>{getTitle(collection)}</li>
+                              ))}
+                        </Collapse>
+                        <li className='menu-list' onClick={() => onNavigate('/products/?category=all-swimwear')}>All Swimwear</li>
                         <li className='menu-list'>Beach Clothes</li>
                         <li className='menu-list'>Accessories</li>
                         <li className='menu-list border-b border-gray-300'>
@@ -60,17 +75,11 @@ function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.E
                   </>
             )
       }
-      const collections = collectionsData.map(item => item.category)
-      const { category } = useRouter().query
-      const navigate = (cat: string) => {
-            router.push(`/products/?category=${cat}`)
-            setIsOpen(false)
-      }
 
       return (
-            <ul className="">
+            <ul>
                   {collections.map(collection => (
-                        <li onClick={() => navigate(collection)} key={collection} className={`${category === collection && 'bg-tertiary border-y-2 border-gray-400'} menu-list`}>{collection.charAt(0).toUpperCase() + collection.slice(1)}</li>
+                        <li onClick={() => onNavigate(`/products/?category=${collection}`)} key={collection} className={`${category === collection && 'bg-tertiary border-y-2 border-gray-400'} menu-list`}>{collection.charAt(0).toUpperCase() + collection.slice(1)}</li>
                   ))}
             </ul>
       )
