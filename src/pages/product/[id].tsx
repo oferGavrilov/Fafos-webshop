@@ -20,6 +20,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 function ProductDetails () {
       const [product, setProduct] = useState<Product>()
+      const [loader, setLoader] = useState<boolean>(true)
       const [relativeProducts, setRelativeProducts] = useState<Product[]>([])
       const [size, setSize] = useState<string>('')
       const router = useRouter()
@@ -31,15 +32,16 @@ function ProductDetails () {
 
 
       useEffect(() => {
-            if (!router.isReady) return
             loadProduct()
       }, [id])
 
       async function loadProduct (): Promise<void | JSX.Element> {
             if (!id || !item) return <NoSuchItem />
+            setLoader(true)
             const product = await productService.getProductById(id)
             loadRelativeProducts(product?.category)
             setProduct(product)
+            // setLoader(false)
       }
 
       const loadRelativeProducts = async (category: string) => {
@@ -52,7 +54,7 @@ function ProductDetails () {
             setSize(e.target.value)
       }, [setSize])
 
-      function onAddToCart ():void {
+      function onAddToCart (): void {
             if (!size) {
                   toast.error('You must choose a size')
                   return
@@ -63,8 +65,7 @@ function ProductDetails () {
             increaseItemQuantity(productToAdd)
       }
 
-      if (!product) return <Loader />
-      return (
+      return loader ? <Loader page='product' /> : (
             <section className='relative'>
                   <div className='pt-24 pb-16 mt-8  md:max-w-[75rem]  mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
                         <SingleCarousel images={images} />

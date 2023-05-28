@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { SelectChangeEvent } from '@mui/material'
 
+import Loader from 'src/components/Loader'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { productService } from '@services/product.service'
 import ProductFilter from '../../components/Category/ProductFilter'
@@ -14,17 +15,20 @@ export default function ProductPage () {
 
       const [sortBy, setSortBy] = useState(initSort)
       const [products, setProducts] = useState<Product[]>([])
-      
+      const [loader, setLoader] = useState<boolean>(true)
+
       const router = useRouter()
       const pathname = usePathname()
       const { category } = router.query
 
       useEffect(() => {
+            setLoader(true)
             const getProducts = async () => {
                   const products = await productService.getProducts(category as string)
                   setProducts(products)
             }
             getProducts()
+            setLoader(false)
       }, [category])
 
       useEffect(() => {
@@ -50,7 +54,7 @@ export default function ProductPage () {
             setProducts(sortedProducts)
       }
 
-      return (
+      return loader ? <Loader page='category' count={4}/> : (
             <>
                   <ProductFilter category={category} handleSort={handleSort} sort={sortBy} />
                   <ProductList products={products} />
