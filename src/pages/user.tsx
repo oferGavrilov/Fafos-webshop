@@ -18,7 +18,6 @@ export default function user (): JSX.Element {
 
       function onSignOut () {
             signOut()
-            toast.success('Sign out success')
       }
 
       return (

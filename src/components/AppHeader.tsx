@@ -48,7 +48,7 @@ function AppHeader ({ page }: Props) {
                 </Badge>
               </IconButton>
             </Link>
-            <Link className='header-icon' href="/yes">
+            <Link className='header-icon' href="/yes" >
               <IconButton>
                 <AiOutlineSearch />
               </IconButton>
@@ -57,8 +57,8 @@ function AppHeader ({ page }: Props) {
               <AiOutlineGlobal />
             </IconButton>
           </div>
-          <Link href="/" className='flex gap-4 items-center'>
-            <span className='text-2xl md:text-3xl font-mono uppercase tracking-wider'>Fafos</span>
+          <Link href="/" className='flex gap-4 items-center '>
+            <span className='text-2xl md:text-3xl lg:text-4xl font-mono uppercase tracking-wider drop-shadow-xl'>Fafos</span>
           </Link>
           <IconButton className='text-inherit  lg:!hidden' edge='start' size='large' aria-label='logo' onClick={() => setIsOpen(true)}>
             <Badge badgeContent={cartItems?.length} color="warning">
