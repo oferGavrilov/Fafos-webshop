@@ -54,11 +54,10 @@ export default function ProductPage () {
             setProducts(sortedProducts)
       }
 
-      return loader ? <Loader page='category' count={4}/> : (
+      return (loader || !products) ? <Loader page='category' count={4}/> : (
             <>
                   <ProductFilter category={category} handleSort={handleSort} sort={sortBy} />
                   <ProductList products={products} />
             </>
       )
 }
-

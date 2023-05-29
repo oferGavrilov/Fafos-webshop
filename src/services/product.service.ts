@@ -25,8 +25,6 @@ async function getProducts (category = 'all-swimwear') {
       return data
 }
 
-
-
 async function getProductById (id: string) {
       let res = await fetch(`${findOneUrl}/?id=${id}`, {
             method: 'GET',
@@ -52,7 +50,6 @@ function setSort (sort: string, products: Product[]) {
       }
 }
 
-
 function isInStock (id: string, itemId: string, size: string, itemAmount: number) {
       const amount = getAmountFromStock(id, itemId, size)
       return amount >= itemAmount
@@ -63,14 +60,3 @@ function getAmountFromStock (id: string, itemId: string, size: string) {
       const { quantity } = product.inventory.find(item => item.id === itemId)
       return quantity.find(item => item.size === size).amount
 }
-
-// async function getRelativeProducts (category: string) {
-//       let res = await fetch(`${getProductsUrl}/?category=${category}`, {
-//             method: 'GET',
-//             headers: {
-//                   'Content-Type': 'application/json'
-//             }
-//       })
-//       let data = await res.json()
-//       return data
-// }

@@ -9,7 +9,7 @@ export default function Loader ({ page, count = 1 }: Props) {
       return (
             page === 'product' ? (
                   <div className='relative'>
-                        <div className='min-h-[200vh] pb-20 mt-32  max-w-[485px] mx-auto'>
+                        <div className='mx-10 min-h-[200vh] pb-20 mt-32  max-w-[485px] md:mx-auto'>
                               <SkeletonTheme baseColor="#dee2e6" highlightColor="#eeeeee">
                                     <div className='absolute -top-12 right-4'>
                                           <Skeleton height={30} width={30} circle />

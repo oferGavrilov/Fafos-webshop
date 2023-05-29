@@ -39,7 +39,7 @@ function ProductDetails () {
             if (!id || !item) return <NoSuchItem />
             setLoader(true)
             const product = await productService.getProductById(id)
-            loadRelativeProducts(product?.category)
+            await loadRelativeProducts(product?.category)
             setProduct(product)
             setLoader(false)
       }

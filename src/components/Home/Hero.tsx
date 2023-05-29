@@ -3,10 +3,10 @@ import React from 'react'
 
 function Hero() {
       return (
-            <section className='relative '>
+            <section className='relative shadow-lg'>
                   <img className='object-cover w-full' src="imgs/home/desktop-hero.jpg" alt="hero" />
-                  <div className=' absolute w-[100%] flex flex-col items-center bottom-[70px] font-fuzzy'>
-                        <span className='uppercase text-white text-2xl md:text-5xl lg:text-7xl font-marker drop-shadow-2xl'>Summer {new Date().getFullYear()}</span>
+                  <div className='absolute w-full flex flex-col items-center bottom-[33%] font-fuzzy'>
+                        <span className='uppercase text-white text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-marker drop-shadow-2xl'>Summer {new Date().getFullYear()}</span>
                         <Link href="/collections"
                               className='hero-btn'>Take me there
                         </Link>

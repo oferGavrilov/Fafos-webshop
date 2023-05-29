@@ -55,7 +55,7 @@ function DynamicList (type: string, setIsOpen: (isOpen: boolean) => void): JSX.E
                         {!currentUser ? <li className='menu-list' onClick={() => onNavigate('/login')}>Login</li> : <li className='menu-list' onClick={() => onNavigate('/user')}>Profile</li>}
                         <li className={`menu-list ${cartItems.length && 'text-green'}`} onClick={() => onNavigate('/cart')}>Cart {cartItems.length !== 0 && <span className="bg-green text-white px-[6px] py-[1px] rounded-full">{cartItems.length}</span>}</li>
                         <li onClick={() => setOpen(!open)} className='menu-list flex justify-end gap-x-2'>Collections <ExpandMore className={`${open && 'rotate-180'}`} /> </li>
-                        <Collapse in={open} timeout='auto' component="li" >
+                        <Collapse in={open} timeout='auto' component="div" >
                               <li className='menu-list text-sm underline underline-offset-2 border-none' onClick={() => onNavigate('/collections')}>All Collections</li>
                               {collections.map(collection => (
                                     <li onClick={() => onNavigate(`/products/?category=${collection}`)} key={collection} className={`${category === collection && 'bg-tertiary border-y-2 border-gray-400'} menu-list text-sm underline underline-offset-2 border-none`}>{getTitle(collection)}</li>
