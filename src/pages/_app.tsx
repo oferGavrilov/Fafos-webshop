@@ -16,6 +16,7 @@ import { ShoppingCartProvider } from '../context/ShoppingCart'
 const Layout = dynamic(() => import('../layout/Layout'), { ssr: false })
 
 export default function App ({ Component, pageProps }: AppProps) {
+  
   return (
     <AuthProvider>
       <ShoppingCartProvider>

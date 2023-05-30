@@ -75,7 +75,7 @@ function ProductDetails () {
                                     <span className='flex items-center justify-center text-xl font-rubik'>{formatCurrency(+product.price.toFixed(2))}</span>
                               </div >
                               <ProductForm product={data} handleChange={handleChange} />
-                              <button type='button' onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>Add to cart</button>
+                              <button title='Add To Cart' aria-label='add-to-cart' type='button' onClick={onAddToCart} className='bg-[#212529] text-white py-2 w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>Add to cart</button>
                               <span className='text-center main-text mt-1'>✦ Free Shipping On Orders Above 600₪ ✦</span>
                         </div>
                   </div>

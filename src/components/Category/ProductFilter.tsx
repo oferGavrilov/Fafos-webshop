@@ -5,14 +5,14 @@ import SideMenu from '../SideMenu'
 
 interface Props {
   category: string | string[] | undefined
-  handleSort:  (ev: SelectChangeEvent ) => void
+  handleSort: (ev: SelectChangeEvent) => void
   sort: string
 }
 
-function ProductFilter({ category, handleSort, sort }: Props) {
+function ProductFilter ({ category, handleSort, sort }: Props) {
   const [isOpen, setIsOpen] = useState(false)
 
-  function getCategoryText() {
+  function getCategoryText () {
     switch (category) {
       case 'all-swimwear': return 'All Swimwear'
       case 'plus-size': return 'Plus Size'

@@ -1,8 +1,8 @@
-'use client' 
+'use client'
 
-import React , { useEffect }from 'react';
+import React, { useEffect } from 'react';
 
-function Error({
+function Error ({
   error,
   reset,
 }: {
@@ -17,6 +17,8 @@ function Error({
     <div>
       <h2>Something went wrong!</h2>
       <button type='button'
+        title='Try again'
+        aria-label='Try again'
         onClick={
           () => reset()
         }

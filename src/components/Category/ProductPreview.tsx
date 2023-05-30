@@ -32,7 +32,7 @@ function ProductPreview({ product }: Props) {
               <Link href={`/product/${product.id}?item=${product.inventory[idx].id}`} className='hover:underline underline-offset-2 h-12 cursor-pointer uppercase'>{product.title} {product.inventory[idx].color} {product.category}</Link>
               <span className='text-lg'>{formatCurrency(product.price)}</span>
               <Link href={`/product/${product.id}?item=${product.inventory[idx].id}`}>
-                <button type='button' className='primary-button'>
+                <button title='More Details' aria-label='More Details' type='button' className='primary-button'>
                   More Details
                 </button>
               </Link>
