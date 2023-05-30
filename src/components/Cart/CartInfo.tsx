@@ -23,7 +23,7 @@ export default function CartInfo ({ cartItems }: Props) {
                         </div>
                   </div>
                   <div className='flex justify-end '>
-                        <button type='button' onClick={() => clearCart()} className='underline underline-offset-4'>Clear Cart</button>
+                        <button aria-label='clear-cart' type='button' onClick={() => clearCart()} className='underline underline-offset-4'>Clear Cart</button>
                   </div>
             </div>
       )

@@ -22,13 +22,7 @@ export default function ProductPage () {
       const { category } = router.query
 
       useEffect(() => {
-            setLoader(true)
-            const getProducts = async () => {
-                  const products = await productService.getProducts(category as string)
-                  setProducts(products)
-            }
-            getProducts()
-            setLoader(false)
+            loadProducts()
       }, [category])
 
       useEffect(() => {
@@ -38,6 +32,13 @@ export default function ProductPage () {
             setProducts(sortedProducts)
       }, [initSort])
 
+
+      async function loadProducts (): Promise<void> {
+            setLoader(true)
+            const products = await productService.getProducts(category as string)
+            setProducts(products)
+            setLoader(false)
+      }
 
       const createQueryString = useCallback((key: string, value: string) => {
             const params = new URLSearchParams(searchParams)
@@ -54,7 +55,7 @@ export default function ProductPage () {
             setProducts(sortedProducts)
       }
 
-      return (loader || !products) ? <Loader page='category' count={4}/> : (
+      return (loader || !products.length) ? <Loader page='category' count={4} /> : (
             <>
                   <ProductFilter category={category} handleSort={handleSort} sort={sortBy} />
                   <ProductList products={products} />

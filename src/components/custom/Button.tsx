@@ -15,6 +15,6 @@ interface ButtonProps {
 export default function Button ({ backgroundColor, borderColor, borderWidth, color , text , width, margin, buttonType = 'button'}: ButtonProps): JSX.Element {
       console.log(backgroundColor , borderColor , borderWidth , color)
       return (
-            <button style={{borderWidth , borderColor , color:borderColor , width , margin}} className={`flow-btn   before:!${backgroundColor} hover:!text-white`} type={buttonType} >{text}</button>
+            <button style={{borderWidth , borderColor , color:borderColor , width , margin}} className={`flow-btn  px-7   before:!${backgroundColor} hover:!text-white`} type={buttonType} >{text}</button>
       )
 }

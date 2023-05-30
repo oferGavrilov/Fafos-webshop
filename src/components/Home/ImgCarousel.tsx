@@ -3,6 +3,7 @@ import Link from 'next/link'
 import "react-multi-carousel/lib/styles.css"
 import Carousel from 'react-multi-carousel'
 import formatCurrency from 'src/helpers/formatCurrency'
+import Image from 'next/image'
 import carouselData from '../../constants/carousel-data.json'
 import { ICarousel} from '../../models/products.model'
 import { shuffle } from '../../utils/util.service'
@@ -37,7 +38,8 @@ function ImgCarousel() {
                         {carousel.map((item: ICarousel) => (
                               <div key={item.itemId} className='flex flex-col text-center font-mono'>
                                     <Link href={`/product/${item.id}?item=${item.itemId}`}>
-                                          <img src={item.imgUrl} alt={item.title} className='w-full shadow-gray-300 shadow-xl' />
+                                          <Image loading='eager' width={0} height={0} sizes='100%' src={`/${item.imgUrl}`} alt={item.title} className='w-full shadow-gray-300 shadow-xl' />
+                                          {/* <img src={item.imgUrl} alt={item.title} className='w-full shadow-gray-300 shadow-xl' /> */}
                                     </Link>
                                     <p className='uppercase py-2'>{item.title} {item.color} {item.category}</p>
                                     <p className='text-lg'>{formatCurrency(item.price)}</p>

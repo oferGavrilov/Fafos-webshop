@@ -1,0 +1,20 @@
+[
+      {
+            "id": "1",
+            "imgUrl":"imgs/home/teaser1.jpg",
+            "name":"One Piece",
+            "category":"one-piece"
+      },
+      {
+            "id": "2",
+            "imgUrl":"imgs/home/teaser2.jpg",
+            "name":"Bottoms",
+            "category":"bottoms"
+      },
+      {
+            "id": "3",
+            "imgUrl":"imgs/home/teaser3.jpg",
+            "name":"Tops",
+            "category":"tops"
+      }
+]

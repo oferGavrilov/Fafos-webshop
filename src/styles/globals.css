@@ -35,7 +35,7 @@
 
   /* Teaser */
   .teaser-img {
-    @apply object-cover transition duration-300 h-[100%] w-[100%] hover:scale-110;
+    @apply object-cover transition duration-300 h-full w-full hover:scale-110;
   }
 
   .teaser-name {
@@ -118,7 +118,7 @@
   }
   
   .flow-btn {
-    @apply text-xl md:text-2xl relative z-10 overflow-hidden bg-transparent py-3 px-7 main-text transition-colors duration-300;
+    @apply text-xl md:text-2xl relative z-10 overflow-hidden bg-transparent py-3 main-text transition-colors duration-300;
    }
    
    .flow-btn::before {
