@@ -37,7 +37,7 @@ function Layout ({ children, ...props }: Props) {
                         <link rel="icon" href="/favicon.ico" />
                   </Head>
                   <AboveHeader />
-                  <AppHeader page={props.page} />
+                  <AppHeader page={router.pathname} />
                   <Suspense fallback={<div>Loading...</div>}>
                         <main className='min-h-screen' {...props} >
                               {children}

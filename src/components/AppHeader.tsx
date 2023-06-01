@@ -34,33 +34,32 @@ function AppHeader ({ page }: Props) {
   return (
     <>
       <header className={`fixed w-[100%] z-10 transition duration-500  ${isScrolled ? 'scrolled' : 'text-white'}`}>
-        <nav className={`flex h-[70px] items-center px-4 justify-between ${page !== 'Home' ? 'text-[#212529]' : ''}`}>
+        <nav className={`flex h-[70px] items-center px-4 justify-between ${page !== '/home' ? 'text-[#212529]' : ''}`}>
           <div className='gap-5 items-center hidden lg:flex'>
-            <Link className='header-icon ' href="/login">
-              <IconButton>
+            <Link className='header-icon ' href="/login" aria-label='Login and sign up page or user page'>
+              <IconButton aria-label='login'>
                 {currentUser ? <img className='w-8 h-8 rounded-full' src={currentUser?.photoURL || 'imgs/etc/default-user.png'} alt="user" /> : <AiOutlineUser />}
               </IconButton>
             </Link>
-            <Link className='header-icon' href="/cart">
-              <IconButton>
+            <Link className='header-icon' href="/cart" aria-label='Move to cart page'>
+              <IconButton aria-label='cart'>
                 <Badge badgeContent={cartItems?.length} color="warning">
                   <IoBagOutline />
                 </Badge>
               </IconButton>
             </Link>
-            <Link className='header-icon' href="/yes" >
-              <IconButton>
+            {page === '/products' &&
+              <IconButton aria-label='search'>
                 <AiOutlineSearch />
-              </IconButton>
-            </Link>
-            <IconButton>
+              </IconButton>}
+            <IconButton aria-label='translate'>
               <AiOutlineGlobal />
             </IconButton>
           </div>
           <Link href="/" className='flex gap-4 items-center '>
             <span className='text-2xl md:text-3xl lg:text-4xl font-mono uppercase tracking-wider drop-shadow-xl'>Fafos</span>
           </Link>
-          <IconButton className='text-inherit  lg:!hidden' edge='start' size='large' aria-label='logo' onClick={() => setIsOpen(true)}>
+          <IconButton className='text-inherit lg:!hidden' edge='start' size='large' aria-label='menu' onClick={() => setIsOpen(true)}>
             <Badge badgeContent={cartItems?.length} color="warning">
               <MenuIcon />
             </Badge>

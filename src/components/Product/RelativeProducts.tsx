@@ -39,7 +39,7 @@ export default function RelativeProducts ({ relativeProducts }: Props) {
                                           <img src={`/${item.imgUrl}`} className='w-full  max-w-1/3' alt={item.title} />
                                           <span className='text-center main-text text-xl'>{item.title} </span>
                                           <span className='text-center main-text text-xl'>{formatCurrency(+item.price.toFixed(2))}</span>
-                                          <Link href={`/product/${item?.id}?item=${item.inventory[0]?.id}`} className='py-2'><span className='bg-[#212529] text-white py-2 px-4 rounded-lg font-bold w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>View Product</span></Link>
+                                          <Link aria-label='Preview this product' href={`/product/${item?.id}?item=${item.inventory[0]?.id}`} className='py-2'><span className='bg-[#212529] text-white py-2 px-4 rounded-lg font-bold w-full max-w-xs self-center transition duration-200 hover:bg-white hover:text-[#212529] border-[#212529] border-2'>View Product</span></Link>
                                     </div>
                               ))}
                         </Carousel>

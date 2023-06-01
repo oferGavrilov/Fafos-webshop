@@ -11,10 +11,10 @@ interface Props {
       item: Cart
 }
 
-export default function CartPreview ({item}:Props) {
+export default function CartPreview ({ item }: Props) {
 
-      const { increaseItemQuantity, decreaseItemQuantity , removeItem } = useShoppingCart()
-     
+      const { increaseItemQuantity, decreaseItemQuantity, removeItem } = useShoppingCart()
+
       return (
             <li key={item.id + item.size + item.color} className='flex md:mx-12 border-b-2 p-2 shadow-lg shadow-gray-200'>
                   <div className='flex w-full '>
@@ -43,7 +43,11 @@ export default function CartPreview ({item}:Props) {
                                           <span className='text-dark-gray'>Total: </span>
                                           <span>{formatCurrency(item.price * item.quantity)}</span>
                                     </p>
-                                    <Link href={`/product/${item.id}?item=${item.itemId}`} className='absolute bottom-0 right-0 main-text text-base md:text-xl underline underline-offset-4'>Preview Product</Link>
+                                    <Link href={`/product/${item.id}?item=${item.itemId}`}
+                                          className='absolute bottom-0 right-0 main-text text-base md:text-xl underline underline-offset-4' 
+                                          aria-label='Preview this product'>
+                                          Preview Product
+                                    </Link>
                               </div>
                               <button title='Remove Product' aria-label='Remove Product' type='button' className='absolute main-text text-base right-0 underline underline-offset-4' onClick={() => removeItem(item.id, item.size, item.color)}>Remove</button>
                         </div>
