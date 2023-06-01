@@ -9,7 +9,7 @@ function Teaser () {
       {teaser.map(item => (
         <li key={item.id} className='flex-1 relative overflow-hidden shadow-gray-400 shadow-2xl'>
           <Link href={`/products/?category=${item.category}`} aria-label='Preview this category'>
-            <Image loading='lazy' width={0} height={0} sizes='100%' src={`/${item.imgUrl}`} alt={item.name} className='teaser-img shadow-gray-300 shadow-xl' />
+            <Image quality={75} loading='lazy' width={0} height={0} sizes='100%' src={`/${item.imgUrl}`} alt={item.name} className='teaser-img shadow-gray-300 shadow-xl' />
             <h2 className='teaser-name '>{item.name}</h2>
           </Link>
         </li>

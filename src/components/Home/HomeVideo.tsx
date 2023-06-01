@@ -1,16 +1,13 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable react/jsx-boolean-value */
 import React, { Suspense } from 'react'
-import dynamic from 'next/dynamic'
-
-// const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 import ReactPlayer from 'react-player/lazy'
 
 function HomeVideo () {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className='py-10'>
-        <ReactPlayer url='../../video/home-video.mp4'
+        {/* <ReactPlayer url='../../video/home-video.mp4'
           width="100%"
           height="100%"
           playing={true}
@@ -18,7 +15,8 @@ function HomeVideo () {
           loop={true}
           muted={true}
           playsInline={true}
-        />
+        /> */}
+        <video src="../../video/home-video.mp4" autoPlay={true} muted={true} playsInline={true} loop={true}/>
       </div>
     </Suspense>
   )

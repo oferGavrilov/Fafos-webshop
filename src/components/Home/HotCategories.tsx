@@ -18,6 +18,8 @@ function HotCategories () {
                                     alt={category.title}
                                     width={0}
                                     height={0}
+                                    quality={75}
+                                    loading="lazy"
                                     sizes="100%"
                                     className="max-h-[700px]  w-[100%] h-[100%] transition duration-300 object-cover hover:scale-110"
                               />

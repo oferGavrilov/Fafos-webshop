@@ -128,16 +128,4 @@
    .flow-btn:hover::before {
     @apply translate-x-0;
    }
-/*   
-  .flow-btn {
-    @apply text-xl md:text-2xl relative z-10 overflow-hidden bg-transparent py-3 px-7 main-text border-4  border-gray-300;
-   }
-   
-   .flow-btn::before {
-    @apply content-[""] absolute left-0 top-0 w-full h-full bg-gray-300 -translate-x-full transition-all duration-300 -z-10;
-   }
-   
-   .flow-btn:hover::before {
-    @apply translate-x-0;
-   } */
 }

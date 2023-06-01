@@ -5,10 +5,10 @@ import Carousel from 'react-multi-carousel'
 import formatCurrency from 'src/helpers/formatCurrency'
 import Image from 'next/image'
 import carouselData from '../../constants/carousel-data.json'
-import { ICarousel} from '../../models/products.model'
+import { ICarousel } from '../../models/products.model'
 import { shuffle } from '../../utils/util.service'
 
-function ImgCarousel() {
+function ImgCarousel () {
       const carousel = shuffle(carouselData)
       const responsive = {
             superLargeDesktop: {
@@ -35,10 +35,19 @@ function ImgCarousel() {
                         <Link href="/collections" className='uppercase underline underline-offset-2 font-mono' aria-label='Move to collection page'>Shop 23' Collection</Link>
                   </div>
                   <Carousel itemClass='px-4' centerMode={false} responsive={responsive} infinite className='mb-[85px] sm:mx-10'>
-                        {carousel.map((item: ICarousel) => (
-                              <div key={item.itemId} className='flex flex-col text-center font-mono'>
+                        {carousel.map((item: ICarousel, idx: number) => (
+                              <div key={item.itemId} data-index={idx} aria-hidden="true" className='flex flex-col text-center font-mono'>
                                     <Link href={`/product/${item.id}?item=${item.itemId}`}>
-                                          <Image loading='eager' aria-label='Preview this product' width={0} height={0} sizes='100%' src={`/${item.imgUrl}`} alt={item.title} className='w-full shadow-gray-300 shadow-xl' />
+                                          <Image
+                                                quality={75}
+                                                loading='eager'
+                                                aria-label='Preview this product'
+                                                width={0}
+                                                height={0}
+                                                sizes='100%'
+                                                src={`/${item.imgUrl}`}
+                                                alt={item.title}
+                                                className='w-full shadow-gray-300 shadow-xl' />
                                           {/* <img src={item.imgUrl} alt={item.title} className='w-full shadow-gray-300 shadow-xl' /> */}
                                     </Link>
                                     <p className='uppercase py-2'>{item.title} {item.color} {item.category}</p>

@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 
 import { TextField } from '@mui/material'
@@ -9,7 +9,6 @@ import { useAuth } from '@context/AuthContext'
 import { toast } from 'react-toastify'
 import LockIcon from '@mui/icons-material/Lock'
 
-import Button from '../custom/Button'
 import { IUser } from '../../models/user.model'
 
 function AccountForm () {
@@ -67,13 +66,13 @@ function AccountForm () {
 
       return (
             <form onSubmit={formik.handleSubmit} className=' max-w-3xl  pt-2 pb-6 px-6 m-3 md:mx-auto rounded-3xl'>
-                  <LockIcon style={{ fontSize: 100 , display:'block', margin:'auto' , color:'#242424' }} />
+                  <LockIcon style={{ fontSize: 100, display: 'block', margin: 'auto', color: '#242424' }} />
                   <h2 className='text-center font-pangolin text-2xl md:text-3xl tracking-wide py-4'>{isLogin ? 'Login' : 'Signup'}</h2>
-                  
-                  <TextField fullWidth id='email' name='email' label='Email' margin='normal' variant='filled'  className='mb-4' value={formik.values.email} onChange={formik.handleChange} error={formik.touched.email && Boolean(formik.errors.email)} helperText={formik.touched.email && formik.errors.email} />
+
+                  <TextField fullWidth id='email' name='email' label='Email' margin='normal' variant='filled' className='mb-4' value={formik.values.email} onChange={formik.handleChange} error={formik.touched.email && Boolean(formik.errors.email)} helperText={formik.touched.email && formik.errors.email} />
                   <TextField fullWidth id='password' type='password' name='password' label='Password' margin='normal' variant='filled' className='mb-4' value={formik.values.password} onChange={formik.handleChange} error={formik.touched.password && Boolean(formik.errors.password)} helperText={formik.touched.password && formik.errors.password} />
-                 
-                  <Button buttonType='submit' backgroundColor='bg-dark-gray' width='100%' margin='12px 0' borderWidth='2px' borderColor='#6c757d' color='white' text='Submit' />
+                  
+                  <button type='submit' className='flow-btn rounded-md w-full border-2 border-gray-300 my-5 before:bg-gray-300 hover:text-white'>Submit</button>
                   <div className='text-center my-2'>{!isLogin ? 'Already have account ?' : 'Not a member yet ? '} <span role='presentation' onClick={() => setIsLogin(!isLogin)} className='cursor-pointer underline underline-offset-2 text-sm text-[#726e6e] hover:text-[#242424] px-1'>{!isLogin ? 'Login Here' : 'Sign up Here'}</span> </div>
             </form>
       )
