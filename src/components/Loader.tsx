@@ -8,7 +8,7 @@ interface Props {
 export default function Loader ({ page, count = 1 }: Props) {
       return (
             page === 'product' ? (
-                  <div className='relative'>
+                  <div className='relative fade'>
                         <div className='mx-10 min-h-[200vh] pb-20 mt-32  max-w-[485px] md:mx-auto'>
                               <SkeletonTheme baseColor="#dee2e6" highlightColor="#eeeeee">
                                     <div className='absolute -top-12 right-4'>
@@ -44,7 +44,7 @@ export default function Loader ({ page, count = 1 }: Props) {
                         </div>
                   </div>
             ) : (
-                  <div className='min-h-[200vh] mx-10 pt-16  mb-5 flex flex-col'>
+                  <div className='min-h-[200vh] mx-10 pt-16  mb-5 flex flex-col fade'>
                         <SkeletonTheme baseColor="#dee2e6" highlightColor="#eeeeee">
                               <div className=''>
                                     <div className='flex justify-end'>

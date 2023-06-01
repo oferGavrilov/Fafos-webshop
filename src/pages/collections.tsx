@@ -10,7 +10,7 @@ function collections () {
                         {collectionsData.map(collection => (
                               <Link key={collection.id} href={`/products/?category=${collection.category}`} aria-label='Preview products from this category'>
                                     <li className='relative overflow-hidden cursor-pointer'>
-                                          <img className='w-full transition min-h-[290px] min-w-[250px] object-cover duration-300 hover:scale-110' src={collection.img} alt={collection.title} />
+                                          <img className='w-full fade transition min-h-[290px] min-w-[250px] object-cover duration-300 hover:scale-110' src={collection.img} alt={collection.title} />
                                           <h2 className='absolute-center uppercase text-3xl lg:text-4xl text-white tracking-wider text-center font-marker drop-shadow-xl'>{collection.title}</h2>
                                     </li>
                               </Link>

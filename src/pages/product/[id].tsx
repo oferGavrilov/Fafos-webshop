@@ -67,7 +67,7 @@ function ProductDetails () {
 
       return loader ? <Loader page='product' /> : (
             <section className='relative'>
-                  <div className='pt-24 pb-16 mt-8  md:max-w-[75rem]  mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
+                  <div className='fade pt-24 pb-16 mt-8  md:max-w-[75rem]  mx-auto justify-between items-center md:px-20 flex flex-col lg:flex-row-reverse' >
                         <SingleCarousel images={images} />
                         <div className='flex flex-col w-full py-6 '>
                               <div className='flex flex-col mt-5 md:mt-1 text-center gap-4'>

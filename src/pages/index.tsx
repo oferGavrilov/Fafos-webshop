@@ -7,7 +7,7 @@ import Teaser from '../components/Home/Teaser'
 
 function Home() {
       return (
-            <div className='scroll-smooth '>
+            <div className='scroll-smooth fade '>
                   <Hero />
                   <div className='mx-0 max-w-[1400px] md:mx-auto'>
                         <Teaser />
