@@ -1,22 +1,10 @@
+import { Product } from '@models/products.model'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
 import React from 'react'
 
 interface Props {
       product: Product
       handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
-
-type Product = {
-      id: string
-      color: string
-      imgUrl: string[]
-      bulletColor: string
-      quantity: Quantity[]
-}
-
-type Quantity = {
-      size: string
-      amount: number
 }
 
 export default function ProductForm ({ product, handleChange }: Props) {

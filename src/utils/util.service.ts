@@ -1,3 +1,4 @@
+/* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export function saveToStorage (key: string, value: any): void {
@@ -28,4 +29,8 @@ export function shuffle (arr: any[]): any[] {
             [arr[i], arr[j]] = [arr[j], arr[i]];
       }
       return arr;
+}
+
+export function wait (ms: number) {
+      return new Promise(resolve => setTimeout(resolve, ms))
 }

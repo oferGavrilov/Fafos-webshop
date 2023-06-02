@@ -11,7 +11,7 @@ interface Props {
 
 type ShoppingCartContextType = {
       getItemQuantity: (id: string) => number
-      increaseItemQuantity: (cartItem: Cart) => void
+      increaseItemQuantity: (cartItem: Cart) => Promise<void>
       decreaseItemQuantity: (id: string, size: string, color: string) => void
       removeItem: (id: string, size: string, color: string) => void | Cart[]
       clearCart: () => void
@@ -32,13 +32,13 @@ export function ShoppingCartProvider ({ children }: Props) {
             return item ? item.quantity : 0
       }
 
-      function increaseItemQuantity (cartItem: Cart): void {
-            setCartItems(prevState => {
-                  const item = cartItems.find(item => item.id === cartItem.id && item.size === cartItem.size && cartItem.color === item.color)
-                  const isInStock = productService.isInStock(cartItem.id, cartItem.itemId, cartItem.size, (item?.quantity + 1 || 1))
-                  
+      async function increaseItemQuantity (cartItem: Cart): Promise<void> {
+            const item = cartItems.find(item => item.id === cartItem.id && item.size === cartItem.size && cartItem.color === item.color)
+            const isInStock = await productService.isInStock(cartItem.id, cartItem.itemId, cartItem.size, (item?.quantity + 1 || 1))
+            
+            setCartItems ( prevState => {
+                  console.log(isInStock)
                   if (!isInStock) {
-                        console.log('no stock')
                         toast.error('There`s no more stock of this item')
                         return [...prevState]
                   }

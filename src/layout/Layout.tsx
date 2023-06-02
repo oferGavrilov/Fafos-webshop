@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import SpinnerLoader from 'src/components/SpinnerLoader'
 import AppHeader from '../components/AppHeader'
 import AppFooter from '../components/AppFooter'
 import AboveHeader from '../components/AboveHeader'
@@ -38,7 +39,7 @@ function Layout ({ children, ...props }: Props) {
                   </Head>
                   <AboveHeader />
                   <AppHeader page={router.pathname} />
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<SpinnerLoader />}>
                         <main className='min-h-screen' {...props} >
                               {children}
                         </main>

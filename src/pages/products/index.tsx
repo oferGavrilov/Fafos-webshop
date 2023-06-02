@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { SelectChangeEvent } from '@mui/material'
 
-import Loader from 'src/components/Loader'
+import Loader from 'src/components/SkeletonLoader'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { productService } from '@services/product.service'
 import ProductFilter from '../../components/Category/ProductFilter'

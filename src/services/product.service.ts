@@ -1,5 +1,4 @@
 import { Product } from "../models/products.model"
-import productsJson from '../constants/products.json'
 
 const findOneUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/product' : 'http://localhost:3000/api/product/'
 const getProductsUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/products' : 'http://localhost:3000/api/products/'
@@ -8,7 +7,7 @@ const getProductsUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-we
 export const productService = {
       setSort,
       getEmptyFilter,
-      getProductById,
+      getProductByIdAndItem,
       isInStock,
       getAmountFromStock,
       getProducts,
@@ -32,8 +31,21 @@ async function getProductById (id: string) {
                   'Content-Type': 'application/json'
             }
       })
-      let data = await res.json()
-      return data
+      let product = await res.json()
+      return product
+}
+
+async function getProductByIdAndItem (id: string, itemId: string) {
+      let res = await fetch(`${findOneUrl}/?id=${id}`, {
+            method: 'GET',
+            headers: {
+                  'Content-Type': 'application/json'
+            }
+      })
+      let product = await res.json()
+      const images = product?.inventory.filter(type => type.id === itemId).map(item => item.imgUrl).flat()
+      const data = product?.inventory.find(type => type.id === itemId)
+      return { ...product, images, ...data }
 }
 
 function getEmptyFilter () {
@@ -50,13 +62,13 @@ function setSort (sort: string, products: Product[]) {
       }
 }
 
-function isInStock (id: string, itemId: string, size: string, itemAmount: number) {
-      const amount = getAmountFromStock(id, itemId, size)
+async function isInStock (id: string, itemId: string, size: string, itemAmount: number) {
+      const amount = await getAmountFromStock(id, itemId, size)
       return amount >= itemAmount
 }
 
-function getAmountFromStock (id: string, itemId: string, size: string) {
-      const product = productsJson.find(product => product.id === id)
+async function getAmountFromStock (id: string, itemId: string, size: string) {
+      const product = await getProductById(id)
       const { quantity } = product.inventory.find(item => item.id === itemId)
       return quantity.find(item => item.size === size).amount
 }

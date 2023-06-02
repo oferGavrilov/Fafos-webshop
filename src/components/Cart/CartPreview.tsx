@@ -5,14 +5,12 @@ import { Cart } from '@models/products.model'
 import formatCurrency from 'src/helpers/formatCurrency'
 import ControlPointRoundedIcon from '@mui/icons-material/ControlPointRounded'
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded'
-import { productService } from '@services/product.service'
 
 interface Props {
       item: Cart
 }
 
 export default function CartPreview ({ item }: Props) {
-
       const { increaseItemQuantity, decreaseItemQuantity, removeItem } = useShoppingCart()
 
       return (
@@ -36,7 +34,7 @@ export default function CartPreview ({ item }: Props) {
                                           <div className='flex gap-x-5 pt-4 md:pt-0'>
                                                 <button title='Decrease item quantity' aria-label='Decrease item quantity' type='button' onClick={() => decreaseItemQuantity(item.id, item.size, item.color)} ><RemoveCircleOutlineRoundedIcon className='!text-3xl cursor-pointer text-blue' /></button>
                                                 <span >{item.quantity}</span>
-                                                <button title='Add more from this product' aria-label='Add more from this product' type='button' className=" text-blue disabled:cursor-not-allowed disabled:text-gray-400" onClick={() => increaseItemQuantity(item)} disabled={productService.getAmountFromStock(item.id, item.itemId, item.size) <= item.quantity}><ControlPointRoundedIcon className='!text-3xl' /></button>
+                                                <button title='Add more from this product' aria-label='Add more from this product' type='button' className=" text-blue disabled:cursor-not-allowed disabled:text-gray-400" onClick={() => increaseItemQuantity(item)}><ControlPointRoundedIcon className='!text-3xl' /></button>
                                           </div>
                                     </div>
                                     <p>
@@ -44,7 +42,7 @@ export default function CartPreview ({ item }: Props) {
                                           <span>{formatCurrency(item.price * item.quantity)}</span>
                                     </p>
                                     <Link href={`/product/${item.id}?item=${item.itemId}`}
-                                          className='absolute bottom-0 right-0 main-text text-base md:text-xl underline underline-offset-4' 
+                                          className='absolute bottom-0 right-0 main-text text-base md:text-xl underline underline-offset-4'
                                           aria-label='Preview this product'>
                                           Preview Product
                                     </Link>

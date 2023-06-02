@@ -23,13 +23,16 @@ export interface CollectionsData {
 }
 
 export interface Product {
-      _id?: string
       id: string
       imgUrl: string
       title: string
       price: number
       category: string
       inventory: Inventory[]
+      _id?: string
+      images?: string[]
+      quantity?: Quantity[]
+      bulletColor: string
 }
 
 interface Inventory {

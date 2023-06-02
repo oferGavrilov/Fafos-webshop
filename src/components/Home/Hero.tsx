@@ -5,10 +5,11 @@ import React from 'react'
 function Hero () {
       return (
             <section className='relative shadow-lg'>
-                  <Image className='object-cover w-full max-h-screen'
+                  <Image className='object-cover w-full max-h-screen fade'
                         width={0}
                         height={0}
                         sizes="100%"
+                        priority
                         src="/imgs/home/desktop-hero.jpg"
                         alt="hero" />
                   <div className='absolute w-full flex flex-col items-center bottom-[25%] font-fuzzy'>
