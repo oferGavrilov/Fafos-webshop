@@ -20,7 +20,6 @@ export default function ProductPage () {
       const router = useRouter()
       const pathname = usePathname()
       const { category } = router.query
-
       useEffect(() => {
             loadProducts()
       }, [category])
@@ -55,7 +54,7 @@ export default function ProductPage () {
             setProducts(sortedProducts)
       }
 
-      return (loader || !products.length) ? <Loader page='category' count={4} /> : (
+      return (loader || !products?.length) ? <Loader page='category' count={4} /> : (
             <>
                   <ProductFilter category={category} handleSort={handleSort} sort={sortBy} />
                   <ProductList products={products} />

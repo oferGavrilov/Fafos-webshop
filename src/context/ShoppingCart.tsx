@@ -37,7 +37,6 @@ export function ShoppingCartProvider ({ children }: Props) {
             const isInStock = await productService.isInStock(cartItem.id, cartItem.itemId, cartItem.size, (item?.quantity + 1 || 1))
             
             setCartItems ( prevState => {
-                  console.log(isInStock)
                   if (!isInStock) {
                         toast.error('There`s no more stock of this item')
                         return [...prevState]
