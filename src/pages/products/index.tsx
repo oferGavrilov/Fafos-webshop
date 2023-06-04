@@ -9,7 +9,7 @@ import ProductFilter from '../../components/Category/ProductFilter'
 import ProductList from '../../components/Category/ProductList'
 import { Product } from '../../models/products.model'
 
-export default function ProductPage (params: any) {
+export default function ProductPage () {
       const searchParams = useSearchParams().toString()
       const initSort = searchParams.split('sort=')[1] || 'none'
 
