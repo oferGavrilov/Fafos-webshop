@@ -1,5 +1,8 @@
 import { Product } from "../models/products.model"
 
+const getProductsUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/products' : '/api/products/'
+const getProductUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/product' : '/api/products/'
+
 export const productService = {
       setSort,
       getEmptyFilter,
@@ -10,7 +13,7 @@ export const productService = {
 }
 
 async function getProducts (category = 'all-swimwear') {
-      let res = await fetch(`/api/products/?category=${category}`, {
+      let res = await fetch(`${getProductsUrl}/?category=${category}`, {
             method: 'GET',
             headers: {
                   'accept': 'application/json'
@@ -21,7 +24,7 @@ async function getProducts (category = 'all-swimwear') {
 }
 
 async function getProductById (id: string) {
-      let res = await fetch(`/api/product/?id=${id}`, {
+      let res = await fetch(`${getProductUrl}/?id=${id}`, {
             method: 'GET',
             headers: {
                   'accept': 'application/json'
@@ -32,7 +35,7 @@ async function getProductById (id: string) {
 }
 
 async function getProductByIdAndItem (id: string, itemId: string) {
-      let res = await fetch(`/api/product/?id=${id}`, {
+      let res = await fetch(`${getProductUrl}/?id=${id}`, {
             method: 'GET',
             headers: {
                   'accept': 'application/json'
