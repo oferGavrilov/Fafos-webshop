@@ -13,10 +13,10 @@ export const productService = {
 }
 
 async function getProducts (category = 'all-swimwear') {
-      let res = await fetch(`${getProductsUrl}/?category=${category}`, {
+      let res = await fetch(`/api/products/?category=${category}`, {
             method: 'GET',
             headers: {
-                  'accept': 'application/json'
+                  'Content-Type': 'application/json'
             }
       })
       let data = await res.json()
@@ -24,10 +24,10 @@ async function getProducts (category = 'all-swimwear') {
 }
 
 async function getProductById (id: string) {
-      let res = await fetch(`${getProductUrl}/?id=${id}`, {
+      let res = await fetch(`/api/products/?id=${id}`, {
             method: 'GET',
             headers: {
-                  'accept': 'application/json'
+                  'Content-Type': 'application/json'
             }
       })
       let product = await res.json()
@@ -35,10 +35,10 @@ async function getProductById (id: string) {
 }
 
 async function getProductByIdAndItem (id: string, itemId: string) {
-      let res = await fetch(`${getProductUrl}/?id=${id}`, {
+      let res = await fetch(`/api/products/?id=${id}`, {
             method: 'GET',
             headers: {
-                  'accept': 'application/json'
+                  'Content-Type': 'application/json'
             }
       })
       let product = await res.json()
