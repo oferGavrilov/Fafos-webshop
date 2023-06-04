@@ -76,7 +76,7 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
       }
 
       function isAdmin (): boolean {
-            const adminId = 'xWI6uTLBiDdmOxV8oTfmMtreNtG3'
+            const adminId = process.env.NEXT_PUBLIC_ADMIN_ID
             return currentUser?.uid === adminId
       }
 

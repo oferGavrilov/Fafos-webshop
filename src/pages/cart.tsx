@@ -12,7 +12,7 @@ function Cart () {
 
   return (
     <>
-      {cartItems.length > 0 && <Link href="/" className='flow-btn !text-base md:text-2xl slide-bottom before:bg-green !border-2 rounded-md !border-green hover:text-white '>
+      {cartItems.length > 0 && <Link href="/purchase" className='flow-btn !text-base md:text-2xl slide-bottom before:bg-green !border-2 rounded-md !border-green hover:text-white '>
         <span>Apply Purchase</span>
       </Link>}
       <section className='pt-10 pb-20'>

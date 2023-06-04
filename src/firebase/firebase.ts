@@ -3,16 +3,16 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 const firebaseConfig = {
-      apiKey: "AIzaSyD5sm7PbfTGQ7ytzPqA6wHw7zN5bdqh78k",
-      authDomain: "webshop-c2120.firebaseapp.com",
-      projectId: "webshop-c2120",
-      storageBucket: "webshop-c2120.appspot.com",
-      messagingSenderId: "872470488345",
-      appId: "1:872470488345:web:469ffb69bd646d3abf9188",
-      measurementId: "G-LJ3PTWZMC5"
+      apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,
+      authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+      projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+      storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+      appId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_APP_ID,
+      measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 }
 
 // initialize firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp()
 
 export const initFirebase = () => app

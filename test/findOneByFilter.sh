@@ -1,14 +1,15 @@
 #!/bin/bash
+source .env
 
-appid ="data-drwva"
+appid="data-drwva"
 
-apikey="5bjHlorLPDthuztKPbtxIpPIlDjUCkOr29KYSHt4IynAOXAlCWCrELIAnRSBFQAP"
+apikey=$NEXT_PUBLIC_MONGO_DATA_API_KEY
 
-baseurl="https://eu-central-1.aws.data.mongodb-api.com/app/data-drwva/endpoint/data/v1"
+baseurl=$NEXT_PUBLIC_MONGODB_DATA_API_URL
 
 endpoint="/action/findOne"
 
-dataSource="Cluster0"
+dataSource=$NEXT_PUBLIC_MONGODB_DATA_SOURCE
 
 database="fafos"
 
