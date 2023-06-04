@@ -9,7 +9,7 @@ import ProductFilter from '../../components/Category/ProductFilter'
 import ProductList from '../../components/Category/ProductList'
 import { Product } from '../../models/products.model'
 
-export default function ProductPage () {
+export default function ProductPage (params: any) {
       const searchParams = useSearchParams().toString()
       const initSort = searchParams.split('sort=')[1] || 'none'
 
@@ -41,9 +41,9 @@ export default function ProductPage () {
       }
 
       const createQueryString = useCallback((key: string, value: string) => {
-            const params = new URLSearchParams(searchParams)
-            params.set(key, value)
-            return params.toString()
+            const paramsI = new URLSearchParams(searchParams)
+            paramsI.set(key, value)
+            return paramsI.toString()
       }, [searchParams])
 
 

@@ -1,9 +1,5 @@
 import { Product } from "../models/products.model"
 
-const findOneUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/product' : 'http://localhost:3000/api/product/'
-const getProductsUrl = process.env.NODE_ENV === 'production' ? 'https://fafos-webshop.vercel.app/api/products' : 'http://localhost:3000/api/products/'
-
-// eslint-disable-next-line import/prefer-default-export
 export const productService = {
       setSort,
       getEmptyFilter,
@@ -14,10 +10,10 @@ export const productService = {
 }
 
 async function getProducts (category = 'all-swimwear') {
-      let res = await fetch(`${getProductsUrl}/?category=${category}`, {
+      let res = await fetch(`/api/products/?category=${category}`, {
             method: 'GET',
             headers: {
-                  'Content-Type': 'application/json'
+                  'accept': 'application/json'
             }
       })
       let data = await res.json()
@@ -25,10 +21,10 @@ async function getProducts (category = 'all-swimwear') {
 }
 
 async function getProductById (id: string) {
-      let res = await fetch(`${findOneUrl}/?id=${id}`, {
+      let res = await fetch(`/api/product/?id=${id}`, {
             method: 'GET',
             headers: {
-                  'Content-Type': 'application/json'
+                  'accept': 'application/json'
             }
       })
       let product = await res.json()
@@ -36,10 +32,10 @@ async function getProductById (id: string) {
 }
 
 async function getProductByIdAndItem (id: string, itemId: string) {
-      let res = await fetch(`${findOneUrl}/?id=${id}`, {
+      let res = await fetch(`/api/product/?id=${id}`, {
             method: 'GET',
             headers: {
-                  'Content-Type': 'application/json'
+                  'accept': 'application/json'
             }
       })
       let product = await res.json()

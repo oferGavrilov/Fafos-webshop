@@ -22,6 +22,8 @@ module.exports = {
             'plugin:import/warnings',
             'plugin:import/typescript',
             'prettier',
+            "eslint:recommended",
+            "plugin:react/recommended"
       ],
       rules: {
             'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
@@ -60,6 +62,9 @@ module.exports = {
             "react/no-array-index-key": "off",
             'import/no-extraneous-dependencies': 'off',
             'consistent-return': 'off',
+            'no-undef': 'off',
+            'no-unused-vars': 'off',
+            '@typescript-eslint/no-empty-function': 'off'
       },
       settings: {
             'import/resolver': {

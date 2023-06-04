@@ -1,5 +1,3 @@
-/* eslint-disable no-case-declarations */
-/* eslint-disable @typescript-eslint/no-empty-function */
 import React, { ReactNode, useContext, useEffect, useMemo, useState, createContext } from 'react'
 
 import {
@@ -19,8 +17,8 @@ interface AuthContextProps {
       socialSignIn: (platform: string) => Promise<void>,
       signOut?: () => void,
       isAdmin: () => boolean,
-      signupWithCredentials?: (user: IUser) => Promise<void>,
-      signInWithCredentials?: (user: IUser) => Promise<void>
+      signupWithCredentials?: ({ email, password }: IUser) => Promise<void>,
+      signInWithCredentials?: ({ email, password }: IUser) => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextProps>({
@@ -88,7 +86,7 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
             await signInWithEmailAndPassword(auth, email, password)
       }
 
-      function signOut () {
+      function signOut (): void {
             try {
                   auth.signOut()
                   toast.success("Logout success.")

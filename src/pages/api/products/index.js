@@ -1,6 +1,6 @@
 import clientPromise from "../../../../lib/mongodb"
 
-export default async function handler (req, res) {
+export default async (req, res) => {
       const client = await clientPromise
       const db = await client.db("fafos")
       const { category } = req.query
@@ -14,7 +14,7 @@ export default async function handler (req, res) {
 }
 
 function criteria (category) {
-      if (category === 'all-swimwear') {
+      if (category === 'all-swimwear' || category === '') {
             return {}
       }
       return { "category": { $regex: category, $options: 'i' } }
