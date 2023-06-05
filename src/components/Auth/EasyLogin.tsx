@@ -1,20 +1,15 @@
 import { useAuth } from '@context/AuthContext'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 import React from 'react'
-import { toast } from 'react-toastify'
 
 export default function EasyLogin () {
-      const router = useRouter()
       const { socialSignIn } = useAuth()
 
       async function onSignIn (platform: string) {
             try {
                   await socialSignIn(platform)
-                  toast.success(`Login with ${platform} success.`)
-                  router.push('/user')
             } catch (err) {
-                  toast.error(`Login with ${platform} failed, please try again.`)
+                  console.error(err)
             }
       }
       

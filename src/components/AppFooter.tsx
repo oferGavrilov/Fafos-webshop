@@ -6,7 +6,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 function AppFooter () {
-  const hidden = useRouter().pathname === '/login' || useRouter().pathname === '/user'
+  const { pathname } = useRouter()
+  const hidden = pathname === '/login' || pathname === '/user'
 
   return (
     <footer className={`${hidden && 'hidden'} w-full py-10 px-2 md:px-10 flex-col bg-[#e9ecef] justify-center items-center shadow-inner`}>

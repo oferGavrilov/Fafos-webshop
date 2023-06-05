@@ -1,19 +1,16 @@
 import React, { useState } from 'react'
-import { useRouter } from 'next/router'
 
 import { TextField } from '@mui/material'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 
 import { useAuth } from '@context/AuthContext'
-import { toast } from 'react-toastify'
 import LockIcon from '@mui/icons-material/Lock'
 
 import { IUser } from '../../models/user.model'
 
 function AccountForm () {
       const [isLogin, setIsLogin] = useState(true)
-      const router = useRouter()
       const { signInWithCredentials, signupWithCredentials } = useAuth()
 
       const validationSchema = yup.object({
@@ -44,10 +41,7 @@ function AccountForm () {
       async function signIn (credentials: IUser) {
             try {
                   await signInWithCredentials(credentials)
-                  router.push('/user')
-                  toast.success("Login success.")
             } catch (error) {
-                  toast.error('Incorrect email or password. Please try again.')
                   console.log(error)
             }
       }
@@ -55,14 +49,10 @@ function AccountForm () {
       async function signUp (credentials: IUser) {
             try {
                   await signupWithCredentials(credentials)
-                  router.push('/user')
-                  toast.success("Signup success.")
             } catch (error) {
-                  toast.error('Signup failed. Please try again.')
                   console.log(error)
             }
       }
-
 
       return (
             <form onSubmit={formik.handleSubmit} className=' max-w-3xl  pt-2 pb-6 px-6 m-3 md:mx-auto rounded-3xl'>

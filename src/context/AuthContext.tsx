@@ -1,4 +1,5 @@
 import React, { ReactNode, useContext, useEffect, useMemo, useState, createContext } from 'react'
+import { useRouter } from 'next/navigation'
 
 import {
       onAuthStateChanged, signInWithPopup, User, getAuth,
@@ -42,6 +43,7 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
       const googleProvider = new GoogleAuthProvider()
       const facebookProvider = new FacebookAuthProvider()
       const [user, loading] = useAuthState(auth)
+      const router = useRouter()
 
       useEffect(() => {
             const unsubscribe = onAuthStateChanged(auth, user => {
@@ -58,10 +60,14 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
                         case 'google':
                               res = await signInWithPopup(auth, googleProvider)
                               setCurrentUser(res.user)
+                              toast.success(`Login with ${platform} success.`)
+                              router.push('/user')
                               break
                         case 'facebook':
                               res = await signInWithPopup(auth, facebookProvider)
                               setCurrentUser(res.user)
+                              toast.success(`Login with ${platform} success.`)
+                              router.push('/user')
                               break
                         case 'apple':
                               break
@@ -69,7 +75,7 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
                               break
                   }
             } catch (error) {
-                  console.log(error)
+                  toast.error(`Login with ${platform} failed, please try again.`)
             }
       }
 
@@ -79,11 +85,33 @@ export function AuthProvider ({ children }: { children: ReactNode }) {
       }
 
       async function signupWithCredentials ({ email, password }: IUser) {
-            await createUserWithEmailAndPassword(auth, email, password)
+            try {
+                  await createUserWithEmailAndPassword(auth, email, password)
+                  toast.success("Signup success.")
+                  router.push('/user')
+            } catch (err) {
+                  toast.error(err.message)
+                  throw new Error(err.message)
+            }
       }
 
       async function signInWithCredentials ({ email, password }: IUser) {
-            await signInWithEmailAndPassword(auth, email, password)
+            try {
+                  await signInWithEmailAndPassword(auth, email, password)
+                  toast.success("Login success.")
+                  router.push('/user')
+            } catch (err) {
+                  switch (err.code) {
+                        case 'auth/user-not-found':
+                              toast.error("User not found.")
+                              break
+                        case 'auth/wrong-password':
+                              toast.error("Wrong password.")
+                              break
+                        default: toast.error('Email or password is incorrect.')
+                  }
+                  throw new Error(err.message)
+            }
       }
 
       function signOut (): void {
