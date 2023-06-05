@@ -47,6 +47,13 @@ function AppHeader ({ page }: Props) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  function imgError (e: React.SyntheticEvent<HTMLImageElement, Event>) {
+    console.log(e.currentTarget.src)
+    e.currentTarget.onerror = null
+    e.currentTarget.src = 'imgs/etc/default-user.png'
+    return true
+  }
+
 
   return (
     <>
@@ -56,7 +63,7 @@ function AppHeader ({ page }: Props) {
             <Link className='header-icon ' href="/login" aria-label='Login and sign up page or user page'>
               <Tooltip title={currentUser ? 'User' : 'Login'} placement='bottom' arrow>
                 <IconButton aria-label='login'>
-                  {currentUser ? <img className='w-8 h-8 rounded-full' src={currentUser?.photoURL || 'imgs/etc/default-user.png'} alt="user" /> : <AiOutlineUser />}
+                  {currentUser ? <img className='w-8 h-8 rounded-full'  referrerPolicy="no-referrer" onError={(e) => imgError(e)} src={currentUser?.photoURL || 'imgs/etc/default-user.png'} alt="user" /> : <AiOutlineUser />}
                 </IconButton>
               </Tooltip>
             </Link>

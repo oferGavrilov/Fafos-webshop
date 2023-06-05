@@ -9,6 +9,12 @@ export default function Admin () {
     if (!isAdmin()) router.push('/')
   },[])
   return (
-    <div>Admin</div>
+    <section className='h-screen pt-24'>
+      <h2>Admin page</h2>
+      <form>
+        <span>Add a product</span>
+
+      </form>
+    </section>
   )
 }
