@@ -1,13 +1,19 @@
+'use client'
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useAuth } from '@context/AuthContext'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 
 export default function Admin () {
-  const { isAdmin } = useAuth()
   const router = useRouter()
+  const { isAdmin, currentUser } = useAuth()
+
+
+
   useEffect(() => {
     if (!isAdmin()) router.push('/')
-  },[])
+  }, [])
   return (
     <section className='h-screen pt-24'>
       <h2>Admin page</h2>
@@ -18,3 +24,8 @@ export default function Admin () {
     </section>
   )
 }
+
+// export async function getServerSideProps (context) {
+//   const session = await getIdTokenResult(context.req)
+//   console.log(session)
+// }
