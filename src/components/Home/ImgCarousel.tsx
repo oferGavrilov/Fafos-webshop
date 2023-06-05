@@ -40,7 +40,7 @@ function ImgCarousel () {
                                     <Link href={`/product/${item.id}?item=${item.itemId}`}>
                                           <Image
                                                 quality={75}
-                                                loading='eager'
+                                                priority
                                                 aria-label='Preview this product'
                                                 width={0}
                                                 height={0}

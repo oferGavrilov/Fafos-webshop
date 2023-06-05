@@ -17,7 +17,6 @@ import { ShoppingCartProvider } from '../context/ShoppingCart'
 const Layout = dynamic(() => import('../layout/Layout'), { ssr: false })
 
 export default function App ({ Component, pageProps }: AppProps) {
-  console.log(process.env.DATABASE_API_KEY)
   return (
     <AuthProvider>
       <ShoppingCartProvider>

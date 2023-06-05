@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import SpinnerLoader from 'src/components/SpinnerLoader'
+import { usePathname } from 'next/navigation'
 import AppHeader from '../components/AppHeader'
 import AppFooter from '../components/AppFooter'
 import AboveHeader from '../components/AboveHeader'
@@ -16,18 +17,14 @@ interface Props {
 function Layout ({ children, ...props }: Props) {
       const [title, setTitle] = useState<string>('Home')
       const router = useRouter()
+      const pathName = usePathname().split('/')[1]
 
       useEffect(() => {
             getTitle()
       }, [router.asPath])
 
       function getTitle () {
-            setTitle(() => {
-                  const path = router.asPath.split('/')
-                  if (path[1] === '') return 'Home'
-                  if (/\d/.test(path[path.length - 1])) path.pop()
-                  return path[path.length - 1].charAt(0).toUpperCase() + path[path.length - 1].slice(1)
-            })
+            setTitle(() => !pathName ? 'Home' : pathName.charAt(0).toUpperCase() + pathName.slice(1))
       }
 
       return (

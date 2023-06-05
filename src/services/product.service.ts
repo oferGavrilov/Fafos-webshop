@@ -20,7 +20,6 @@ async function getProducts (category = 'all-swimwear') {
                         'Content-Type': 'application/json'
                   }
             })
-            console.log(res)
             let data = await res.json()
             return data
       } catch (error) {
