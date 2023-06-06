@@ -1,38 +1,101 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Fafos - E-commerce for swimwear inspired by bananahot.com
+Fafos is a swimwear store built using NextJS , [here is my project link](https://fafos-webshop.vercel.app/)
 
-## Getting Started
+![Hero image](public/imgs/readme/fafos-large.jpg "Hero-image")
 
-First, run the development server:
+___
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+### Table of contents
+- [Application Features](#application-features)
+
+## Application Architecture
+This web shop built with NextJS for Server Side Rendering, which upgrades the SEO (Search Engin Optimization), 
+Using React and Typescript for the frontend including the best UI&UX tools and libraries like TailwindCSS, MUI, 
+React-Multi-Carousel, React-loading-skeleton, Next-I18n, React-Toastify, Formik & Yup for forming and validation and more.
+Advanced cart logic that is matches the inventory database, data matches the data structure of the products and saves the user picks in the local storage.
+All the api requests and data fetching made with Axios including validations high security with the right middlewares, all the way to the MongoDB database.
+User Authentication made with firebase that brings with him connecting with email & password, Google authentication and Facebook authentication.
+This project was build with extra development tools like Docker, Eslint, and testing tools like Jest, Postman and shell scripts for database tests.
+
+## Application Features
+- Advanced and modern UI for searching and purchasing swimwear 
+- Advanced cart logic that is matches the inventory database, data matches the data structure of the products and saves the user picks in the local storage.
+- Admin panel for add, remove, update products. and also dashboard for sales review.
+- Internationalization - I18n translate for the most popular languages.
+
+## Technologies
+React, Typescript, TailwindCSS and MUI for the Frontend side.
+Next framework, MongoDB database and Restful API for Backend side.
+Jest for Unit Testing, Selenium for end-to-end testing and Karma for Integration testing.
+Morgan framework for Logging.
+and more development tools like Docker, Cloudinary, Eslint, Postman and Mongo compass.
+
+## Showcase
+
+## Home Page
+The landing page including hero, teasers, image carousel, hot categories and video sections.
+
+#### Hero 
+![Hero-image](public/imgs/readme/fafos-large.jpg "Hero")
+
+#### Teaser
+![Teaser](public/imgs/readme/teaser.jpg "Teaser")
+
+#### Image-Carousel
+![Image-Carousel](public/imgs/readme/image-carousel.png "Image Carousel")
+
+
+## Collections Page
+The collection page includes all the popular collections to choose
+
+![Collection-page](public/imgs/readme/collection.jpg "Collection-page")
+
+## Products Page
+The products page includes products with filters and sorting features
+** Every product is presented with color bullets that present the product in other colors if any. **
+
+![Products-page](public/imgs/readme/products.jpg "Products-page")
+
+## Product Page
+The product page includes more images of the chosen product, size choosing, add to cart button and relative products
+
+![Product-page](public/imgs/readme/product.jpg "Product-page")
+
+## Cart Page
+The cart page includes all the products that the user has been added
+![Cart-page](public/imgs/readme/cart.jpg "Cart-page")
+
+And for who's the cart is empty.. 
+![Cart-page](public/imgs/readme/empty-cart.jpg "Cart-page")
+
+## Login Page
+The login & sign up page includes login with Email & Password, login with Google, login with Facebook and Login with Apple for macOs, IOS systems.
+
+![Login-page](public/imgs/readme/login-signup.jpg "Login-page")
+
+## Some Mobile
+This Project is a fully responsive for any device!
+
+![Laptop](public/imgs/readme/laptop.jpg "Laptop")
+![Phone](public/imgs/readme/phone.jpg "Phone")
+
+
+## Getting started 
+
+Head to the repository on top and clone the project 
+
+```
+git clone https://github.com/oferGavrilov/Fafos-webshop.git
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next, in the terminal:
 
-You can start editing the page by modifying `pages/Home.tsx`. The page auto-updates as you edit the file.
+```
+cd ./Fafos-webshop
+npm install & npm run dev
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+Open your favorite browser on localhost:3000 and That's it!
+if you have a problem please make contact me here [Gmail]('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ofergavri@gmail.com)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
