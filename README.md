@@ -7,6 +7,14 @@ ___
 
 ### Table of contents
 - [Application Features](#application-features)
+- [Technologies](#technologies)
+- [Home Page](#home-page)
+- [Collections Page](#collections-page)
+- [Products Page](#products-page)
+- [Product Page](#product-page)
+- [Cart Page](#cart-page)
+- [Login Page](#login-page)
+- [Getting Started](#getting-started)
 
 ## Application Architecture
 This web shop built with NextJS for Server Side Rendering, which upgrades the SEO (Search Engin Optimization), 
@@ -29,8 +37,6 @@ Next framework, MongoDB database and Restful API for Backend side.
 Jest for Unit Testing, Selenium for end-to-end testing and Karma for Integration testing.
 Morgan framework for Logging.
 and more development tools like Docker, Cloudinary, Eslint, Postman and Mongo compass.
-
-## Showcase
 
 ## Home Page
 The landing page including hero, teasers, image carousel, hot categories and video sections.
@@ -63,6 +69,7 @@ The product page includes more images of the chosen product, size choosing, add 
 
 ## Cart Page
 The cart page includes all the products that the user has been added
+
 ![Cart-page](public/imgs/readme/cart.jpg "Cart-page")
 
 And for who's the cart is empty.. 
@@ -77,10 +84,12 @@ The login & sign up page includes login with Email & Password, login with Google
 This Project is a fully responsive for any device!
 
 ![Laptop](public/imgs/readme/laptop.jpg "Laptop")
+
+
 ![Phone](public/imgs/readme/phone.jpg "Phone")
 
 
-## Getting started 
+## Getting Started 
 
 Head to the repository on top and clone the project 
 
@@ -96,6 +105,6 @@ cd ./Fafos-webshop
 npm install & npm run dev
 
 ```
-Open your favorite browser on localhost:3000 and That's it!
-if you have a problem please make contact me here [Gmail]('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ofergavri@gmail.com)
+Remember to add your own enviorment variables and open your favorite browser on localhost:3000 and That's it!
+if you have a problem please make contact me here [Gmail](https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ofergavri@gmail.com)
 
