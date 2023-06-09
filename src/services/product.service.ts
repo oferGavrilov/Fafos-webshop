@@ -10,6 +10,7 @@ export const productService = {
       isInStock,
       getAmountFromStock,
       getProducts,
+      getProductPair
 }
 
 async function getProducts (category = 'all-swimwear') {
@@ -22,6 +23,31 @@ async function getProducts (category = 'all-swimwear') {
             })
             let data = await res.json()
             return data
+      } catch (error) {
+            console.log(error)
+      }
+}
+
+async function getProductPair(id:string , itemId:string) {
+      try {
+            let res = await fetch(`${getProductUrl}/pair/?id=${id}&itemId=${itemId}`, {
+                  method: 'GET',
+                  headers: {
+                        'Content-Type': 'application/json'
+                  }
+            })
+
+            let product = await res.json()
+            const image = product.inventory.find(item => item.id === itemId).imgUrl[0]
+            const pair = {
+                  image,
+                  title: product.title,
+                  price: product.price,
+                  category: product.category,
+            }
+            
+            return pair
+
       } catch (error) {
             console.log(error)
       }

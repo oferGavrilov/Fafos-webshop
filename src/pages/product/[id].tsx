@@ -12,6 +12,7 @@ import SingleCarousel from 'src/components/SingleCarousel'
 import ProductForm from 'src/components/Product/ProductForm'
 import Loader from 'src/components/SkeletonLoader'
 import ProductInfo from 'src/components/Product/ProductInfo'
+import ProductPair from 'src/components/Product/ProductPair'
 import formatCurrency from '../../helpers/formatCurrency'
 import NoSuchItem from '../../components/Product/NoSuchItem'
 import { useShoppingCart } from '../../context/ShoppingCart'
@@ -41,6 +42,7 @@ function ProductDetails () {
       async function loadProduct (): Promise<void | JSX.Element> {
             setLoader(true)
             const product = await productService.getProductByIdAndItem(id, item as string)
+            if (!product) return <NoSuchItem />
             await loadRelativeProducts(product?.category)
             setProduct(product)
             setLoader(false)
@@ -66,7 +68,6 @@ function ProductDetails () {
             increaseItemQuantity(productToAdd)
       }
 
-      if (!product) return <NoSuchItem />
       return loader ? <Loader page='product' /> : (
             <section className='relative'>
                   <div className='fade pt-24 pb-16 mt-8  md:max-w-[75rem] items-center lg:items-start mx-auto gap-x-[2rem] xl:gap-x-[12rem]  flex flex-col lg:flex-row-reverse' >
@@ -90,7 +91,7 @@ function ProductDetails () {
                               <span className='text-center main-text mt-1'>✦ Free Shipping On Orders Above 600₪ ✦</span>
 
                               <ProductInfo product={product} />
-
+                              <ProductPair product={product} />
                         </div>
                   </div>
 

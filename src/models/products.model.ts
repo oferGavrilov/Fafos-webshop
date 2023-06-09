@@ -25,6 +25,9 @@ export interface CollectionsData {
 export interface Product {
       id: string
       imgUrl: string
+      description: string
+      details: string
+      model: string
       title: string
       price: number
       category: string
@@ -34,6 +37,10 @@ export interface Product {
       quantity?: Quantity[]
       bulletColor: string
       color: string
+      pairs?:{
+            id: string
+            itemId: string
+      }
 }
 
 interface Inventory {
