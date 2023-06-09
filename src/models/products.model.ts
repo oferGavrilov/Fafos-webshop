@@ -33,6 +33,7 @@ export interface Product {
       images?: string[]
       quantity?: Quantity[]
       bulletColor: string
+      color: string
 }
 
 interface Inventory {
@@ -54,7 +55,7 @@ export interface Cart  {
       bulletColor: string
       color: string;
       id: string;
-      imgUrl: string[];
+      images: string[];
       size: string;
       title: string;
       price: number;

@@ -12,11 +12,11 @@ interface Props {
 
 export default function CartPreview ({ item }: Props) {
       const { increaseItemQuantity, decreaseItemQuantity, removeItem } = useShoppingCart()
-
+      
       return (
             <li key={item.id + item.size + item.color} className='flex md:mx-12 border-b-2 p-2 shadow-lg shadow-gray-200'>
                   <div className='flex w-full '>
-                        <img src={`/${item.imgUrl[0]}`} className='object-cover  w-1/2 max-w-[250px] lg:max-w-[410px]' alt="product" />
+                        <img src={`/${item.images[0]}`} className='object-cover  w-1/2 max-w-[250px] lg:max-w-[410px]' alt="product" />
                         <div className='relative ml-5 mt-6 gap-y-4 md:gap-y-8 text-xl flex flex-col flex-grow '>
                               <span className='text-sm md:text-2xl'>{item.title}</span>
                               <span><span className='text-dark-gray'>Size: </span>{item.size.toUpperCase()}</span>
