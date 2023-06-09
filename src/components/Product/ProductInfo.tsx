@@ -8,7 +8,6 @@ export default function ProductInfo ({ product }: { product: Product }) {
 
       function handleDrawer (e: React.MouseEvent<HTMLDivElement>) {
             const drawer = e.currentTarget.innerText.split(' ')[0].toLowerCase()
-            console.log(drawer)
             setDrawerIsOpen(prevState => ({...prevState, [drawer]: !prevState[drawer]}))
       }
 

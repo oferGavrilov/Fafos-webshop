@@ -67,7 +67,6 @@ function ProductDetails () {
       }
 
       if (!product) return <NoSuchItem />
-      console.log(product)
       return loader ? <Loader page='product' /> : (
             <section className='relative'>
                   <div className='fade pt-24 pb-16 mt-8  md:max-w-[75rem] items-center lg:items-start mx-auto gap-x-[2rem] xl:gap-x-[12rem]  flex flex-col lg:flex-row-reverse' >
