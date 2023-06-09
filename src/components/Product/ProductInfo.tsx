@@ -41,7 +41,7 @@ export default function ProductInfo ({ product }: { product: Product }) {
                         <RemoveIcon />
                         <span className='uppercase tracking-widest text-gray-500'>Shipping & returns</span>
                   </div>
-                  <article className={`  drawer ${drawer.shipping ? 'drawer-open' : 'drawer-close'}`}>
+                  <article className={`  drawer ${drawer.shipping ? 'h-20' : 'drawer-close'}`}>
                         <p className=''>Delivery up to 5 business days
                               Exchange/return will be made up to 14 days from the moment of receiving the product.</p>
                   </article>

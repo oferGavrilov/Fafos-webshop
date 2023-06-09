@@ -1,0 +1,1564 @@
+[
+      {
+            "id": "b100",
+            "imgUrl": "imgs/products/bottoms/tai-ice-blue1.jpg",
+            "title": "Tai",
+            "description": "This special bikini set is made from a silky material. These Brazilian bikini bottoms have knotted detailing at the front, thick straps, and a ruched cheeky cut.",
+            "details": "80% nylon 20% elastane",
+            "model": "Model is wearing size XS",
+            "price": 430,
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "id": "10",
+                        "color": "ice blue",
+                        "bulletColor": "deepskyblue",
+                        "imgUrl": [
+                              "imgs/products/bottoms/tai-ice-blue1.jpg",
+                              "imgs/products/bottoms/tai-ice-blue2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 0
+                              }
+                        ],
+                        "pairs": {
+                              "id": "t104",
+                              "itemId": "21"
+                        }
+                  },
+                  {
+                        "id": "11",
+                        "color": "ivory",
+                        "bulletColor": "ghostwhite",
+                        "imgUrl": [
+                              "imgs/products/bottoms/tai-ivory1.jpg",
+                              "imgs/products/bottoms/tai-ivory2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id": "t104",
+                              "itemId": "22"
+                        }
+                  },
+                  {
+                        "id": "12",
+                        "color": "red",
+                        "bulletColor": "red",
+                        "imgUrl": [
+                              "imgs/products/bottoms/tai-red1.jpg",
+                              "imgs/products/bottoms/tai-red2.jpg",
+                              "imgs/products/bottoms/tai-red3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id": "t104",
+                              "itemId": "23"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "b101",
+            "imgUrl": "imgs/products/bottoms/donna-black1.jpg",
+            "title": "Donna",
+            "description":"The DONNA bottom is an ultra-flattering bikini bottom with a ruched design, adjustable front coverage, and tie details on each side.",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size XS",
+            "price": 350,
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "id": "13",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-black1.jpg",
+                              "imgs/products/bottoms/donna-black2.jpg",
+                              "imgs/products/bottoms/donna-black3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"t105",
+                              "itemId":"24"
+                        }
+                  },
+                  {
+                        "id": "14",
+                        "color": "pink",
+                        "bulletColor":"pink",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-pink2.jpg",
+                              "imgs/products/bottoms/donna-pink1.jpg",
+                              "imgs/products/bottoms/donna-pink3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t105",
+                              "itemId":"25"
+                        }
+                  },
+                  {
+                        "id": "15",
+                        "color": "lime",
+                        "bulletColor":"greenyellow",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-lime1.jpg",
+                              "imgs/products/bottoms/donna-lime2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t105",
+                              "itemId":"26"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "b102",
+            "imgUrl": "imgs/products/bottoms/emi-white1.jpg",
+            "title": "Emi",
+            "price": 300,
+            "description":"This bikini set is the perfect classic triangle style! The Emi Brazilian style bottoms are adjustable on both sides and is finished with beautiful gold tiny rings.",
+            "details":"78% Recyceld PL 22% elastane",
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "id": "16",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/bottoms/emi-white1.jpg",
+                              "imgs/products/bottoms/emi-white2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id": "t103",
+                              "itemId": "19"
+                        }
+                  },
+                  {
+                        "id": "17",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/bottoms/emi-black1.jpg",
+                              "imgs/products/bottoms/emi-black2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id": "t103",
+                              "itemId": "20"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "b103",
+            "imgUrl": "imgs/products/bottoms/pinki-white1.jpg",
+            "title": "Pinki",
+            "price": 320,
+            "description":"This bikini set is the perfect classic triangle style! The Emi Brazilian style bottoms are adjustable on both sides and is finished with beautiful gold tiny rings.",
+            "details":"78% Recyceld PL 22% elastane",
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "id": "18",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/bottoms/pinki-white1.jpg",
+                              "imgs/products/bottoms/pinki-white2.jpg",
+                              "imgs/products/bottoms/pinki-white3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t100",
+                              "itemId":"10"
+                        }
+                  },
+                  {
+                        "id": "19",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/bottoms/pinki-black1.jpg",
+                              "imgs/products/bottoms/pinki-black2.jpg",
+                              "imgs/products/bottoms/pinki-black3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t100",
+                              "itemId":"11"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "b104",
+            "imgUrl": "imgs/products/bottoms/bell-ruby1.jpg",
+            "title": "Bell",
+            "price": 370,
+            "description":"The BELL top is perfect for your sun-soaking needs with its barely-there straps. The timeless triangle bikini top has a removable waist tie that can be worn in different ways - super sexy!",
+            "details":"78% Recyceld PL 22% elastane",
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "id": "19",
+                        "color": "ruby",
+                        "bulletColor":"ruby",
+                        "imgUrl": [
+                              "imgs/products/bottoms/bell-ruby1.jpg",
+                              "imgs/products/bottoms/bell-ruby2.jpg",
+                              "imgs/products/bottoms/bell-ruby3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t101",
+                              "itemId":"12"
+                        }
+                  },
+                  {
+                        "id": "20",
+                        "color": "purple",
+                        "bulletColor":"purple",
+                        "imgUrl": [
+                              "imgs/products/bottoms/bell-purple1.jpg",
+                              "imgs/products/bottoms/bell-purple2.jpg",
+                              "imgs/products/bottoms/bell-purple3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t101",
+                              "itemId":"13"
+                        }
+                  },
+                  {
+                        "id": "21",
+                        "color": "green",
+                        "bulletColor":"green",
+                        "imgUrl": [
+                              "imgs/products/bottoms/bell-green1.jpg",
+                              "imgs/products/bottoms/bell-green2.jpg",
+                              "imgs/products/bottoms/bell-green3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t101",
+                              "itemId":"14"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "b105",
+            "imgUrl": "imgs/products/bottoms/jasmin-turquoise1.jpg",
+            "title": "Jasmin",
+            "price": 375,
+            "description":"The turquoise bottom is perfect for your sun-soaking needs with its barely-there straps. The timeless triangle bikini top has a removable waist tie that can be worn in different ways - super sexy!",
+            "details":"78% Recyceld PL 22% elastane",
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "id": "22",
+                        "color": "turquoise",
+                        "bulletColor":"turquoise",
+                        "imgUrl": [
+                              "imgs/products/bottoms/jasmin-turquoise1.jpg",
+                              "imgs/products/bottoms/jasmin-turquoise2.jpg",
+                              "imgs/products/bottoms/jasmin-turquoise3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t102",
+                              "itemId":"15"
+                        }
+                  },
+                  {
+                        "id": "23",
+                        "color": "purple",
+                        "bulletColor":"purple",
+                        "imgUrl": [
+                              "imgs/products/bottoms/jasmin-purple1.jpg",
+                              "imgs/products/bottoms/jasmin-purple2.jpg",
+                              "imgs/products/bottoms/jasmin-purple3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t102",
+                              "itemId":"16"
+                        }
+                  },
+                  {
+                        "id": "24",
+                        "color": "ice purple",
+                        "bulletColor":"lightpink",
+                        "imgUrl": [
+                              "imgs/products/bottoms/jasmin-ice1.jpg",
+                              "imgs/products/bottoms/jasmin-ice2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t102",
+                              "itemId":"17"
+                        }
+                  },
+                  {
+                        "id": "25",
+                        "color": "lime",
+                        "bulletColor":"greenyellow",
+                        "imgUrl": [
+                              "imgs/products/bottoms/jasmin-lime1.jpg",
+                              "imgs/products/bottoms/jasmin-lime2.jpg",
+                              "imgs/products/bottoms/jasmin-lime3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"t102",
+                              "itemId":"18"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "t100",
+            "imgUrl": "imgs/products/tops/pinki-white1.jpg",
+            "title": "Pinki",
+            "description":"The Pinki bikini top is made from a stunning material. The top are thoughtfully designed for a flattering fit.",
+            "details":"78% Recyceld PL 22% elastane",
+            "model":"Model is wearing size XS",
+            "price": 320,
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "10",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/tops/pinki-white1.jpg",
+                              "imgs/products/tops/pinki-white2.jpg",
+                              "imgs/products/tops/pinki-white3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b103",
+                              "itemId":"18"
+                        }
+                  },
+                  {
+                        "id": "11",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/tops/pinki-black1.jpg",
+                              "imgs/products/tops/pinki-black2.jpg",
+                              "imgs/products/tops/pinki-black3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b103",
+                              "itemId":"19"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "t101",
+            "imgUrl": "imgs/products/tops/bell-ruby1.jpg",
+            "title": "Bell",
+            "description":"The BELL top is perfect for your sun-soaking needs with its barely-there straps. The timeless triangle bikini top has a removable waist tie that can be worn in different ways - super sexy!",
+            "details":"83% poly, 17% elastane",
+            "model":"Model is wearing size XS",
+            "price": 370,
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "12",
+                        "color": "ruby",
+                        "bulletColor":"saddlebrown",
+                        "imgUrl": [
+                              "imgs/products/tops/bell-ruby1.jpg",
+                              "imgs/products/tops/bell-ruby2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b104",
+                              "itemId":"19"
+                        }
+                  },
+                  {
+                        "id": "13",
+                        "color": "purple",
+                        "bulletColor":"purple",
+                        "imgUrl": [
+                              "imgs/products/tops/bell-purple1.jpg",
+                              "imgs/products/tops/bell-purple2.jpg",
+                              "imgs/products/tops/bell-purple3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b104",
+                              "itemId":"20"
+                        }
+                  },
+                  {
+                        "id": "14",
+                        "color": "green",
+                        "bulletColor":"green",
+                        "imgUrl": [
+                              "imgs/products/tops/bell-green1.jpg",
+                              "imgs/products/tops/bell-green2.jpg",
+                              "imgs/products/tops/bell-green3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "t102",
+            "imgUrl": "imgs/products/tops/jasmin-turquoise1.jpg",
+            "title": "Jasmin",
+            "description":"The Jasmin top is perfect for your sun-soaking needs with its barely-there straps. The timeless triangle bikini top has a removable waist tie that can be worn in different ways - super sexy!",
+            "details":"83% poly, 17% elastane",
+            "model":"Model is wearing size XS",
+            "price": 375,
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "15",
+                        "color": "turquoise",
+                        "bulletColor":"turquoise",
+                        "imgUrl": [
+                              "imgs/products/tops/jasmin-turquoise1.jpg",
+                              "imgs/products/tops/jasmin-turquoise2.jpg",
+                              "imgs/products/tops/jasmin-turquoise3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b105",
+                              "itemId":"22"
+                        }
+                  },
+                  {
+                        "id": "16",
+                        "color": "purple",
+                        "bulletColor":"purple",
+                        "imgUrl": [
+                              "imgs/products/tops/jasmin-purple3.jpg",
+                              "imgs/products/tops/jasmin-purple1.jpg",
+                              "imgs/products/tops/jasmin-purple2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b105",
+                              "itemId":"23"
+                        }
+                  },
+                  {
+                        "id": "17",
+                        "color": "ice purple",
+                        "bulletColor":"lightpink",
+                        "imgUrl": [
+                              "imgs/products/tops/jasmin-ice1.jpg",
+                              "imgs/products/tops/jasmin-ice2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b105",
+                              "itemId":"24"
+                        }
+                  },
+                  {
+                        "id": "18",
+                        "color": "lime",
+                        "bulletColor":"greenyellow",
+                        "imgUrl": [
+                              "imgs/products/tops/jasmin-lime1.jpg",
+                              "imgs/products/tops/jasmin-lime2.jpg",
+                              "imgs/products/tops/jasmin-lime3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b105",
+                              "itemId":"25"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "t103",
+            "imgUrl": "imgs/products/tops/emi-white1.jpg",
+            "title": "Emi",
+            "description":"The emi top is perfect for your sun-soaking needs with its barely-there straps. The timeless triangle bikini top has a removable waist tie that can be worn in different ways - super sexy!",
+            "details":"83% poly, 17% elastane",
+            "model":"Model is wearing size XS",
+            "price": 300,
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "19",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/tops/emi-white1.jpg",
+                              "imgs/products/tops/emi-white2.jpg",
+                              "imgs/products/tops/emi-white3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b102",
+                              "itemId":"16"
+                        }
+                  },
+                  {
+                        "id": "20",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/tops/emi-black3.jpg",
+                              "imgs/products/tops/emi-black1.jpg",
+                              "imgs/products/tops/emi-black2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b102",
+                              "itemId":"17"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "t104",
+            "imgUrl": "imgs/products/tops/tai-ice-blue1.jpg",
+            "title": "Tai",
+            "description":"The tai top is perfect for your sun-soaking needs with its barely-there straps. The timeless triangle bikini top has a removable waist tie that can be worn in different ways - super sexy!",
+            "details":"83% poly, 17% elastane",
+            "model":"Model is wearing size XS",
+            "price": 300,
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "21",
+                        "color": "ice blue",
+                        "bulletColor":"deepskyblue",
+                        "imgUrl": [
+                              "imgs/products/tops/tai-ice-blue1.jpg",
+                              "imgs/products/tops/tai-ice-blue2.jpg",
+                              "imgs/products/tops/tai-ice-blue3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b100",
+                              "itemId":"10"
+                        }
+                  },
+                  {
+                        "id": "22",
+                        "color": "ivory",
+                        "bulletColor":"ghostwhite",
+                        "imgUrl": [
+                              "imgs/products/tops/tai-ivory1.jpg",
+                              "imgs/products/tops/tai-ivory2.jpg",
+                              "imgs/products/tops/tai-ivory3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b100",
+                              "itemId":"11"
+                        }
+                  },
+                  {
+                        "id": "23",
+                        "color": "red",
+                        "bulletColor":"red",
+                        "imgUrl": [
+                              "imgs/products/tops/tai-red1.jpg",
+                              "imgs/products/tops/tai-red2.jpg",
+                              "imgs/products/tops/tai-red3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b100",
+                              "itemId":"12"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "t105",
+            "imgUrl": "imgs/products/tops/donna-black1.jpg",
+            "title": "Donna",
+            "description":"The donna top is perfect for your sun-soaking needs with its barely-there straps. The timeless triangle bikini top has a removable waist tie that can be worn in different ways - super sexy!",
+            "details":"83% poly, 17% elastane",
+            "model":"Model is wearing size XS",
+            "price": 300,
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "24",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-black1.jpg",
+                              "imgs/products/bottoms/donna-black2.jpg",
+                              "imgs/products/bottoms/donna-black3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b101",
+                              "itemId":"13"
+                        }
+                  },
+                  {
+                        "id": "25",
+                        "color": "pink",
+                        "bulletColor":"pink",
+                        "imgUrl": [
+                              "imgs/products/tops/donna-pink1.jpg",
+                              "imgs/products/tops/donna-pink2.jpg",
+                              "imgs/products/tops/donna-pink3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b101",
+                              "itemId":"14"
+                        }
+                  },
+                  {
+                        "id": "26",
+                        "color": "lime",
+                        "bulletColor":"greenyellow",
+                        "imgUrl": [
+                              "imgs/products/tops/donna-lime1.jpg",
+                              "imgs/products/tops/donna-lime2.jpg",
+                              "imgs/products/tops/donna-lime3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"b101",
+                              "itemId":"15"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "o100",
+            "imgUrl": "imgs/products/one-piece/mulan-apple1.jpg",
+            "title": "Mulan",
+            "description":"This classy one-piece is summer’s hottest swimsuit! Featuring a body-baring brazilian style bottom and a flattering ruched silhouette designed to compliment every shape. This swimsuit has an adjustable high-cut leg elongating your figure for a flattering fit and adjustable thin straps transforming it to a bandeau style!",
+            "details":"Fabric: 80% Polyeaster / 20% Elastane",
+            "model":"Model is wearing size XS",
+            "price": 799,
+            "category": "one-piece",
+            "inventory": [
+                  {
+                        "id": "10",
+                        "color": "apple",
+                        "bulletColor":"springgreen",
+                        "imgUrl": [
+                              "imgs/products/one-piece/mulan-apple1.jpg",
+                              "imgs/products/one-piece/mulan-apple2.jpg",
+                              "imgs/products/one-piece/mulan-apple3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "11",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/one-piece/mulan-white1.jpg",
+                              "imgs/products/one-piece/mulan-white2.jpg",
+                              "imgs/products/one-piece/mulan-white3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "12",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/one-piece/mulan-black1.jpg",
+                              "imgs/products/one-piece/mulan-black2.jpg",
+                              "imgs/products/one-piece/mulan-black3.jpg",
+                              "imgs/products/one-piece/mulan-black4.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "o101",
+            "imgUrl": "imgs/products/one-piece/jade-turquoise1.jpg",
+            "title": "Jade",
+            "description":"The JADE one piece is a vacation essential! This one-piece has halter neck straps which can be tied in the front for tanning and tie details on both sides with gold finishes. It features a bandeau-style top, and the swimsuit body has a cut-out - perfect to show off your figure!",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size XS",
+            "price": 835,
+            "category": "one-piece",
+            "inventory": [
+                  {
+                        "id": "13",
+                        "color": "turquoise",
+                        "bulletColor":"turquoise",
+                        "imgUrl": [
+                              "imgs/products/one-piece/jade-turquoise1.jpg",
+                              "imgs/products/one-piece/jade-turquoise2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "14",
+                        "color": "lime",
+                        "bulletColor":"greenyellow",
+                        "imgUrl": [
+                              "imgs/products/one-piece/jade-lime1.jpg",
+                              "imgs/products/one-piece/jade-lime2.jpg",
+                              "imgs/products/one-piece/jade-lime3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "15",
+                        "color": "ivory",
+                        "bulletColor":"ghostwhite",
+                        "imgUrl": [
+                              "imgs/products/one-piece/jade-ivory1.jpg",
+                              "imgs/products/one-piece/jade-ivory2.jpg",
+                              "imgs/products/one-piece/jade-ivory3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "16",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/one-piece/jade-black1.jpg",
+                              "imgs/products/one-piece/jade-black2.jpg",
+                              "imgs/products/one-piece/jade-black3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "o102",
+            "imgUrl": "imgs/products/one-piece/amber-red1.jpg",
+            "description":"Girls, watch out! This is the AMBER one-piece, it has halter neck straps which can be tied in the front making it perfect for your tanning needs. The underwire cups are supportive and flattering, the one piece has a subtle but sexy ruching design.",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size XS",
+            "title": "Amber",
+            "price": 850,
+            "category": "one-piece",
+            "inventory": [
+                  {
+                        "id": "17",
+                        "color": "red",
+                        "bulletColor":"red",
+                        "imgUrl": [
+                              "imgs/products/one-piece/amber-red1.jpg",
+                              "imgs/products/one-piece/amber-red2.jpg",
+                              "imgs/products/one-piece/amber-red3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "18",
+                        "color": "blue",
+                        "bulletColor":"turquoise",
+                        "imgUrl": [
+                              "imgs/products/one-piece/amber-blue1.jpg",
+                              "imgs/products/one-piece/amber-blue2.jpg",
+                              "imgs/products/one-piece/amber-blue3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "p100",
+            "imgUrl": "imgs/products/plus-size/jasmin-pink1.jpg",
+            "title": "Jasmin",
+            "description":"This one’s a bestseller, girls! A twist on the classic triangle, this unpadded bikini top is designed with thin barely-there straps and luxurious ruching design. The shiny material will definitely make you stand out from the crowd.",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size 3XL",
+            "price": 360,
+            "category": "plus-size",
+            "inventory": [
+                  {
+                        "id": "10",
+                        "color": "pink",
+                        "bulletColor":"pink",
+                        "imgUrl": [
+                              "imgs/products/plus-size/jasmin-pink1.jpg",
+                              "imgs/products/plus-size/jasmin-pink2.jpg",
+                              "imgs/products/plus-size/jasmin-pink3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "11",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/plus-size/jasmin-black1.jpg",
+                              "imgs/products/plus-size/jasmin-black2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "p101",
+            "imgUrl": "imgs/products/plus-size/rings-leopard1.jpg",
+            "description":"This is the RINGS one-piece, it has halter neck straps which can be tied in the front making it perfect for your tanning needs. The underwire cups are supportive and flattering, the one piece has a subtle but sexy ruching design.",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size 3XL",
+            "title": "Rings",
+            "price": 350,
+            "category": "plus-size",
+            "inventory": [
+                  {
+                        "id": "12",
+                        "color": "leopard",
+                        "bulletColor":"saddlebrown",
+                        "imgUrl": [
+                              "imgs/products/plus-size/rings-leopard1.jpg",
+                              "imgs/products/plus-size/rings-leopard2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "13",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/plus-size/rings-black1.jpg",
+                              "imgs/products/plus-size/rings-black2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "p102",
+            "imgUrl": "imgs/products/plus-size/lucy-pascolo1.jpg",
+            "description":"This bikini set is the perfect sexy twist on the classic triangle style! The Lucy bikini top is made from a shiny material, it features sexy straps and knot detailing. The unpadded bikini top is complete with gold rings.",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size 3XL",
+            "title": "Lucy",
+            "price": 340,
+            "category": "plus-size",
+            "inventory": [
+                  {
+                        "id": "14",
+                        "color": "pascolo",
+                        "bulletColor":"springgreen",
+                        "imgUrl": [
+                              "imgs/products/plus-size/lucy-pascolo1.jpg",
+                              "imgs/products/plus-size/lucy-pascolo2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "15",
+                        "color": "nude",
+                        "bulletColor":"moccasin",
+                        "imgUrl": [
+                              "imgs/products/plus-size/lucy-nude1.jpg",
+                              "imgs/products/plus-size/lucy-nude2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "m100",
+            "imgUrl": "imgs/products/b-man/swim-white1.jpg",
+            "title": "Swim short",
+            "price": 350,
+            "category": "b-man",
+            "inventory": [
+                  {
+                        "id": "10",
+                        "color": "white",
+                        "bulletColor":"white",
+                        "imgUrl": [
+                              "imgs/products/b-man/swim-white1.jpg",
+                              "imgs/products/b-man/swim-white2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  },
+                  {
+                        "id": "11",
+                        "color": "blue",
+                        "bulletColor":"blue",
+                        "imgUrl": [
+                              "imgs/products/b-man/swim-blue1.jpg",
+                              "imgs/products/b-man/swim-blue2.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ]
+                  }
+            ]
+      }
+]

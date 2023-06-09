@@ -3,6 +3,9 @@
             "id": "100",
             "imgUrl": "imgs/products/one-piece/mulan-apple1.jpg",
             "title": "Mulan",
+            "description":"This classy one-piece is summer’s hottest swimsuit! Featuring a body-baring brazilian style bottom and a flattering ruched silhouette designed to compliment every shape. This swimsuit has an adjustable high-cut leg elongating your figure for a flattering fit and adjustable thin straps transforming it to a bandeau style!",
+            "details":"Fabric: 80% Polyeaster / 20% Elastane",
+            "model":"Model is wearing size XS",
             "price": 835,
             "category": "one-piece",
             "inventory": [
@@ -58,6 +61,9 @@
             "id": "101",
             "imgUrl": "imgs/products/one-piece/jade-turquoise1.jpg",
             "title": "Jade",
+            "description":"The JADE one piece is a vacation essential! This one-piece has halter neck straps which can be tied in the front for tanning and tie details on both sides with gold finishes. It features a bandeau-style top, and the swimsuit body has a cut-out - perfect to show off your figure!",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size XS",
             "price": 835,
             "category": "one-piece",
             "inventory": [
@@ -113,6 +119,9 @@
             "id": "102",
             "imgUrl": "imgs/products/bottoms/tai-ice-blue1.jpg",
             "title": "Tai",
+            "description":"This special bikini set is made from a silky material. These Brazilian bikini bottoms have knotted detailing at the front, thick straps, and a ruched cheeky cut.",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size XS",
             "price": 430,
             "category": "bottoms",
             "inventory": [
@@ -137,7 +146,11 @@
                                     "size": "l",
                                     "amount": 0
                               }
-                        ]
+                        ],
+                        "pairs":{
+                              "id":"114",
+                              "itemId":"36"
+                        }
                   },
                   {
                         "id": "15",
@@ -160,24 +173,20 @@
                                     "size": "l",
                                     "amount": 1
                               }
-                        ]
-                  }
-            ]
-      },
-      {
-            "id": "103",
-            "imgUrl": "imgs/products/bottoms/donna-black1.jpg",
-            "title": "Donna",
-            "price": 350,
-            "category": "bottoms",
-            "inventory": [
+                        ],
+                        "pairs":{
+                              "id":"114",
+                              "itemId":"37"
+                        }
+                  },
                   {
-                        "id": "16",
-                        "color": "black",
-                        "bulletColor":"black",
+                        "id": "15",
+                        "color": "red",
+                        "bulletColor":"red",
                         "imgUrl": [
-                              "imgs/products/bottoms/donna-black1.jpg",
-                              "imgs/products/bottoms/donna-black2.jpg"
+                              "imgs/products/bottoms/tai-red1.jpg",
+                              "imgs/products/bottoms/tai-red2.jpg",
+                              "imgs/products/bottoms/tai-red3.jpg"
                         ],
                         "quantity": [
                               {
@@ -192,7 +201,51 @@
                                     "size": "l",
                                     "amount": 1
                               }
-                        ]
+                        ],
+                        "pairs":{
+                              "id":"114",
+                              "itemId":"38"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "103",
+            "imgUrl": "imgs/products/bottoms/donna-black1.jpg",
+            "title": "Donna",
+            "description":"The DONNA bottom is an ultra-flattering bikini bottom with a ruched design, adjustable front coverage, and tie details on each side.",
+            "details":"80% nylon 20% elastane",
+            "model":"Model is wearing size XS",
+            "price": 350,
+            "category": "bottoms",
+            "inventory": [
+                  {
+                        "id": "16",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-black1.jpg",
+                              "imgs/products/bottoms/donna-black2.jpg",
+                              "imgs/products/bottoms/donna-black3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"115",
+                              "itemId":"39"
+                        }
                   },
                   {
                         "id": "17",
@@ -216,6 +269,33 @@
                                     "amount": 1
                               }
                         ]
+                  },
+                  {
+                        "id": "41",
+                        "color": "lime",
+                        "bulletColor":"greenyellow",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-lime2.jpg",
+                              "imgs/products/bottoms/donna-lime1.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs": {
+                              "id":"115",
+                              "itemId":"40"
+                        }
                   }
             ]
       },
@@ -306,7 +386,6 @@
                   }
             ]
       },
-      
       {
             "id": "107",
             "imgUrl": "imgs/products/b-man/swim-white1.jpg",
@@ -584,7 +663,7 @@
                   },
                   {
                         "id": "33",
-                        "color": "ice",
+                        "color": "ice purple",
                         "bulletColor":"lightpink",
                         "imgUrl": [
                               "imgs/products/tops/jasmin-ice1.jpg",
@@ -689,8 +768,10 @@
       {
             "id": "113",
             "imgUrl": "imgs/products/bottoms/emi-white1.jpg",
-            "title": "emi",
+            "title": "Emi",
             "price": 300,
+            "description":"This bikini set is the perfect classic triangle style! The Emi Brazilian style bottoms are adjustable on both sides and is finished with beautiful gold tiny rings.",
+            "details":"78% Recyceld PL 22% elastane",
             "category": "bottoms",
             "inventory": [
                   {
@@ -738,6 +819,226 @@
                                     "amount": 1
                               }
                         ]
+                  }
+            ]
+      },
+      {
+            "id": "114",
+            "imgUrl": "imgs/products/tops/tai-ice-blue1.jpg",
+            "title": "Tai",
+            "price": 300,
+            "description":"This special bikini set is made from a silky material. The Tie triangle bikini top features thick knotted straps and a frill detail at the bottom of the cups. The bikini top is unpadded.",
+            "details":"Fabric: 80% Polyester/ 20% Elastane",
+            "model":"Model is wearing size XS",
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "36",
+                        "color": "ice-blue",
+                        "bulletColor":"deepskyblue",
+                        "imgUrl": [
+                              "imgs/products/bottoms/tai-ice-blue1.jpg",
+                              "imgs/products/bottoms/tai-ice-blue2.jpg",
+                              "imgs/products/bottoms/tai-ice-blue3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"102",
+                              "itemId":"14"
+                        }
+                  },
+                  {
+                        "id": "37",
+                        "color": "ivory",
+                        "bulletColor":"ghostwhite",
+                        "imgUrl": [
+                              "imgs/products/tops/tai-ivory1.jpg",
+                              "imgs/products/tops/tai-ivory2.jpg",
+                              "imgs/products/tops/tai-ivory3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"102",
+                              "itemId":"15"
+                        }
+                  },
+                  {
+                        "id": "38",
+                        "color": "red",
+                        "bulletColor":"red",
+                        "imgUrl": [
+                              "imgs/products/tops/tai-red1.jpg",
+                              "imgs/products/tops/tai-red2.jpg",
+                              "imgs/products/tops/tai-red3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"102",
+                              "itemId":"39"
+                        }
+                  }
+            ]
+      },
+      {
+            "id": "115",
+            "imgUrl": "imgs/products/tops/donna-black1.jpg",
+            "title": "Donna",
+            "price": 375,
+            "description":"This beautiful bikini set will make you stand out from the crowd. The unpadded bikini top features sculpted shell underwire cups for a flattering and supportive fit and long string ties from the cups which wrap around the body. The Cherry bikini top has an all-over ruching design, and ultra-thin adjustable shoulder straps, and is secured with a clasp closure at the back.",
+            "details":"Fabric: 80% Polyester/ 20% Elastane",
+            "model":"Model is wearing size XS",
+            "category": "tops",
+            "inventory": [
+                  {
+                        "id": "39",
+                        "color": "black",
+                        "bulletColor":"black",
+                        "imgUrl": [
+                              "imgs/products/bottoms/donna-black1.jpg",
+                              "imgs/products/bottoms/donna-black2.jpg",
+                              "imgs/products/bottoms/donna-black3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"103",
+                              "itemId":"16"
+                        }
+                  },
+                  {
+                        "id": "37",
+                        "color": "ivory",
+                        "bulletColor":"ghostwhite",
+                        "imgUrl": [
+                              "imgs/products/tops/tai-ivory1.jpg",
+                              "imgs/products/tops/tai-ivory2.jpg",
+                              "imgs/products/tops/tai-ivory3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"102",
+                              "itemId":"15"
+                        }
+                  },
+                  {
+                        "id": "38",
+                        "color": "red",
+                        "bulletColor":"red",
+                        "imgUrl": [
+                              "imgs/products/tops/tai-red1.jpg",
+                              "imgs/products/tops/tai-red2.jpg",
+                              "imgs/products/tops/tai-red3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"102",
+                              "itemId":"39"
+                        }
+                  },
+                  {
+                        "id": "42",
+                        "color": "red",
+                        "bulletColor":"red",
+                        "imgUrl": [
+                              "imgs/products/tops/tai-red1.jpg",
+                              "imgs/products/tops/tai-red2.jpg",
+                              "imgs/products/tops/tai-red3.jpg"
+                        ],
+                        "quantity": [
+                              {
+                                    "size": "s",
+                                    "amount": 3
+                              },
+                              {
+                                    "size": "m",
+                                    "amount": 5
+                              },
+                              {
+                                    "size": "l",
+                                    "amount": 1
+                              }
+                        ],
+                        "pairs":{
+                              "id":"102",
+                              "itemId":"39"
+                        }
                   }
             ]
       }
