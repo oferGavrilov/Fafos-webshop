@@ -1,6 +1,6 @@
 
 export interface ICarousel {
-      imgUrl: string
+      imgUrl: string[] | string
       title: string
       price: number
       id: string

@@ -1,6 +1,33 @@
 [
       {
-            "id": "100",
+            "id": "b100",
+            "title": "Tai",
+            "price": 430,
+            "imgUrl": "imgs/products/bottoms/tai-ice-blue1.jpg",
+            "itemId": "10",
+            "color": "ice-blue",
+            "category": "bottoms"
+      },
+      {
+            "id": "b100",
+            "title": "Tai",
+            "price": 430,
+            "imgUrl": "imgs/products/bottoms/tai-ivory1.jpg",
+            "itemId": "11",
+            "color": "ivory",
+            "category": "bottoms"
+      },
+      {
+            "id": "b100",
+            "title": "Tai",
+            "price": 430,
+            "imgUrl": "imgs/products/bottoms/tai-red1.jpg",
+            "itemId": "12",
+            "color": "red",
+            "category": "bottoms"
+      },
+      {
+            "id": "o100",
             "title": "Mulan",
             "price": 835,
             "imgUrl": "imgs/products/one-piece/mulan-apple1.jpg",
@@ -9,7 +36,7 @@
             "category": "one-piece"
       },
       {
-            "id": "100",
+            "id": "o100",
             "title": "Mulan",
             "price": 835,
             "imgUrl": "imgs/products/one-piece/mulan-white1.jpg",
@@ -18,101 +45,74 @@
             "category": "one-piece"
       },
       {
-            "id": "101",
+            "id": "o101",
             "title": "Jade",
             "price": 835,
             "imgUrl": "imgs/products/one-piece/jade-turquoise1.jpg",
-            "itemId": "12",
+            "itemId": "13",
             "color": "turquoise",
             "category": "one-piece"
       },
       {
-            "id": "101",
-            "title": "Jade",
-            "price": 835,
-            "imgUrl": "imgs/products/one-piece/jade-lime1.jpg",
-            "itemId": "13",
-            "color": "lime",
-            "category": "one-piece"
-      },
-      {
-            "id": "102",
-            "title": "Tai",
-            "price": 430,
-            "imgUrl": "imgs/products/bottoms/tai-ice-blue1.jpg",
-            "itemId": "14",
-            "color": "ice-blue",
-            "category": "bottoms"
-      },
-      {
-            "id": "102",
-            "title": "Tai",
-            "price": 835,
-            "imgUrl": "imgs/products/bottoms/tai-ivory1.jpg",
-            "itemId": "15",
-            "color": "ivory",
-            "category": "bottoms"
-      },
-      {
-            "id": "103",
+            "id": "b101",
             "title": "Donna",
             "price": 350,
             "imgUrl": "imgs/products/bottoms/donna-black1.jpg",
-            "itemId": "16",
+            "itemId": "13",
             "color": "black",
             "category": "bottoms"
       },
       {
-            "id": "103",
+            "id": "b101",
             "title": "Donna",
             "price": 350,
             "imgUrl": "imgs/products/bottoms/donna-pink1.jpg",
-            "itemId": "17",
+            "itemId": "14",
             "color": "pink",
             "category": "bottoms"
       },
       {
-            "id": "104",
-            "title": "Mila",
+            "id": "b101",
+            "title": "Donna",
             "price": 375,
-            "imgUrl": "imgs/products/tops/mila-pink1.jpg",
-            "itemId": "18",
-            "color": "pink",
-            "category": "tops"
+            "imgUrl": "imgs/products/bottoms/donna-lime1.jpg",
+            "itemId": "15",
+            "color": "lime",
+            "category": "bottoms"
       },
       {
-            "id": "105",
+            "id": "b104",
             "title": "Bell",
             "price": 370,
-            "imgUrl": "imgs/products/tops/bell-ruby1.jpg",
-            "itemId": "20",
+            "imgUrl": "imgs/products/bottoms/bell-ruby1.jpg",
+            "itemId": "19",
             "color": "ruby",
-            "category": "tops"
+            "category": "bottoms"
       },
       {
-            "id": "105",
+            "id": "b104",
             "title": "Bell",
             "price": 370,
-            "imgUrl": "imgs/products/tops/bell-purple1.jpg",
-            "itemId": "21",
+            "imgUrl": "imgs/products/bottoms/bell-purple1.jpg",
+            "itemId": "20",
             "color": "purple",
-            "category": "tops"
+            "category": "bottoms"
       },
       {
-            "id": "110",
+            "id": "o102",
             "title": "Amber",
             "price": 850,
             "imgUrl": "imgs/products/one-piece/amber-red1.jpg",
-            "itemId": "29",
+            "itemId": "17",
             "color": "red",
             "category": "one-piece"
       },
       {
-            "id": "110",
+            "id": "b102",
             "title": "Amber",
             "price": 850,
             "imgUrl": "imgs/products/one-piece/amber-blue1.jpg",
-            "itemId": "30",
+            "itemId": "18",
             "color": "blue",
             "category": "one-piece"
       }

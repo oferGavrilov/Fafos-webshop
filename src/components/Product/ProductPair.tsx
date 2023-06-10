@@ -34,7 +34,7 @@ export default function ProductPair ({ product }: { product: Product }) {
                               <h4 className=' uppercase font-semibold'>{pair.title} - {pair.category}</h4>
                               <span className='text-xl'>{formantCurrency(+pair.price)}</span>
                         </div>
-                        <Image src={`/${pair.image}`} alt={pair.title} width={120} height={200} />
+                        <Image src={`/${pair.image}`} alt={pair.title} width={120} height={200} style={{width:'auto' , height:'auto'}}/>
                   </Link>
             </section>
       )

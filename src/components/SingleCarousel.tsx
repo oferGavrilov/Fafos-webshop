@@ -6,7 +6,7 @@ export default function SingleCarousel ({ images }: { images: string[] }) {
             <MainCarousel showIndicators={false} showArrows={false} showStatus={false} className='max-w-[31rem] px-4' >
                   {images && images.map((item, idx) => (
                         <div key={item + idx} className='flex flex-col'>
-                              < img loading='lazy' src={`/${item}`} className='w-full ' alt={item} />
+                              <img style={{width:'auto' , height:'auto'}}  src={`/${item}`} className='w-full ' alt={item} />
                         </div>
                   ))}
             </MainCarousel>

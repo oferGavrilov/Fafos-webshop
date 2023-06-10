@@ -18,12 +18,13 @@ export default function Admin () {
   return (
     <section className='h-screen pt-24'>
       <h2 className='page-header text-center'>Admin page</h2>
+      <div className='flex flex-col'>
         <Link href="/admin/edit-product">Add a product</Link>
+        <Link href="/admin/edit-carousel">Edit carousel</Link>
+      </div>
     </section>
   )
 }
 
 // export async function getServerSideProps (context) {
-//   const session = await getIdTokenResult(context.req)
-//   console.log(session)
 // }
