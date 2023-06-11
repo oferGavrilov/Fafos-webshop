@@ -58,15 +58,16 @@ export default function Loader ({ page, count = 1 }: Props) {
                                                 <Skeleton height={56} />
                                           </div>
                                     </div>
-                                    <div className='grid gap-4 grid-cols-1   sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+                                    <div className='custom-grid'>
                                           {[...Array(count)].map((_, idx) => (
-                                                <div key={idx} className='flex flex-col'>
-                                                      <Skeleton height={410} width='100%' />
+                                                <div key={idx} className='flex flex-col w-full'>
+                                                      <Skeleton height={510} width='100%' />
                                                       <div className='p-5 flex flex-col items-center h-[240px] justify-between'>
                                                             <Skeleton height={28} width={200} />
                                                             <Skeleton height={28} width={65} />
                                                             <Skeleton height={45} width={150} />
                                                             <div className='flex gap-x-3'>
+                                                                  <Skeleton height={28} width={28} circle />
                                                                   <Skeleton height={28} width={28} circle />
                                                                   <Skeleton height={28} width={28} circle />
                                                             </div>

@@ -36,7 +36,7 @@ export default function ProductPage () {
             setLoader(true)
             const products = await productService.getProducts(category as string)
             setProducts(products)
-            setLoader(false)
+            // setLoader(false)
       }
 
       const createQueryString = useCallback((key: string, value: string) => {
@@ -54,7 +54,7 @@ export default function ProductPage () {
             setProducts(sortedProducts)
       }
 
-      return (loader || !products?.length) ? <Loader page='category' count={4} /> : (
+      return (loader || !products?.length) ? <Loader page='category' count={18} /> : (
             <>
                   <ProductFilter category={category} handleSort={handleSort} sort={sortBy} />
                   <ProductList products={products} />

@@ -26,7 +26,7 @@ function ProductPreview({ product }: Props) {
         {data.map((item, idx) => (
           <SwiperSlide key={product.inventory[idx].id}>
             <Link href={`/product/${product.id}?item=${product.inventory[idx].id}`} aria-label='Preview this product'>
-              <img loading='eager' className='rounded relative shadow w-[100%] fade' src={`/${  item[0]}`} alt={item[idx]}/>
+              <img loading='eager' className='rounded relative shadow w-[100%]  fade' src={`/${  item[0]}`} alt={item[idx]}/>
             </Link>
             <div className='flex flex-col items-center gap-4 p-5'>
               <Link href={`/product/${product.id}?item=${product.inventory[idx].id}`} aria-label='Preview this product' className='hover:underline underline-offset-2 h-12 cursor-pointer uppercase'>{product.title} {product.inventory[idx].color} {product.category}</Link>

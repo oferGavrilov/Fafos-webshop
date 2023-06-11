@@ -57,7 +57,7 @@
   }
 
   .card {
-    @apply mb-5 block rounded-lg border border-gray-200 shadow-md;
+    @apply mb-5 block rounded-lg border border-gray-200 shadow-md max-w-[370px];
   }
 
   .primary-button {
@@ -103,7 +103,10 @@
   .custom-gradient {
     background-image: linear-gradient(to bottom, #ffffff, #e2ecea, #eaf3e8, #dce5df, #cae7c1);
   }
-
+  .custom-grid {
+    @apply flex flex-wrap justify-center gap-5 md:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
   .main-text {
     @apply font-fuzzy text-[#212529] tracking-wider;
   }
