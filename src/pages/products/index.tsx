@@ -36,7 +36,7 @@ export default function ProductPage () {
             setLoader(true)
             const products = await productService.getProducts(category as string)
             setProducts(products)
-            // setLoader(false)
+            setLoader(false)
       }
 
       const createQueryString = useCallback((key: string, value: string) => {
