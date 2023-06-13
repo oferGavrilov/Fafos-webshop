@@ -1,7 +1,7 @@
 ### Fafos - E-commerce for swimwear inspired by bananahot.com
-Fafos is a swimwear store built using NextJS , [here is my project link](https://fafos-webshop.vercel.app/)
+Fafos is a swimwear store built using NextJS , [Here is my project link](https://fafos-webshop.vercel.app/)
 
-![Hero image](public/imgs/readme/fafos-large.jpg "Hero-image")
+![Hero image](https://res.cloudinary.com/dqkstk6dw/image/upload/v1686681301/fafos/readme/fafos-large_c3npvn.jpg "Hero-image")
 
 ___
 
@@ -41,52 +41,63 @@ and more development tools like Docker, Cloudinary, Eslint, Postman and Mongo co
 ## Home Page
 The landing page including hero, teasers, image carousel, hot categories and video sections.
 
-#### Hero 
-![Hero-image](public/imgs/readme/fafos-large.jpg "Hero")
+<h3 align="center">Hero</h3>
+<div align="center">
+<img src="https://res.cloudinary.com/dqkstk6dw/image/upload/v1686681301/fafos/readme/fafos-large_c3npvn.jpg" alt="cart-page" width="900"/>
+</div>
 
-#### Teaser
-![Teaser](public/imgs/readme/teaser.jpg "Teaser")
 
-#### Image-Carousel
-![Image-Carousel](public/imgs/readme/image-carousel.png "Image Carousel")
+<h3 align="center">Teaser</h3>
+<div align="center">
+<img src="https://res.cloudinary.com/dqkstk6dw/image/upload/v1686681367/fafos/readme/teaser_wl0mcr.jpg" alt="cart-page" width="900"/>
+</div>
 
+
+<h3 align="center">Image Carousel</h3>
+<div align="center">
+<img src="https://res.cloudinary.com/dqkstk6dw/image/upload/v1686681396/fafos/readme/image-carousel_k4uldq.png" alt="cart-page" width="900"/>
+</div>
 
 ## Collections Page
 The collection page includes all the popular collections to choose
 
-![Collection-page](public/imgs/readme/collection.jpg "Collection-page")
+![Collection-page](https://res.cloudinary.com/dqkstk6dw/image/upload/v1686679806/fafos/readme/collection-page_1_rtgz5x.png "Collection-page")
 
 ## Products Page
 The products page includes products with filters and sorting features
 ** Every product is presented with color bullets that present the product in other colors if any. **
 
-![Products-page](public/imgs/readme/products.jpg "Products-page")
+![Products-page](https://res.cloudinary.com/dqkstk6dw/image/upload/v1686679435/fafos/readme/products-page_2_dtays2.png "Products-page")
 
 ## Product Page
 The product page includes more images of the chosen product, size choosing, add to cart button and relative products
 
-![Product-page](public/imgs/readme/product.jpg "Product-page")
+![Product-page](https://res.cloudinary.com/dqkstk6dw/image/upload/v1686678833/fafos/readme/readme-productpage_2_dne9dk.png "Product-page")
 
 ## Cart Page
 The cart page includes all the products that the user has been added
 
-![Cart-page](public/imgs/readme/cart.jpg "Cart-page")
+![Cart-page](https://res.cloudinary.com/dqkstk6dw/image/upload/v1686680372/fafos/readme/cart-page_1_nlp3wu.png "Cart-page")
 
 And for who's the cart is empty.. 
-![Cart-page](public/imgs/readme/empty-cart.jpg "Cart-page")
-
+<div align="center">
+<img src="https://res.cloudinary.com/dqkstk6dw/image/upload/v1686681448/fafos/readme/empty-cart_kn5hxb.jpg" alt="cart-page" width="950"/>
+</div>
+  
 ## Login Page
 The login & sign up page includes login with Email & Password, login with Google, login with Facebook and Login with Apple for macOs, IOS systems.
 
-![Login-page](public/imgs/readme/login-signup.jpg "Login-page")
 
+<div  align="center"><img src="https://res.cloudinary.com/dqkstk6dw/image/upload/v1686681473/fafos/readme/login-signup_acdpwo.jpg" alt="login-page" width="950" /></div>  
+
+  
 ## Some Mobile
 This Project is a fully responsive for any device!
 
-![Laptop](public/imgs/readme/laptop.jpg "Laptop")
+![Laptop](https://res.cloudinary.com/dqkstk6dw/image/upload/v1686681496/fafos/readme/laptop_ceud4f.jpg "Laptop")
 
 
-![Phone](public/imgs/readme/phone.jpg "Phone")
+![Phone](https://res.cloudinary.com/dqkstk6dw/image/upload/v1686681509/fafos/readme/phone_obeu8k.jpg "Phone")
 
 
 ## Getting Started 
